@@ -1,18 +1,21 @@
 import React, { useState } from "react";
-
+import "./NumberInput.css"
 
 function NumberImput({ label, name, value, onChange }) {
     return (
-        <div>
-            <label>
+        <div className="number-input">
+            <label for="input" className="label-simulation">
                 {label}:
-                <input className="number-input-simulation"
+                
+            </label>
+            <input id="input" className="number-input-simulation"
                     name={name}
                     type="text"
                     value={value}
                     onChange={onChange}
                 />
-            </label>
+            
+            
         </div>
 
     );
