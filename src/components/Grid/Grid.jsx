@@ -1,10 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "./Grid.css";
 
 
 function Grid({ data, cantidadEnsambladores, cantidadHornos }) {
-
-    
 
     return (
         <div>
@@ -18,7 +16,7 @@ function Grid({ data, cantidadEnsambladores, cantidadHornos }) {
                         <th colSpan={2 + cantidadHornos * 2}>Hornos</th>
                         <th rowSpan="2" colSpan="4">Estadisticos</th>
                     </tr>
-                    <tr>
+                    <tr >
                         {Array.from({ length: cantidadEnsambladores }, (_, index) => (
                             <th colSpan="4" key={`ensamblador${index}`}>Ensamblador {index + 1}</th>
                         ))}
@@ -50,6 +48,7 @@ function Grid({ data, cantidadEnsambladores, cantidadHornos }) {
                     </tr>
                 </thead>
                 <tbody>
+                    {console.log(data)}
                     {data.map((dato) => (
                         <tr key={dato.n}>
                             <td>{dato.n}</td>

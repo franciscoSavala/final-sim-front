@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./SimulationForm.css";
 import NumberImput from "../NumberImput/NumberImput";
 
-function SimulationForm() {
+function SimulationForm({onFormatSubmit}) {
 
     const [apiJsonReq, setApiJsonReq] = useState({
         time: 500,
@@ -29,24 +29,9 @@ function SimulationForm() {
         });
     };
 
-    const handleSubmit = async (event) => {
+    const handleSubmit = (event) => {
         event.preventDefault();
-        console.log(apiJsonReq);
-        try {
-            let res = await fetch("http://localhost:8080/api/v1", {
-                method: "POST",
-                headers: {
-                    'Content-type': 'application/json; charset=UTF-8',
-                },
-                body: JSON.stringify({ ...apiJsonReq })
-            });
-            let resJson = await res.json();
-            if (res.status === 200) {
-                console.log(resJson);
-            }
-        } catch (err) {
-            console.log(err)
-        }
+        onFormatSubmit(apiJsonReq);
     }
 
     return (
