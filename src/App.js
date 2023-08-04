@@ -6,2604 +6,2669 @@ import Grid from './components/Grid/Grid';
 function App() {
 
     const data = [
-        {
-            "n": 0,
-            "evento": "INICIO",
-            "reloj": 0.0,
-            "futbolALlegar": {
-                "rnd_llegada": 0.9473691969955245,
-                "llegada": 88.33361166570249,
-                "rnd_fin_juego1": 0.0,
-                "rnd_fin_juego2": 0.0,
-                "fin_juego": 0.0,
-                "llego": false,
-                "estado": "NO_LLEGO"
-            },
-            "handBallALlegar": {
-                "rnd_llegada1": 0.5045137929917881,
-                "rnd_llegada2": 0.3265972988237069,
-                "llegada": 18.9170206342181,
-                "rnd_fin_juego1": 0.0,
-                "rnd_fin_juego2": 0.0,
-                "fin_juego": 0.0,
-                "llego": false,
-                "estado": "NO_LLEGO"
-            },
-            "basketBallALlegar": {
-                "rnd_llegada1": 0.9048438863216288,
-                "rnd_llegada2": 0.3405565316942394,
-                "llegada": 9.518121363251916,
-                "rnd_fin_juego1": 0.0,
-                "rnd_fin_juego2": 0.0,
-                "fin_juego": 0.0,
-                "llego": false,
-                "estado": "NO_LLEGO"
-            },
-            "jugando1": null,
-            "jugando2": null,
-            "finLimpieza": 1.7976931348623157E308,
-            "cancha": {
-                "estado": "LIBRE"
-            },
-            "colaHF": 0,
-            "colaB": 0,
-            "acumuladorEsperaFutbol": 0.0,
-            "acumuladorEsperaHandBall": 0.0,
-            "acumuladorEsperaBasketBall": 0.0,
-            "acumuladorCantidadFutbolLlegaron": 0,
-            "acumuladorCantidadHandBallLlegaron": 0,
-            "acumuladorCantidadBasketBallLlegaron": 0,
-            "llegaron": []
-        },
-        {
-            "n": 1,
-            "evento": "LLEGADA_BASKET",
-            "reloj": 9.518121363251916,
-            "futbolALlegar": {
-                "rnd_llegada": 0.9473691969955245,
-                "llegada": 88.33361166570249,
-                "rnd_fin_juego1": 0.0,
-                "rnd_fin_juego2": 0.0,
-                "fin_juego": 0.0,
-                "llego": false,
-                "estado": "NO_LLEGO"
-            },
-            "handBallALlegar": {
-                "rnd_llegada1": 0.5045137929917881,
-                "rnd_llegada2": 0.3265972988237069,
-                "llegada": 18.9170206342181,
-                "rnd_fin_juego1": 0.0,
-                "rnd_fin_juego2": 0.0,
-                "fin_juego": 0.0,
-                "llego": false,
-                "estado": "NO_LLEGO"
-            },
-            "basketBallALlegar": {
-                "rnd_llegada1": 0.9048438863216288,
-                "rnd_llegada2": 0.3405565316942394,
-                "llegada": 20.271603805755074,
-                "rnd_fin_juego1": 0.0,
-                "rnd_fin_juego2": 0.0,
-                "fin_juego": 0.0,
-                "llego": false,
-                "estado": "NO_LLEGO"
-            },
-            "jugando1": {
-                "rnd_llegada1": 0.9048438863216288,
-                "rnd_llegada2": 0.3405565316942394,
-                "llegada": 9.518121363251916,
-                "rnd_fin_juego1": 0.8776360759891684,
-                "rnd_fin_juego2": 0.27962760187353797,
-                "fin_juego": 1.7976931348623157E308,
-                "llego": true,
-                "estado": "FIN_JUEGO"
-            },
-            "jugando2": null,
-            "finLimpieza": 1.7976931348623157E308,
-            "cancha": {
-                "estado": "OCUPADA_UN_GRUPO"
-            },
-            "colaHF": 0,
-            "colaB": 0,
-            "acumuladorEsperaFutbol": 0.0,
-            "acumuladorEsperaHandBall": 0.0,
-            "acumuladorEsperaBasketBall": 0.0,
-            "acumuladorCantidadFutbolLlegaron": 0,
-            "acumuladorCantidadHandBallLlegaron": 0,
-            "acumuladorCantidadBasketBallLlegaron": 0,
-            "llegaron": [
-                {
-                    "rnd_llegada1": 0.9048438863216288,
-                    "rnd_llegada2": 0.3405565316942394,
-                    "llegada": 9.518121363251916,
-                    "rnd_fin_juego1": 0.8776360759891684,
-                    "rnd_fin_juego2": 0.27962760187353797,
-                    "fin_juego": 29.423557743577128,
-                    "llego": true,
-                    "estado": "JUGANDO"
-                }
-            ]
-        },
-        {
-            "n": 2,
-            "evento": "LLEGADA_HANDBALL",
-            "reloj": 18.9170206342181,
-            "futbolALlegar": {
-                "rnd_llegada": 0.9473691969955245,
-                "llegada": 88.33361166570249,
-                "rnd_fin_juego1": 0.0,
-                "rnd_fin_juego2": 0.0,
-                "fin_juego": 0.0,
-                "llego": false,
-                "estado": "NO_LLEGO"
-            },
-            "handBallALlegar": {
-                "rnd_llegada1": 0.5045137929917881,
-                "rnd_llegada2": 0.3265972988237069,
-                "llegada": 40.99077001405989,
-                "rnd_fin_juego1": 0.0,
-                "rnd_fin_juego2": 0.0,
-                "fin_juego": 0.0,
-                "llego": false,
-                "estado": "NO_LLEGO"
-            },
-            "basketBallALlegar": {
-                "rnd_llegada1": 0.9048438863216288,
-                "rnd_llegada2": 0.3405565316942394,
-                "llegada": 20.271603805755074,
-                "rnd_fin_juego1": 0.0,
-                "rnd_fin_juego2": 0.0,
-                "fin_juego": 0.0,
-                "llego": false,
-                "estado": "NO_LLEGO"
-            },
-            "jugando1": {
-                "rnd_llegada1": 0.9048438863216288,
-                "rnd_llegada2": 0.3405565316942394,
-                "llegada": 9.518121363251916,
-                "rnd_fin_juego1": 0.8776360759891684,
-                "rnd_fin_juego2": 0.27962760187353797,
-                "fin_juego": 1.7976931348623157E308,
-                "llego": true,
-                "estado": "FIN_JUEGO"
-            },
-            "jugando2": null,
-            "finLimpieza": 1.7976931348623157E308,
-            "cancha": {
-                "estado": "OCUPADA_UN_GRUPO"
-            },
-            "colaHF": 1,
-            "colaB": 0,
-            "acumuladorEsperaFutbol": 0.0,
-            "acumuladorEsperaHandBall": 0.0,
-            "acumuladorEsperaBasketBall": 0.0,
-            "acumuladorCantidadFutbolLlegaron": 0,
-            "acumuladorCantidadHandBallLlegaron": 0,
-            "acumuladorCantidadBasketBallLlegaron": 0,
-            "llegaron": [
-                {
-                    "rnd_llegada1": 0.9048438863216288,
-                    "rnd_llegada2": 0.3405565316942394,
-                    "llegada": 9.518121363251916,
-                    "rnd_fin_juego1": 0.8776360759891684,
-                    "rnd_fin_juego2": 0.27962760187353797,
-                    "fin_juego": 29.423557743577128,
-                    "llego": true,
+            {
+                "n": 27,
+                "evento": "LLEGADA_BASKET",
+                "reloj": 100.54527210198407,
+                "futbolALlegar": {
+                    "tipo": "FUTBOL",
+                    "rnd_llegada": 0.03385290044914757,
+                    "llegada": 100.55151695867244,
+                    "rnd_fin_juego1": 0.0,
+                    "rnd_fin_juego2": 0.0,
+                    "fin_juego": 0.0,
+                    "estado": "NO_LLEGO"
+                },
+                "handBallALlegar": {
+                    "tipo": "HAND_BALL",
+                    "rnd_llegada1": 0.6037707380652982,
+                    "rnd_llegada2": 0.37152004758658064,
+                    "llegada": 117.57860528798045,
+                    "rnd_fin_juego1": 0.0,
+                    "rnd_fin_juego2": 0.0,
+                    "fin_juego": 0.0,
+                    "estado": "NO_LLEGO"
+                },
+                "basketBallALlegar": {
+                    "tipo": "BASKET_BALL",
+                    "rnd_llegada1": 0.3207198938364654,
+                    "rnd_llegada2": 0.532589251786078,
+                    "llegada": 109.93196769070977,
+                    "rnd_fin_juego1": 0.0,
+                    "rnd_fin_juego2": 0.0,
+                    "fin_juego": 0.0,
+                    "estado": "NO_LLEGO"
+                },
+                "jugando1": {
+                    "tipo": "HAND_BALL",
+                    "rnd_llegada1": 0.5145573956081833,
+                    "rnd_llegada2": 0.9387119274693267,
+                    "llegada": 41.270659519071074,
+                    "rnd_fin_juego1": 0.5791077633858823,
+                    "rnd_fin_juego2": 0.007486808496297903,
+                    "fin_juego": 104.9603239718115,
                     "estado": "JUGANDO"
                 },
-                {
-                    "rnd_llegada1": 0.5045137929917881,
-                    "rnd_llegada2": 0.3265972988237069,
-                    "llegada": 18.9170206342181,
+                "jugando2": null,
+                "finLimpieza": 1.7976931348623157E308,
+                "cancha": {
+                    "estado": "OCUPADA_UN_GRUPO"
+                },
+                "colaHF": 7,
+                "colaB": 10,
+                "acumuladorEsperaFutbol": 104.31570341384413,
+                "acumuladorEsperaHandBall": 0.0,
+                "acumuladorEsperaBasketBall": 411.5359063483902,
+                "acumuladorCantidadFutbolLlegaron": 0,
+                "acumuladorCantidadHandBallLlegaron": 0,
+                "acumuladorCantidadBasketBallLlegaron": 0,
+                "llegaronFutbolHandBall": [
+                    {
+                        "tipo": "HAND_BALL",
+                        "rnd_llegada1": 0.5145573956081833,
+                        "rnd_llegada2": 0.9387119274693267,
+                        "llegada": 22.13671205329328,
+                        "rnd_fin_juego1": 0.5791077633858823,
+                        "rnd_fin_juego2": 0.007486808496297903,
+                        "fin_juego": 1.7976931348623157E308,
+                        "estado": "FIN_JUEGO"
+                    },
+                    {
+                        "tipo": "HAND_BALL",
+                        "rnd_llegada1": 0.5145573956081833,
+                        "rnd_llegada2": 0.9387119274693267,
+                        "llegada": 41.270659519071074,
+                        "rnd_fin_juego1": 0.5791077633858823,
+                        "rnd_fin_juego2": 0.007486808496297903,
+                        "fin_juego": 104.9603239718115,
+                        "estado": "JUGANDO"
+                    },
+                    {
+                        "tipo": "FUTBOL",
+                        "rnd_llegada": 0.7397116102546244,
+                        "llegada": 43.48364673125598,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "HAND_BALL",
+                        "rnd_llegada1": 0.33713121387980505,
+                        "rnd_llegada2": 0.6967523617704322,
+                        "llegada": 60.30223884174352,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "FUTBOL",
+                        "rnd_llegada": 0.6757021877152599,
+                        "llegada": 77.2664370808445,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "HAND_BALL",
+                        "rnd_llegada1": 0.33713121387980505,
+                        "rnd_llegada2": 0.6967523617704322,
+                        "llegada": 77.51648473962757,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "FUTBOL",
+                        "rnd_llegada": 0.010956948009574918,
+                        "llegada": 77.59695960516392,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "HAND_BALL",
+                        "rnd_llegada1": 0.6037707380652982,
+                        "rnd_llegada2": 0.37152004758658064,
+                        "llegada": 96.12723583523072,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "FUTBOL",
+                        "rnd_llegada": 0.5184343596826992,
+                        "llegada": 99.51834157682774,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    }
+                ],
+                "llegaronBasketBall": [
+                    {
+                        "tipo": "BASKET_BALL",
+                        "rnd_llegada1": 0.2516439702199742,
+                        "rnd_llegada2": 0.58806102614851,
+                        "llegada": 15.427488351038564,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "BASKET_BALL",
+                        "rnd_llegada1": 0.5201807211071783,
+                        "rnd_llegada2": 0.0675376378357575,
+                        "llegada": 27.511298899773863,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "BASKET_BALL",
+                        "rnd_llegada1": 0.5201807211071783,
+                        "rnd_llegada2": 0.0675376378357575,
+                        "llegada": 38.45276875831047,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "BASKET_BALL",
+                        "rnd_llegada1": 0.42429473296077513,
+                        "rnd_llegada2": 0.6085763830381785,
+                        "llegada": 46.42002368434708,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "BASKET_BALL",
+                        "rnd_llegada1": 0.42429473296077513,
+                        "rnd_llegada2": 0.6085763830381785,
+                        "llegada": 54.768792935203145,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "BASKET_BALL",
+                        "rnd_llegada1": 0.3167352495263638,
+                        "rnd_llegada2": 0.4669837200025906,
+                        "llegada": 61.801075309177605,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "BASKET_BALL",
+                        "rnd_llegada1": 0.3167352495263638,
+                        "rnd_llegada2": 0.4669837200025906,
+                        "llegada": 72.42570666014014,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "BASKET_BALL",
+                        "rnd_llegada1": 0.9280949322809195,
+                        "rnd_llegada2": 0.09456631374961555,
+                        "llegada": 83.06592186427865,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "BASKET_BALL",
+                        "rnd_llegada1": 0.9280949322809195,
+                        "rnd_llegada2": 0.09456631374961555,
+                        "llegada": 93.49846610719692,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "BASKET_BALL",
+                        "rnd_llegada1": 0.3207198938364654,
+                        "rnd_llegada2": 0.532589251786078,
+                        "llegada": 100.54527210198407,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    }
+                ]
+            },
+            {
+                "n": 28,
+                "evento": "LLEGADA_FUTBOL",
+                "reloj": 100.55151695867244,
+                "futbolALlegar": {
+                    "tipo": "FUTBOL",
+                    "rnd_llegada": 0.8044879576960828,
+                    "llegada": 149.51551607841054,
                     "rnd_fin_juego1": 0.0,
                     "rnd_fin_juego2": 0.0,
                     "fin_juego": 0.0,
-                    "llego": true,
-                    "estado": "ESPERANDO"
-                }
-            ]
-        },
-        {
-            "n": 3,
-            "evento": "LLEGADA_BASKET",
-            "reloj": 20.271603805755074,
-            "futbolALlegar": {
-                "rnd_llegada": 0.9473691969955245,
-                "llegada": 88.33361166570249,
-                "rnd_fin_juego1": 0.0,
-                "rnd_fin_juego2": 0.0,
-                "fin_juego": 0.0,
-                "llego": false,
-                "estado": "NO_LLEGO"
-            },
-            "handBallALlegar": {
-                "rnd_llegada1": 0.5045137929917881,
-                "rnd_llegada2": 0.3265972988237069,
-                "llegada": 40.99077001405989,
-                "rnd_fin_juego1": 0.0,
-                "rnd_fin_juego2": 0.0,
-                "fin_juego": 0.0,
-                "llego": false,
-                "estado": "NO_LLEGO"
-            },
-            "basketBallALlegar": {
-                "rnd_llegada1": 0.14981362086436079,
-                "rnd_llegada2": 0.49725518309741623,
-                "llegada": 26.375145199709976,
-                "rnd_fin_juego1": 0.0,
-                "rnd_fin_juego2": 0.0,
-                "fin_juego": 0.0,
-                "llego": false,
-                "estado": "NO_LLEGO"
-            },
-            "jugando1": {
-                "rnd_llegada1": 0.9048438863216288,
-                "rnd_llegada2": 0.3405565316942394,
-                "llegada": 9.518121363251916,
-                "rnd_fin_juego1": 0.8776360759891684,
-                "rnd_fin_juego2": 0.27962760187353797,
-                "fin_juego": 1.7976931348623157E308,
-                "llego": true,
-                "estado": "FIN_JUEGO"
-            },
-            "jugando2": null,
-            "finLimpieza": 1.7976931348623157E308,
-            "cancha": {
-                "estado": "OCUPADA_UN_GRUPO"
-            },
-            "colaHF": 1,
-            "colaB": 1,
-            "acumuladorEsperaFutbol": 0.0,
-            "acumuladorEsperaHandBall": 0.0,
-            "acumuladorEsperaBasketBall": 0.0,
-            "acumuladorCantidadFutbolLlegaron": 0,
-            "acumuladorCantidadHandBallLlegaron": 0,
-            "acumuladorCantidadBasketBallLlegaron": 0,
-            "llegaron": [
-                {
-                    "rnd_llegada1": 0.9048438863216288,
-                    "rnd_llegada2": 0.3405565316942394,
-                    "llegada": 9.518121363251916,
-                    "rnd_fin_juego1": 0.8776360759891684,
-                    "rnd_fin_juego2": 0.27962760187353797,
-                    "fin_juego": 29.423557743577128,
-                    "llego": true,
+                    "estado": "NO_LLEGO"
+                },
+                "handBallALlegar": {
+                    "tipo": "HAND_BALL",
+                    "rnd_llegada1": 0.6037707380652982,
+                    "rnd_llegada2": 0.37152004758658064,
+                    "llegada": 117.57860528798045,
+                    "rnd_fin_juego1": 0.0,
+                    "rnd_fin_juego2": 0.0,
+                    "fin_juego": 0.0,
+                    "estado": "NO_LLEGO"
+                },
+                "basketBallALlegar": {
+                    "tipo": "BASKET_BALL",
+                    "rnd_llegada1": 0.3207198938364654,
+                    "rnd_llegada2": 0.532589251786078,
+                    "llegada": 109.93196769070977,
+                    "rnd_fin_juego1": 0.0,
+                    "rnd_fin_juego2": 0.0,
+                    "fin_juego": 0.0,
+                    "estado": "NO_LLEGO"
+                },
+                "jugando1": {
+                    "tipo": "HAND_BALL",
+                    "rnd_llegada1": 0.5145573956081833,
+                    "rnd_llegada2": 0.9387119274693267,
+                    "llegada": 41.270659519071074,
+                    "rnd_fin_juego1": 0.5791077633858823,
+                    "rnd_fin_juego2": 0.007486808496297903,
+                    "fin_juego": 104.9603239718115,
                     "estado": "JUGANDO"
                 },
-                {
-                    "rnd_llegada1": 0.5045137929917881,
-                    "rnd_llegada2": 0.3265972988237069,
-                    "llegada": 18.9170206342181,
-                    "rnd_fin_juego1": 0.0,
-                    "rnd_fin_juego2": 0.0,
-                    "fin_juego": 0.0,
-                    "llego": true,
-                    "estado": "ESPERANDO"
+                "jugando2": null,
+                "finLimpieza": 1.7976931348623157E308,
+                "cancha": {
+                    "estado": "OCUPADA_UN_GRUPO"
                 },
-                {
-                    "rnd_llegada1": 0.9048438863216288,
-                    "rnd_llegada2": 0.3405565316942394,
-                    "llegada": 20.271603805755074,
+                "colaHF": 8,
+                "colaB": 10,
+                "acumuladorEsperaFutbol": 104.34068284059761,
+                "acumuladorEsperaHandBall": 0.0,
+                "acumuladorEsperaBasketBall": 411.59835491527394,
+                "acumuladorCantidadFutbolLlegaron": 0,
+                "acumuladorCantidadHandBallLlegaron": 0,
+                "acumuladorCantidadBasketBallLlegaron": 0,
+                "llegaronFutbolHandBall": [
+                    {
+                        "tipo": "HAND_BALL",
+                        "rnd_llegada1": 0.5145573956081833,
+                        "rnd_llegada2": 0.9387119274693267,
+                        "llegada": 22.13671205329328,
+                        "rnd_fin_juego1": 0.5791077633858823,
+                        "rnd_fin_juego2": 0.007486808496297903,
+                        "fin_juego": 1.7976931348623157E308,
+                        "estado": "FIN_JUEGO"
+                    },
+                    {
+                        "tipo": "HAND_BALL",
+                        "rnd_llegada1": 0.5145573956081833,
+                        "rnd_llegada2": 0.9387119274693267,
+                        "llegada": 41.270659519071074,
+                        "rnd_fin_juego1": 0.5791077633858823,
+                        "rnd_fin_juego2": 0.007486808496297903,
+                        "fin_juego": 104.9603239718115,
+                        "estado": "JUGANDO"
+                    },
+                    {
+                        "tipo": "FUTBOL",
+                        "rnd_llegada": 0.7397116102546244,
+                        "llegada": 43.48364673125598,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "HAND_BALL",
+                        "rnd_llegada1": 0.33713121387980505,
+                        "rnd_llegada2": 0.6967523617704322,
+                        "llegada": 60.30223884174352,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "FUTBOL",
+                        "rnd_llegada": 0.6757021877152599,
+                        "llegada": 77.2664370808445,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "HAND_BALL",
+                        "rnd_llegada1": 0.33713121387980505,
+                        "rnd_llegada2": 0.6967523617704322,
+                        "llegada": 77.51648473962757,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "FUTBOL",
+                        "rnd_llegada": 0.010956948009574918,
+                        "llegada": 77.59695960516392,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "HAND_BALL",
+                        "rnd_llegada1": 0.6037707380652982,
+                        "rnd_llegada2": 0.37152004758658064,
+                        "llegada": 96.12723583523072,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "FUTBOL",
+                        "rnd_llegada": 0.5184343596826992,
+                        "llegada": 99.51834157682774,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "FUTBOL",
+                        "rnd_llegada": 0.03385290044914757,
+                        "llegada": 100.55151695867244,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    }
+                ],
+                "llegaronBasketBall": [
+                    {
+                        "tipo": "BASKET_BALL",
+                        "rnd_llegada1": 0.2516439702199742,
+                        "rnd_llegada2": 0.58806102614851,
+                        "llegada": 15.427488351038564,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "BASKET_BALL",
+                        "rnd_llegada1": 0.5201807211071783,
+                        "rnd_llegada2": 0.0675376378357575,
+                        "llegada": 27.511298899773863,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "BASKET_BALL",
+                        "rnd_llegada1": 0.5201807211071783,
+                        "rnd_llegada2": 0.0675376378357575,
+                        "llegada": 38.45276875831047,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "BASKET_BALL",
+                        "rnd_llegada1": 0.42429473296077513,
+                        "rnd_llegada2": 0.6085763830381785,
+                        "llegada": 46.42002368434708,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "BASKET_BALL",
+                        "rnd_llegada1": 0.42429473296077513,
+                        "rnd_llegada2": 0.6085763830381785,
+                        "llegada": 54.768792935203145,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "BASKET_BALL",
+                        "rnd_llegada1": 0.3167352495263638,
+                        "rnd_llegada2": 0.4669837200025906,
+                        "llegada": 61.801075309177605,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "BASKET_BALL",
+                        "rnd_llegada1": 0.3167352495263638,
+                        "rnd_llegada2": 0.4669837200025906,
+                        "llegada": 72.42570666014014,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "BASKET_BALL",
+                        "rnd_llegada1": 0.9280949322809195,
+                        "rnd_llegada2": 0.09456631374961555,
+                        "llegada": 83.06592186427865,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "BASKET_BALL",
+                        "rnd_llegada1": 0.9280949322809195,
+                        "rnd_llegada2": 0.09456631374961555,
+                        "llegada": 93.49846610719692,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "BASKET_BALL",
+                        "rnd_llegada1": 0.3207198938364654,
+                        "rnd_llegada2": 0.532589251786078,
+                        "llegada": 100.54527210198407,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    }
+                ]
+            },
+            {
+                "n": 29,
+                "evento": "FIN_JUEGO",
+                "reloj": 104.9603239718115,
+                "futbolALlegar": {
+                    "tipo": "FUTBOL",
+                    "rnd_llegada": 0.8044879576960828,
+                    "llegada": 149.51551607841054,
                     "rnd_fin_juego1": 0.0,
                     "rnd_fin_juego2": 0.0,
                     "fin_juego": 0.0,
-                    "llego": true,
-                    "estado": "ESPERANDO"
-                }
-            ]
-        },
-        {
-            "n": 4,
-            "evento": "LLEGADA_BASKET",
-            "reloj": 26.375145199709976,
-            "futbolALlegar": {
-                "rnd_llegada": 0.9473691969955245,
-                "llegada": 88.33361166570249,
-                "rnd_fin_juego1": 0.0,
-                "rnd_fin_juego2": 0.0,
-                "fin_juego": 0.0,
-                "llego": false,
-                "estado": "NO_LLEGO"
+                    "estado": "NO_LLEGO"
+                },
+                "handBallALlegar": {
+                    "tipo": "HAND_BALL",
+                    "rnd_llegada1": 0.6037707380652982,
+                    "rnd_llegada2": 0.37152004758658064,
+                    "llegada": 117.57860528798045,
+                    "rnd_fin_juego1": 0.0,
+                    "rnd_fin_juego2": 0.0,
+                    "fin_juego": 0.0,
+                    "estado": "NO_LLEGO"
+                },
+                "basketBallALlegar": {
+                    "tipo": "BASKET_BALL",
+                    "rnd_llegada1": 0.3207198938364654,
+                    "rnd_llegada2": 0.532589251786078,
+                    "llegada": 109.93196769070977,
+                    "rnd_fin_juego1": 0.0,
+                    "rnd_fin_juego2": 0.0,
+                    "fin_juego": 0.0,
+                    "estado": "NO_LLEGO"
+                },
+                "jugando1": null,
+                "jugando2": null,
+                "finLimpieza": 109.9603239718115,
+                "cancha": {
+                    "estado": "RECIBIENDO_LIMPIEZA"
+                },
+                "colaHF": 8,
+                "colaB": 10,
+                "acumuladorEsperaFutbol": 126.38471790629295,
+                "acumuladorEsperaHandBall": 0.0,
+                "acumuladorEsperaBasketBall": 455.6864250466645,
+                "acumuladorCantidadFutbolLlegaron": 0,
+                "acumuladorCantidadHandBallLlegaron": 0,
+                "acumuladorCantidadBasketBallLlegaron": 0,
+                "llegaronFutbolHandBall": [
+                    {
+                        "tipo": "HAND_BALL",
+                        "rnd_llegada1": 0.5145573956081833,
+                        "rnd_llegada2": 0.9387119274693267,
+                        "llegada": 22.13671205329328,
+                        "rnd_fin_juego1": 0.5791077633858823,
+                        "rnd_fin_juego2": 0.007486808496297903,
+                        "fin_juego": 1.7976931348623157E308,
+                        "estado": "FIN_JUEGO"
+                    },
+                    {
+                        "tipo": "HAND_BALL",
+                        "rnd_llegada1": 0.5145573956081833,
+                        "rnd_llegada2": 0.9387119274693267,
+                        "llegada": 41.270659519071074,
+                        "rnd_fin_juego1": 0.5791077633858823,
+                        "rnd_fin_juego2": 0.007486808496297903,
+                        "fin_juego": 1.7976931348623157E308,
+                        "estado": "FIN_JUEGO"
+                    },
+                    {
+                        "tipo": "FUTBOL",
+                        "rnd_llegada": 0.7397116102546244,
+                        "llegada": 43.48364673125598,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "HAND_BALL",
+                        "rnd_llegada1": 0.33713121387980505,
+                        "rnd_llegada2": 0.6967523617704322,
+                        "llegada": 60.30223884174352,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "FUTBOL",
+                        "rnd_llegada": 0.6757021877152599,
+                        "llegada": 77.2664370808445,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "HAND_BALL",
+                        "rnd_llegada1": 0.33713121387980505,
+                        "rnd_llegada2": 0.6967523617704322,
+                        "llegada": 77.51648473962757,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "FUTBOL",
+                        "rnd_llegada": 0.010956948009574918,
+                        "llegada": 77.59695960516392,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "HAND_BALL",
+                        "rnd_llegada1": 0.6037707380652982,
+                        "rnd_llegada2": 0.37152004758658064,
+                        "llegada": 96.12723583523072,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "FUTBOL",
+                        "rnd_llegada": 0.5184343596826992,
+                        "llegada": 99.51834157682774,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "FUTBOL",
+                        "rnd_llegada": 0.03385290044914757,
+                        "llegada": 100.55151695867244,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    }
+                ],
+                "llegaronBasketBall": [
+                    {
+                        "tipo": "BASKET_BALL",
+                        "rnd_llegada1": 0.2516439702199742,
+                        "rnd_llegada2": 0.58806102614851,
+                        "llegada": 15.427488351038564,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "BASKET_BALL",
+                        "rnd_llegada1": 0.5201807211071783,
+                        "rnd_llegada2": 0.0675376378357575,
+                        "llegada": 27.511298899773863,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "BASKET_BALL",
+                        "rnd_llegada1": 0.5201807211071783,
+                        "rnd_llegada2": 0.0675376378357575,
+                        "llegada": 38.45276875831047,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "BASKET_BALL",
+                        "rnd_llegada1": 0.42429473296077513,
+                        "rnd_llegada2": 0.6085763830381785,
+                        "llegada": 46.42002368434708,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "BASKET_BALL",
+                        "rnd_llegada1": 0.42429473296077513,
+                        "rnd_llegada2": 0.6085763830381785,
+                        "llegada": 54.768792935203145,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "BASKET_BALL",
+                        "rnd_llegada1": 0.3167352495263638,
+                        "rnd_llegada2": 0.4669837200025906,
+                        "llegada": 61.801075309177605,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "BASKET_BALL",
+                        "rnd_llegada1": 0.3167352495263638,
+                        "rnd_llegada2": 0.4669837200025906,
+                        "llegada": 72.42570666014014,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "BASKET_BALL",
+                        "rnd_llegada1": 0.9280949322809195,
+                        "rnd_llegada2": 0.09456631374961555,
+                        "llegada": 83.06592186427865,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "BASKET_BALL",
+                        "rnd_llegada1": 0.9280949322809195,
+                        "rnd_llegada2": 0.09456631374961555,
+                        "llegada": 93.49846610719692,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "BASKET_BALL",
+                        "rnd_llegada1": 0.3207198938364654,
+                        "rnd_llegada2": 0.532589251786078,
+                        "llegada": 100.54527210198407,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    }
+                ]
             },
-            "handBallALlegar": {
-                "rnd_llegada1": 0.5045137929917881,
-                "rnd_llegada2": 0.3265972988237069,
-                "llegada": 40.99077001405989,
-                "rnd_fin_juego1": 0.0,
-                "rnd_fin_juego2": 0.0,
-                "fin_juego": 0.0,
-                "llego": false,
-                "estado": "NO_LLEGO"
+            {
+                "n": 30,
+                "evento": "LLEGADA_BASKET",
+                "reloj": 109.93196769070977,
+                "futbolALlegar": {
+                    "tipo": "FUTBOL",
+                    "rnd_llegada": 0.8044879576960828,
+                    "llegada": 149.51551607841054,
+                    "rnd_fin_juego1": 0.0,
+                    "rnd_fin_juego2": 0.0,
+                    "fin_juego": 0.0,
+                    "estado": "NO_LLEGO"
+                },
+                "handBallALlegar": {
+                    "tipo": "HAND_BALL",
+                    "rnd_llegada1": 0.6037707380652982,
+                    "rnd_llegada2": 0.37152004758658064,
+                    "llegada": 117.57860528798045,
+                    "rnd_fin_juego1": 0.0,
+                    "rnd_fin_juego2": 0.0,
+                    "fin_juego": 0.0,
+                    "estado": "NO_LLEGO"
+                },
+                "basketBallALlegar": {
+                    "tipo": "BASKET_BALL",
+                    "rnd_llegada1": 0.2597414525257453,
+                    "rnd_llegada2": 0.6220005014696892,
+                    "llegada": 117.56649182552746,
+                    "rnd_fin_juego1": 0.0,
+                    "rnd_fin_juego2": 0.0,
+                    "fin_juego": 0.0,
+                    "estado": "NO_LLEGO"
+                },
+                "jugando1": null,
+                "jugando2": null,
+                "finLimpieza": 109.9603239718115,
+                "cancha": {
+                    "estado": "RECIBIENDO_LIMPIEZA"
+                },
+                "colaHF": 8,
+                "colaB": 11,
+                "acumuladorEsperaFutbol": 151.24293650078428,
+                "acumuladorEsperaHandBall": 0.0,
+                "acumuladorEsperaBasketBall": 505.40286223564726,
+                "acumuladorCantidadFutbolLlegaron": 0,
+                "acumuladorCantidadHandBallLlegaron": 0,
+                "acumuladorCantidadBasketBallLlegaron": 0,
+                "llegaronFutbolHandBall": [
+                    {
+                        "tipo": "HAND_BALL",
+                        "rnd_llegada1": 0.5145573956081833,
+                        "rnd_llegada2": 0.9387119274693267,
+                        "llegada": 22.13671205329328,
+                        "rnd_fin_juego1": 0.5791077633858823,
+                        "rnd_fin_juego2": 0.007486808496297903,
+                        "fin_juego": 1.7976931348623157E308,
+                        "estado": "FIN_JUEGO"
+                    },
+                    {
+                        "tipo": "HAND_BALL",
+                        "rnd_llegada1": 0.5145573956081833,
+                        "rnd_llegada2": 0.9387119274693267,
+                        "llegada": 41.270659519071074,
+                        "rnd_fin_juego1": 0.5791077633858823,
+                        "rnd_fin_juego2": 0.007486808496297903,
+                        "fin_juego": 1.7976931348623157E308,
+                        "estado": "FIN_JUEGO"
+                    },
+                    {
+                        "tipo": "FUTBOL",
+                        "rnd_llegada": 0.7397116102546244,
+                        "llegada": 43.48364673125598,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "HAND_BALL",
+                        "rnd_llegada1": 0.33713121387980505,
+                        "rnd_llegada2": 0.6967523617704322,
+                        "llegada": 60.30223884174352,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "FUTBOL",
+                        "rnd_llegada": 0.6757021877152599,
+                        "llegada": 77.2664370808445,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "HAND_BALL",
+                        "rnd_llegada1": 0.33713121387980505,
+                        "rnd_llegada2": 0.6967523617704322,
+                        "llegada": 77.51648473962757,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "FUTBOL",
+                        "rnd_llegada": 0.010956948009574918,
+                        "llegada": 77.59695960516392,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "HAND_BALL",
+                        "rnd_llegada1": 0.6037707380652982,
+                        "rnd_llegada2": 0.37152004758658064,
+                        "llegada": 96.12723583523072,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "FUTBOL",
+                        "rnd_llegada": 0.5184343596826992,
+                        "llegada": 99.51834157682774,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "FUTBOL",
+                        "rnd_llegada": 0.03385290044914757,
+                        "llegada": 100.55151695867244,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    }
+                ],
+                "llegaronBasketBall": [
+                    {
+                        "tipo": "BASKET_BALL",
+                        "rnd_llegada1": 0.2516439702199742,
+                        "rnd_llegada2": 0.58806102614851,
+                        "llegada": 15.427488351038564,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "BASKET_BALL",
+                        "rnd_llegada1": 0.5201807211071783,
+                        "rnd_llegada2": 0.0675376378357575,
+                        "llegada": 27.511298899773863,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "BASKET_BALL",
+                        "rnd_llegada1": 0.5201807211071783,
+                        "rnd_llegada2": 0.0675376378357575,
+                        "llegada": 38.45276875831047,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "BASKET_BALL",
+                        "rnd_llegada1": 0.42429473296077513,
+                        "rnd_llegada2": 0.6085763830381785,
+                        "llegada": 46.42002368434708,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "BASKET_BALL",
+                        "rnd_llegada1": 0.42429473296077513,
+                        "rnd_llegada2": 0.6085763830381785,
+                        "llegada": 54.768792935203145,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "BASKET_BALL",
+                        "rnd_llegada1": 0.3167352495263638,
+                        "rnd_llegada2": 0.4669837200025906,
+                        "llegada": 61.801075309177605,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "BASKET_BALL",
+                        "rnd_llegada1": 0.3167352495263638,
+                        "rnd_llegada2": 0.4669837200025906,
+                        "llegada": 72.42570666014014,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "BASKET_BALL",
+                        "rnd_llegada1": 0.9280949322809195,
+                        "rnd_llegada2": 0.09456631374961555,
+                        "llegada": 83.06592186427865,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "BASKET_BALL",
+                        "rnd_llegada1": 0.9280949322809195,
+                        "rnd_llegada2": 0.09456631374961555,
+                        "llegada": 93.49846610719692,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "BASKET_BALL",
+                        "rnd_llegada1": 0.3207198938364654,
+                        "rnd_llegada2": 0.532589251786078,
+                        "llegada": 100.54527210198407,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "BASKET_BALL",
+                        "rnd_llegada1": 0.3207198938364654,
+                        "rnd_llegada2": 0.532589251786078,
+                        "llegada": 109.93196769070977,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    }
+                ]
             },
-            "basketBallALlegar": {
-                "rnd_llegada1": 0.14981362086436079,
-                "rnd_llegada2": 0.49725518309741623,
-                "llegada": 36.44235094091483,
-                "rnd_fin_juego1": 0.0,
-                "rnd_fin_juego2": 0.0,
-                "fin_juego": 0.0,
-                "llego": false,
-                "estado": "NO_LLEGO"
-            },
-            "jugando1": {
-                "rnd_llegada1": 0.9048438863216288,
-                "rnd_llegada2": 0.3405565316942394,
-                "llegada": 9.518121363251916,
-                "rnd_fin_juego1": 0.8776360759891684,
-                "rnd_fin_juego2": 0.27962760187353797,
-                "fin_juego": 1.7976931348623157E308,
-                "llego": true,
-                "estado": "FIN_JUEGO"
-            },
-            "jugando2": null,
-            "finLimpieza": 1.7976931348623157E308,
-            "cancha": {
-                "estado": "OCUPADA_UN_GRUPO"
-            },
-            "colaHF": 1,
-            "colaB": 2,
-            "acumuladorEsperaFutbol": 0.0,
-            "acumuladorEsperaHandBall": 0.0,
-            "acumuladorEsperaBasketBall": 6.103541393954902,
-            "acumuladorCantidadFutbolLlegaron": 0,
-            "acumuladorCantidadHandBallLlegaron": 0,
-            "acumuladorCantidadBasketBallLlegaron": 0,
-            "llegaron": [
-                {
-                    "rnd_llegada1": 0.9048438863216288,
-                    "rnd_llegada2": 0.3405565316942394,
-                    "llegada": 9.518121363251916,
-                    "rnd_fin_juego1": 0.8776360759891684,
-                    "rnd_fin_juego2": 0.27962760187353797,
-                    "fin_juego": 29.423557743577128,
-                    "llego": true,
+            {
+                "n": 31,
+                "evento": "FIN_LIMPIEZA",
+                "reloj": 109.9603239718115,
+                "futbolALlegar": {
+                    "tipo": "FUTBOL",
+                    "rnd_llegada": 0.8044879576960828,
+                    "llegada": 149.51551607841054,
+                    "rnd_fin_juego1": 0.0,
+                    "rnd_fin_juego2": 0.0,
+                    "fin_juego": 0.0,
+                    "estado": "NO_LLEGO"
+                },
+                "handBallALlegar": {
+                    "tipo": "HAND_BALL",
+                    "rnd_llegada1": 0.6037707380652982,
+                    "rnd_llegada2": 0.37152004758658064,
+                    "llegada": 117.57860528798045,
+                    "rnd_fin_juego1": 0.0,
+                    "rnd_fin_juego2": 0.0,
+                    "fin_juego": 0.0,
+                    "estado": "NO_LLEGO"
+                },
+                "basketBallALlegar": {
+                    "tipo": "BASKET_BALL",
+                    "rnd_llegada1": 0.2597414525257453,
+                    "rnd_llegada2": 0.6220005014696892,
+                    "llegada": 117.56649182552746,
+                    "rnd_fin_juego1": 0.0,
+                    "rnd_fin_juego2": 0.0,
+                    "fin_juego": 0.0,
+                    "estado": "NO_LLEGO"
+                },
+                "jugando1": {
+                    "tipo": "FUTBOL",
+                    "rnd_llegada": 0.7397116102546244,
+                    "llegada": 43.48364673125598,
+                    "rnd_fin_juego1": 0.2099917012012431,
+                    "rnd_fin_juego2": 0.4555433680190163,
+                    "fin_juego": 117.44743389835769,
                     "estado": "JUGANDO"
                 },
-                {
-                    "rnd_llegada1": 0.5045137929917881,
-                    "rnd_llegada2": 0.3265972988237069,
-                    "llegada": 18.9170206342181,
+                "jugando2": null,
+                "finLimpieza": 1.7976931348623157E308,
+                "cancha": {
+                    "estado": "OCUPADA_UN_GRUPO"
+                },
+                "colaHF": 7,
+                "colaB": 11,
+                "acumuladorEsperaFutbol": 84.90804066573743,
+                "acumuladorEsperaHandBall": 0.0,
+                "acumuladorEsperaBasketBall": 505.7147813277662,
+                "acumuladorCantidadFutbolLlegaron": 0,
+                "acumuladorCantidadHandBallLlegaron": 0,
+                "acumuladorCantidadBasketBallLlegaron": 0,
+                "llegaronFutbolHandBall": [
+                    {
+                        "tipo": "HAND_BALL",
+                        "rnd_llegada1": 0.5145573956081833,
+                        "rnd_llegada2": 0.9387119274693267,
+                        "llegada": 22.13671205329328,
+                        "rnd_fin_juego1": 0.5791077633858823,
+                        "rnd_fin_juego2": 0.007486808496297903,
+                        "fin_juego": 1.7976931348623157E308,
+                        "estado": "FIN_JUEGO"
+                    },
+                    {
+                        "tipo": "HAND_BALL",
+                        "rnd_llegada1": 0.5145573956081833,
+                        "rnd_llegada2": 0.9387119274693267,
+                        "llegada": 41.270659519071074,
+                        "rnd_fin_juego1": 0.5791077633858823,
+                        "rnd_fin_juego2": 0.007486808496297903,
+                        "fin_juego": 1.7976931348623157E308,
+                        "estado": "FIN_JUEGO"
+                    },
+                    {
+                        "tipo": "FUTBOL",
+                        "rnd_llegada": 0.7397116102546244,
+                        "llegada": 43.48364673125598,
+                        "rnd_fin_juego1": 0.2099917012012431,
+                        "rnd_fin_juego2": 0.4555433680190163,
+                        "fin_juego": 117.44743389835769,
+                        "estado": "JUGANDO"
+                    },
+                    {
+                        "tipo": "HAND_BALL",
+                        "rnd_llegada1": 0.33713121387980505,
+                        "rnd_llegada2": 0.6967523617704322,
+                        "llegada": 60.30223884174352,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "FUTBOL",
+                        "rnd_llegada": 0.6757021877152599,
+                        "llegada": 77.2664370808445,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "HAND_BALL",
+                        "rnd_llegada1": 0.33713121387980505,
+                        "rnd_llegada2": 0.6967523617704322,
+                        "llegada": 77.51648473962757,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "FUTBOL",
+                        "rnd_llegada": 0.010956948009574918,
+                        "llegada": 77.59695960516392,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "HAND_BALL",
+                        "rnd_llegada1": 0.6037707380652982,
+                        "rnd_llegada2": 0.37152004758658064,
+                        "llegada": 96.12723583523072,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "FUTBOL",
+                        "rnd_llegada": 0.5184343596826992,
+                        "llegada": 99.51834157682774,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "FUTBOL",
+                        "rnd_llegada": 0.03385290044914757,
+                        "llegada": 100.55151695867244,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    }
+                ],
+                "llegaronBasketBall": [
+                    {
+                        "tipo": "BASKET_BALL",
+                        "rnd_llegada1": 0.2516439702199742,
+                        "rnd_llegada2": 0.58806102614851,
+                        "llegada": 15.427488351038564,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "BASKET_BALL",
+                        "rnd_llegada1": 0.5201807211071783,
+                        "rnd_llegada2": 0.0675376378357575,
+                        "llegada": 27.511298899773863,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "BASKET_BALL",
+                        "rnd_llegada1": 0.5201807211071783,
+                        "rnd_llegada2": 0.0675376378357575,
+                        "llegada": 38.45276875831047,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "BASKET_BALL",
+                        "rnd_llegada1": 0.42429473296077513,
+                        "rnd_llegada2": 0.6085763830381785,
+                        "llegada": 46.42002368434708,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "BASKET_BALL",
+                        "rnd_llegada1": 0.42429473296077513,
+                        "rnd_llegada2": 0.6085763830381785,
+                        "llegada": 54.768792935203145,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "BASKET_BALL",
+                        "rnd_llegada1": 0.3167352495263638,
+                        "rnd_llegada2": 0.4669837200025906,
+                        "llegada": 61.801075309177605,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "BASKET_BALL",
+                        "rnd_llegada1": 0.3167352495263638,
+                        "rnd_llegada2": 0.4669837200025906,
+                        "llegada": 72.42570666014014,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "BASKET_BALL",
+                        "rnd_llegada1": 0.9280949322809195,
+                        "rnd_llegada2": 0.09456631374961555,
+                        "llegada": 83.06592186427865,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "BASKET_BALL",
+                        "rnd_llegada1": 0.9280949322809195,
+                        "rnd_llegada2": 0.09456631374961555,
+                        "llegada": 93.49846610719692,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "BASKET_BALL",
+                        "rnd_llegada1": 0.3207198938364654,
+                        "rnd_llegada2": 0.532589251786078,
+                        "llegada": 100.54527210198407,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "BASKET_BALL",
+                        "rnd_llegada1": 0.3207198938364654,
+                        "rnd_llegada2": 0.532589251786078,
+                        "llegada": 109.93196769070977,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    }
+                ]
+            },
+            {
+                "n": 32,
+                "evento": "FIN_JUEGO",
+                "reloj": 117.44743389835769,
+                "futbolALlegar": {
+                    "tipo": "FUTBOL",
+                    "rnd_llegada": 0.8044879576960828,
+                    "llegada": 149.51551607841054,
                     "rnd_fin_juego1": 0.0,
                     "rnd_fin_juego2": 0.0,
                     "fin_juego": 0.0,
-                    "llego": true,
-                    "estado": "ESPERANDO"
+                    "estado": "NO_LLEGO"
                 },
-                {
-                    "rnd_llegada1": 0.9048438863216288,
-                    "rnd_llegada2": 0.3405565316942394,
-                    "llegada": 20.271603805755074,
+                "handBallALlegar": {
+                    "tipo": "HAND_BALL",
+                    "rnd_llegada1": 0.6037707380652982,
+                    "rnd_llegada2": 0.37152004758658064,
+                    "llegada": 117.57860528798045,
                     "rnd_fin_juego1": 0.0,
                     "rnd_fin_juego2": 0.0,
                     "fin_juego": 0.0,
-                    "llego": true,
-                    "estado": "ESPERANDO"
+                    "estado": "NO_LLEGO"
                 },
-                {
-                    "rnd_llegada1": 0.14981362086436079,
-                    "rnd_llegada2": 0.49725518309741623,
-                    "llegada": 26.375145199709976,
+                "basketBallALlegar": {
+                    "tipo": "BASKET_BALL",
+                    "rnd_llegada1": 0.2597414525257453,
+                    "rnd_llegada2": 0.6220005014696892,
+                    "llegada": 117.56649182552746,
                     "rnd_fin_juego1": 0.0,
                     "rnd_fin_juego2": 0.0,
                     "fin_juego": 0.0,
-                    "llego": true,
-                    "estado": "ESPERANDO"
-                }
-            ]
-        },
-        {
-            "n": 5,
-            "evento": "FIN_JUEGO",
-            "reloj": 29.423557743577128,
-            "futbolALlegar": {
-                "rnd_llegada": 0.9473691969955245,
-                "llegada": 88.33361166570249,
-                "rnd_fin_juego1": 0.0,
-                "rnd_fin_juego2": 0.0,
-                "fin_juego": 0.0,
-                "llego": false,
-                "estado": "NO_LLEGO"
-            },
-            "handBallALlegar": {
-                "rnd_llegada1": 0.5045137929917881,
-                "rnd_llegada2": 0.3265972988237069,
-                "llegada": 40.99077001405989,
-                "rnd_fin_juego1": 0.0,
-                "rnd_fin_juego2": 0.0,
-                "fin_juego": 0.0,
-                "llego": false,
-                "estado": "NO_LLEGO"
-            },
-            "basketBallALlegar": {
-                "rnd_llegada1": 0.14981362086436079,
-                "rnd_llegada2": 0.49725518309741623,
-                "llegada": 36.44235094091483,
-                "rnd_fin_juego1": 0.0,
-                "rnd_fin_juego2": 0.0,
-                "fin_juego": 0.0,
-                "llego": false,
-                "estado": "NO_LLEGO"
-            },
-            "jugando1": null,
-            "jugando2": null,
-            "finLimpieza": 34.42355774357713,
-            "cancha": {
-                "estado": "RECIBIENDO_LIMPIEZA"
-            },
-            "colaHF": 1,
-            "colaB": 2,
-            "acumuladorEsperaFutbol": 0.0,
-            "acumuladorEsperaHandBall": 0.0,
-            "acumuladorEsperaBasketBall": 12.200366481689205,
-            "acumuladorCantidadFutbolLlegaron": 0,
-            "acumuladorCantidadHandBallLlegaron": 0,
-            "acumuladorCantidadBasketBallLlegaron": 0,
-            "llegaron": [
-                {
-                    "rnd_llegada1": 0.9048438863216288,
-                    "rnd_llegada2": 0.3405565316942394,
-                    "llegada": 9.518121363251916,
-                    "rnd_fin_juego1": 0.8776360759891684,
-                    "rnd_fin_juego2": 0.27962760187353797,
-                    "fin_juego": 1.7976931348623157E308,
-                    "llego": true,
-                    "estado": "FIN_JUEGO"
+                    "estado": "NO_LLEGO"
                 },
-                {
-                    "rnd_llegada1": 0.5045137929917881,
-                    "rnd_llegada2": 0.3265972988237069,
-                    "llegada": 18.9170206342181,
+                "jugando1": null,
+                "jugando2": null,
+                "finLimpieza": 122.44743389835769,
+                "cancha": {
+                    "estado": "RECIBIENDO_LIMPIEZA"
+                },
+                "colaHF": 7,
+                "colaB": 11,
+                "acumuladorEsperaFutbol": 114.85648037192216,
+                "acumuladorEsperaHandBall": 0.0,
+                "acumuladorEsperaBasketBall": 588.0729905197743,
+                "acumuladorCantidadFutbolLlegaron": 0,
+                "acumuladorCantidadHandBallLlegaron": 0,
+                "acumuladorCantidadBasketBallLlegaron": 0,
+                "llegaronFutbolHandBall": [
+                    {
+                        "tipo": "HAND_BALL",
+                        "rnd_llegada1": 0.5145573956081833,
+                        "rnd_llegada2": 0.9387119274693267,
+                        "llegada": 22.13671205329328,
+                        "rnd_fin_juego1": 0.5791077633858823,
+                        "rnd_fin_juego2": 0.007486808496297903,
+                        "fin_juego": 1.7976931348623157E308,
+                        "estado": "FIN_JUEGO"
+                    },
+                    {
+                        "tipo": "HAND_BALL",
+                        "rnd_llegada1": 0.5145573956081833,
+                        "rnd_llegada2": 0.9387119274693267,
+                        "llegada": 41.270659519071074,
+                        "rnd_fin_juego1": 0.5791077633858823,
+                        "rnd_fin_juego2": 0.007486808496297903,
+                        "fin_juego": 1.7976931348623157E308,
+                        "estado": "FIN_JUEGO"
+                    },
+                    {
+                        "tipo": "FUTBOL",
+                        "rnd_llegada": 0.7397116102546244,
+                        "llegada": 43.48364673125598,
+                        "rnd_fin_juego1": 0.2099917012012431,
+                        "rnd_fin_juego2": 0.4555433680190163,
+                        "fin_juego": 1.7976931348623157E308,
+                        "estado": "FIN_JUEGO"
+                    },
+                    {
+                        "tipo": "HAND_BALL",
+                        "rnd_llegada1": 0.33713121387980505,
+                        "rnd_llegada2": 0.6967523617704322,
+                        "llegada": 60.30223884174352,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "FUTBOL",
+                        "rnd_llegada": 0.6757021877152599,
+                        "llegada": 77.2664370808445,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "HAND_BALL",
+                        "rnd_llegada1": 0.33713121387980505,
+                        "rnd_llegada2": 0.6967523617704322,
+                        "llegada": 77.51648473962757,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "FUTBOL",
+                        "rnd_llegada": 0.010956948009574918,
+                        "llegada": 77.59695960516392,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "HAND_BALL",
+                        "rnd_llegada1": 0.6037707380652982,
+                        "rnd_llegada2": 0.37152004758658064,
+                        "llegada": 96.12723583523072,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "FUTBOL",
+                        "rnd_llegada": 0.5184343596826992,
+                        "llegada": 99.51834157682774,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "FUTBOL",
+                        "rnd_llegada": 0.03385290044914757,
+                        "llegada": 100.55151695867244,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    }
+                ],
+                "llegaronBasketBall": [
+                    {
+                        "tipo": "BASKET_BALL",
+                        "rnd_llegada1": 0.2516439702199742,
+                        "rnd_llegada2": 0.58806102614851,
+                        "llegada": 15.427488351038564,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "BASKET_BALL",
+                        "rnd_llegada1": 0.5201807211071783,
+                        "rnd_llegada2": 0.0675376378357575,
+                        "llegada": 27.511298899773863,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "BASKET_BALL",
+                        "rnd_llegada1": 0.5201807211071783,
+                        "rnd_llegada2": 0.0675376378357575,
+                        "llegada": 38.45276875831047,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "BASKET_BALL",
+                        "rnd_llegada1": 0.42429473296077513,
+                        "rnd_llegada2": 0.6085763830381785,
+                        "llegada": 46.42002368434708,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "BASKET_BALL",
+                        "rnd_llegada1": 0.42429473296077513,
+                        "rnd_llegada2": 0.6085763830381785,
+                        "llegada": 54.768792935203145,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "BASKET_BALL",
+                        "rnd_llegada1": 0.3167352495263638,
+                        "rnd_llegada2": 0.4669837200025906,
+                        "llegada": 61.801075309177605,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "BASKET_BALL",
+                        "rnd_llegada1": 0.3167352495263638,
+                        "rnd_llegada2": 0.4669837200025906,
+                        "llegada": 72.42570666014014,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "BASKET_BALL",
+                        "rnd_llegada1": 0.9280949322809195,
+                        "rnd_llegada2": 0.09456631374961555,
+                        "llegada": 83.06592186427865,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "BASKET_BALL",
+                        "rnd_llegada1": 0.9280949322809195,
+                        "rnd_llegada2": 0.09456631374961555,
+                        "llegada": 93.49846610719692,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "BASKET_BALL",
+                        "rnd_llegada1": 0.3207198938364654,
+                        "rnd_llegada2": 0.532589251786078,
+                        "llegada": 100.54527210198407,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "BASKET_BALL",
+                        "rnd_llegada1": 0.3207198938364654,
+                        "rnd_llegada2": 0.532589251786078,
+                        "llegada": 109.93196769070977,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    }
+                ]
+            },
+            {
+                "n": 33,
+                "evento": "LLEGADA_BASKET",
+                "reloj": 117.56649182552746,
+                "futbolALlegar": {
+                    "tipo": "FUTBOL",
+                    "rnd_llegada": 0.8044879576960828,
+                    "llegada": 149.51551607841054,
                     "rnd_fin_juego1": 0.0,
                     "rnd_fin_juego2": 0.0,
                     "fin_juego": 0.0,
-                    "llego": true,
-                    "estado": "ESPERANDO"
+                    "estado": "NO_LLEGO"
                 },
-                {
-                    "rnd_llegada1": 0.9048438863216288,
-                    "rnd_llegada2": 0.3405565316942394,
-                    "llegada": 20.271603805755074,
+                "handBallALlegar": {
+                    "tipo": "HAND_BALL",
+                    "rnd_llegada1": 0.6037707380652982,
+                    "rnd_llegada2": 0.37152004758658064,
+                    "llegada": 117.57860528798045,
                     "rnd_fin_juego1": 0.0,
                     "rnd_fin_juego2": 0.0,
                     "fin_juego": 0.0,
-                    "llego": true,
-                    "estado": "ESPERANDO"
+                    "estado": "NO_LLEGO"
                 },
-                {
-                    "rnd_llegada1": 0.14981362086436079,
-                    "rnd_llegada2": 0.49725518309741623,
-                    "llegada": 26.375145199709976,
+                "basketBallALlegar": {
+                    "tipo": "BASKET_BALL",
+                    "rnd_llegada1": 0.2597414525257453,
+                    "rnd_llegada2": 0.6220005014696892,
+                    "llegada": 125.28853827465578,
                     "rnd_fin_juego1": 0.0,
                     "rnd_fin_juego2": 0.0,
                     "fin_juego": 0.0,
-                    "llego": true,
-                    "estado": "ESPERANDO"
-                }
-            ]
-        },
-        {
-            "n": 6,
-            "evento": "FIN_LIMPIEZA",
-            "reloj": 34.42355774357713,
-            "futbolALlegar": {
-                "rnd_llegada": 0.9473691969955245,
-                "llegada": 88.33361166570249,
-                "rnd_fin_juego1": 0.0,
-                "rnd_fin_juego2": 0.0,
-                "fin_juego": 0.0,
-                "llego": false,
-                "estado": "NO_LLEGO"
-            },
-            "handBallALlegar": {
-                "rnd_llegada1": 0.5045137929917881,
-                "rnd_llegada2": 0.3265972988237069,
-                "llegada": 40.99077001405989,
-                "rnd_fin_juego1": 0.0,
-                "rnd_fin_juego2": 0.0,
-                "fin_juego": 0.0,
-                "llego": false,
-                "estado": "NO_LLEGO"
-            },
-            "basketBallALlegar": {
-                "rnd_llegada1": 0.14981362086436079,
-                "rnd_llegada2": 0.49725518309741623,
-                "llegada": 36.44235094091483,
-                "rnd_fin_juego1": 0.0,
-                "rnd_fin_juego2": 0.0,
-                "fin_juego": 0.0,
-                "llego": false,
-                "estado": "NO_LLEGO"
-            },
-            "jugando1": {
-                "rnd_llegada1": 0.5045137929917881,
-                "rnd_llegada2": 0.3265972988237069,
-                "llegada": 18.9170206342181,
-                "rnd_fin_juego1": 0.11762907392937505,
-                "rnd_fin_juego2": 0.45466081707232275,
-                "fin_juego": 1.7976931348623157E308,
-                "llego": true,
-                "estado": "FIN_JUEGO"
-            },
-            "jugando2": null,
-            "finLimpieza": 1.7976931348623157E308,
-            "cancha": {
-                "estado": "OCUPADA_UN_GRUPO"
-            },
-            "colaHF": 0,
-            "colaB": 2,
-            "acumuladorEsperaFutbol": 0.0,
-            "acumuladorEsperaHandBall": 0.0,
-            "acumuladorEsperaBasketBall": 22.200366481689205,
-            "acumuladorCantidadFutbolLlegaron": 0,
-            "acumuladorCantidadHandBallLlegaron": 0,
-            "acumuladorCantidadBasketBallLlegaron": 0,
-            "llegaron": [
-                {
-                    "rnd_llegada1": 0.9048438863216288,
-                    "rnd_llegada2": 0.3405565316942394,
-                    "llegada": 9.518121363251916,
-                    "rnd_fin_juego1": 0.8776360759891684,
-                    "rnd_fin_juego2": 0.27962760187353797,
-                    "fin_juego": 1.7976931348623157E308,
-                    "llego": true,
-                    "estado": "FIN_JUEGO"
+                    "estado": "NO_LLEGO"
                 },
-                {
-                    "rnd_llegada1": 0.5045137929917881,
-                    "rnd_llegada2": 0.3265972988237069,
-                    "llegada": 18.9170206342181,
-                    "rnd_fin_juego1": 0.11762907392937505,
-                    "rnd_fin_juego2": 0.45466081707232275,
-                    "fin_juego": 62.438019678497966,
-                    "llego": true,
+                "jugando1": null,
+                "jugando2": null,
+                "finLimpieza": 122.44743389835769,
+                "cancha": {
+                    "estado": "RECIBIENDO_LIMPIEZA"
+                },
+                "colaHF": 7,
+                "colaB": 12,
+                "acumuladorEsperaFutbol": 115.33271208060127,
+                "acumuladorEsperaHandBall": 0.0,
+                "acumuladorEsperaBasketBall": 589.382627718642,
+                "acumuladorCantidadFutbolLlegaron": 0,
+                "acumuladorCantidadHandBallLlegaron": 0,
+                "acumuladorCantidadBasketBallLlegaron": 0,
+                "llegaronFutbolHandBall": [
+                    {
+                        "tipo": "HAND_BALL",
+                        "rnd_llegada1": 0.5145573956081833,
+                        "rnd_llegada2": 0.9387119274693267,
+                        "llegada": 22.13671205329328,
+                        "rnd_fin_juego1": 0.5791077633858823,
+                        "rnd_fin_juego2": 0.007486808496297903,
+                        "fin_juego": 1.7976931348623157E308,
+                        "estado": "FIN_JUEGO"
+                    },
+                    {
+                        "tipo": "HAND_BALL",
+                        "rnd_llegada1": 0.5145573956081833,
+                        "rnd_llegada2": 0.9387119274693267,
+                        "llegada": 41.270659519071074,
+                        "rnd_fin_juego1": 0.5791077633858823,
+                        "rnd_fin_juego2": 0.007486808496297903,
+                        "fin_juego": 1.7976931348623157E308,
+                        "estado": "FIN_JUEGO"
+                    },
+                    {
+                        "tipo": "FUTBOL",
+                        "rnd_llegada": 0.7397116102546244,
+                        "llegada": 43.48364673125598,
+                        "rnd_fin_juego1": 0.2099917012012431,
+                        "rnd_fin_juego2": 0.4555433680190163,
+                        "fin_juego": 1.7976931348623157E308,
+                        "estado": "FIN_JUEGO"
+                    },
+                    {
+                        "tipo": "HAND_BALL",
+                        "rnd_llegada1": 0.33713121387980505,
+                        "rnd_llegada2": 0.6967523617704322,
+                        "llegada": 60.30223884174352,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "FUTBOL",
+                        "rnd_llegada": 0.6757021877152599,
+                        "llegada": 77.2664370808445,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "HAND_BALL",
+                        "rnd_llegada1": 0.33713121387980505,
+                        "rnd_llegada2": 0.6967523617704322,
+                        "llegada": 77.51648473962757,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "FUTBOL",
+                        "rnd_llegada": 0.010956948009574918,
+                        "llegada": 77.59695960516392,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "HAND_BALL",
+                        "rnd_llegada1": 0.6037707380652982,
+                        "rnd_llegada2": 0.37152004758658064,
+                        "llegada": 96.12723583523072,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "FUTBOL",
+                        "rnd_llegada": 0.5184343596826992,
+                        "llegada": 99.51834157682774,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "FUTBOL",
+                        "rnd_llegada": 0.03385290044914757,
+                        "llegada": 100.55151695867244,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    }
+                ],
+                "llegaronBasketBall": [
+                    {
+                        "tipo": "BASKET_BALL",
+                        "rnd_llegada1": 0.2516439702199742,
+                        "rnd_llegada2": 0.58806102614851,
+                        "llegada": 15.427488351038564,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "BASKET_BALL",
+                        "rnd_llegada1": 0.5201807211071783,
+                        "rnd_llegada2": 0.0675376378357575,
+                        "llegada": 27.511298899773863,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "BASKET_BALL",
+                        "rnd_llegada1": 0.5201807211071783,
+                        "rnd_llegada2": 0.0675376378357575,
+                        "llegada": 38.45276875831047,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "BASKET_BALL",
+                        "rnd_llegada1": 0.42429473296077513,
+                        "rnd_llegada2": 0.6085763830381785,
+                        "llegada": 46.42002368434708,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "BASKET_BALL",
+                        "rnd_llegada1": 0.42429473296077513,
+                        "rnd_llegada2": 0.6085763830381785,
+                        "llegada": 54.768792935203145,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "BASKET_BALL",
+                        "rnd_llegada1": 0.3167352495263638,
+                        "rnd_llegada2": 0.4669837200025906,
+                        "llegada": 61.801075309177605,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "BASKET_BALL",
+                        "rnd_llegada1": 0.3167352495263638,
+                        "rnd_llegada2": 0.4669837200025906,
+                        "llegada": 72.42570666014014,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "BASKET_BALL",
+                        "rnd_llegada1": 0.9280949322809195,
+                        "rnd_llegada2": 0.09456631374961555,
+                        "llegada": 83.06592186427865,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "BASKET_BALL",
+                        "rnd_llegada1": 0.9280949322809195,
+                        "rnd_llegada2": 0.09456631374961555,
+                        "llegada": 93.49846610719692,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "BASKET_BALL",
+                        "rnd_llegada1": 0.3207198938364654,
+                        "rnd_llegada2": 0.532589251786078,
+                        "llegada": 100.54527210198407,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "BASKET_BALL",
+                        "rnd_llegada1": 0.3207198938364654,
+                        "rnd_llegada2": 0.532589251786078,
+                        "llegada": 109.93196769070977,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "BASKET_BALL",
+                        "rnd_llegada1": 0.2597414525257453,
+                        "rnd_llegada2": 0.6220005014696892,
+                        "llegada": 117.56649182552746,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    }
+                ]
+            },
+            {
+                "n": 34,
+                "evento": "LLEGADA_HANDBALL",
+                "reloj": 117.57860528798045,
+                "futbolALlegar": {
+                    "tipo": "FUTBOL",
+                    "rnd_llegada": 0.8044879576960828,
+                    "llegada": 149.51551607841054,
+                    "rnd_fin_juego1": 0.0,
+                    "rnd_fin_juego2": 0.0,
+                    "fin_juego": 0.0,
+                    "estado": "NO_LLEGO"
+                },
+                "handBallALlegar": {
+                    "tipo": "HAND_BALL",
+                    "rnd_llegada1": 0.32875662897058766,
+                    "rnd_llegada2": 0.867224675721282,
+                    "llegada": 139.58251824613242,
+                    "rnd_fin_juego1": 0.0,
+                    "rnd_fin_juego2": 0.0,
+                    "fin_juego": 0.0,
+                    "estado": "NO_LLEGO"
+                },
+                "basketBallALlegar": {
+                    "tipo": "BASKET_BALL",
+                    "rnd_llegada1": 0.2597414525257453,
+                    "rnd_llegada2": 0.6220005014696892,
+                    "llegada": 125.28853827465578,
+                    "rnd_fin_juego1": 0.0,
+                    "rnd_fin_juego2": 0.0,
+                    "fin_juego": 0.0,
+                    "estado": "NO_LLEGO"
+                },
+                "jugando1": null,
+                "jugando2": null,
+                "finLimpieza": 122.44743389835769,
+                "cancha": {
+                    "estado": "RECIBIENDO_LIMPIEZA"
+                },
+                "colaHF": 8,
+                "colaB": 12,
+                "acumuladorEsperaFutbol": 115.38116593041322,
+                "acumuladorEsperaHandBall": 0.0,
+                "acumuladorEsperaBasketBall": 589.5279892680778,
+                "acumuladorCantidadFutbolLlegaron": 0,
+                "acumuladorCantidadHandBallLlegaron": 0,
+                "acumuladorCantidadBasketBallLlegaron": 0,
+                "llegaronFutbolHandBall": [
+                    {
+                        "tipo": "HAND_BALL",
+                        "rnd_llegada1": 0.5145573956081833,
+                        "rnd_llegada2": 0.9387119274693267,
+                        "llegada": 22.13671205329328,
+                        "rnd_fin_juego1": 0.5791077633858823,
+                        "rnd_fin_juego2": 0.007486808496297903,
+                        "fin_juego": 1.7976931348623157E308,
+                        "estado": "FIN_JUEGO"
+                    },
+                    {
+                        "tipo": "HAND_BALL",
+                        "rnd_llegada1": 0.5145573956081833,
+                        "rnd_llegada2": 0.9387119274693267,
+                        "llegada": 41.270659519071074,
+                        "rnd_fin_juego1": 0.5791077633858823,
+                        "rnd_fin_juego2": 0.007486808496297903,
+                        "fin_juego": 1.7976931348623157E308,
+                        "estado": "FIN_JUEGO"
+                    },
+                    {
+                        "tipo": "FUTBOL",
+                        "rnd_llegada": 0.7397116102546244,
+                        "llegada": 43.48364673125598,
+                        "rnd_fin_juego1": 0.2099917012012431,
+                        "rnd_fin_juego2": 0.4555433680190163,
+                        "fin_juego": 1.7976931348623157E308,
+                        "estado": "FIN_JUEGO"
+                    },
+                    {
+                        "tipo": "HAND_BALL",
+                        "rnd_llegada1": 0.33713121387980505,
+                        "rnd_llegada2": 0.6967523617704322,
+                        "llegada": 60.30223884174352,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "FUTBOL",
+                        "rnd_llegada": 0.6757021877152599,
+                        "llegada": 77.2664370808445,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "HAND_BALL",
+                        "rnd_llegada1": 0.33713121387980505,
+                        "rnd_llegada2": 0.6967523617704322,
+                        "llegada": 77.51648473962757,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "FUTBOL",
+                        "rnd_llegada": 0.010956948009574918,
+                        "llegada": 77.59695960516392,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "HAND_BALL",
+                        "rnd_llegada1": 0.6037707380652982,
+                        "rnd_llegada2": 0.37152004758658064,
+                        "llegada": 96.12723583523072,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "FUTBOL",
+                        "rnd_llegada": 0.5184343596826992,
+                        "llegada": 99.51834157682774,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "FUTBOL",
+                        "rnd_llegada": 0.03385290044914757,
+                        "llegada": 100.55151695867244,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "HAND_BALL",
+                        "rnd_llegada1": 0.6037707380652982,
+                        "rnd_llegada2": 0.37152004758658064,
+                        "llegada": 117.57860528798045,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    }
+                ],
+                "llegaronBasketBall": [
+                    {
+                        "tipo": "BASKET_BALL",
+                        "rnd_llegada1": 0.2516439702199742,
+                        "rnd_llegada2": 0.58806102614851,
+                        "llegada": 15.427488351038564,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "BASKET_BALL",
+                        "rnd_llegada1": 0.5201807211071783,
+                        "rnd_llegada2": 0.0675376378357575,
+                        "llegada": 27.511298899773863,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "BASKET_BALL",
+                        "rnd_llegada1": 0.5201807211071783,
+                        "rnd_llegada2": 0.0675376378357575,
+                        "llegada": 38.45276875831047,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "BASKET_BALL",
+                        "rnd_llegada1": 0.42429473296077513,
+                        "rnd_llegada2": 0.6085763830381785,
+                        "llegada": 46.42002368434708,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "BASKET_BALL",
+                        "rnd_llegada1": 0.42429473296077513,
+                        "rnd_llegada2": 0.6085763830381785,
+                        "llegada": 54.768792935203145,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "BASKET_BALL",
+                        "rnd_llegada1": 0.3167352495263638,
+                        "rnd_llegada2": 0.4669837200025906,
+                        "llegada": 61.801075309177605,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "BASKET_BALL",
+                        "rnd_llegada1": 0.3167352495263638,
+                        "rnd_llegada2": 0.4669837200025906,
+                        "llegada": 72.42570666014014,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "BASKET_BALL",
+                        "rnd_llegada1": 0.9280949322809195,
+                        "rnd_llegada2": 0.09456631374961555,
+                        "llegada": 83.06592186427865,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "BASKET_BALL",
+                        "rnd_llegada1": 0.9280949322809195,
+                        "rnd_llegada2": 0.09456631374961555,
+                        "llegada": 93.49846610719692,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "BASKET_BALL",
+                        "rnd_llegada1": 0.3207198938364654,
+                        "rnd_llegada2": 0.532589251786078,
+                        "llegada": 100.54527210198407,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "BASKET_BALL",
+                        "rnd_llegada1": 0.3207198938364654,
+                        "rnd_llegada2": 0.532589251786078,
+                        "llegada": 109.93196769070977,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "BASKET_BALL",
+                        "rnd_llegada1": 0.2597414525257453,
+                        "rnd_llegada2": 0.6220005014696892,
+                        "llegada": 117.56649182552746,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    }
+                ]
+            },
+            {
+                "n": 35,
+                "evento": "FIN_LIMPIEZA",
+                "reloj": 122.44743389835769,
+                "futbolALlegar": {
+                    "tipo": "FUTBOL",
+                    "rnd_llegada": 0.8044879576960828,
+                    "llegada": 149.51551607841054,
+                    "rnd_fin_juego1": 0.0,
+                    "rnd_fin_juego2": 0.0,
+                    "fin_juego": 0.0,
+                    "estado": "NO_LLEGO"
+                },
+                "handBallALlegar": {
+                    "tipo": "HAND_BALL",
+                    "rnd_llegada1": 0.32875662897058766,
+                    "rnd_llegada2": 0.867224675721282,
+                    "llegada": 139.58251824613242,
+                    "rnd_fin_juego1": 0.0,
+                    "rnd_fin_juego2": 0.0,
+                    "fin_juego": 0.0,
+                    "estado": "NO_LLEGO"
+                },
+                "basketBallALlegar": {
+                    "tipo": "BASKET_BALL",
+                    "rnd_llegada1": 0.2597414525257453,
+                    "rnd_llegada2": 0.6220005014696892,
+                    "llegada": 125.28853827465578,
+                    "rnd_fin_juego1": 0.0,
+                    "rnd_fin_juego2": 0.0,
+                    "fin_juego": 0.0,
+                    "estado": "NO_LLEGO"
+                },
+                "jugando1": {
+                    "tipo": "HAND_BALL",
+                    "rnd_llegada1": 0.33713121387980505,
+                    "rnd_llegada2": 0.6967523617704322,
+                    "llegada": 60.30223884174352,
+                    "rnd_fin_juego1": 0.1570959712160358,
+                    "rnd_fin_juego2": 0.34456766429897867,
+                    "fin_juego": 151.37030913180962,
                     "estado": "JUGANDO"
                 },
-                {
-                    "rnd_llegada1": 0.9048438863216288,
-                    "rnd_llegada2": 0.3405565316942394,
-                    "llegada": 20.271603805755074,
+                "jugando2": null,
+                "finLimpieza": 1.7976931348623157E308,
+                "cancha": {
+                    "estado": "OCUPADA_UN_GRUPO"
+                },
+                "colaHF": 7,
+                "colaB": 12,
+                "acumuladorEsperaFutbol": 134.85648037192215,
+                "acumuladorEsperaHandBall": 0.0,
+                "acumuladorEsperaBasketBall": 647.9539325926045,
+                "acumuladorCantidadFutbolLlegaron": 0,
+                "acumuladorCantidadHandBallLlegaron": 0,
+                "acumuladorCantidadBasketBallLlegaron": 0,
+                "llegaronFutbolHandBall": [
+                    {
+                        "tipo": "HAND_BALL",
+                        "rnd_llegada1": 0.5145573956081833,
+                        "rnd_llegada2": 0.9387119274693267,
+                        "llegada": 22.13671205329328,
+                        "rnd_fin_juego1": 0.5791077633858823,
+                        "rnd_fin_juego2": 0.007486808496297903,
+                        "fin_juego": 1.7976931348623157E308,
+                        "estado": "FIN_JUEGO"
+                    },
+                    {
+                        "tipo": "HAND_BALL",
+                        "rnd_llegada1": 0.5145573956081833,
+                        "rnd_llegada2": 0.9387119274693267,
+                        "llegada": 41.270659519071074,
+                        "rnd_fin_juego1": 0.5791077633858823,
+                        "rnd_fin_juego2": 0.007486808496297903,
+                        "fin_juego": 1.7976931348623157E308,
+                        "estado": "FIN_JUEGO"
+                    },
+                    {
+                        "tipo": "FUTBOL",
+                        "rnd_llegada": 0.7397116102546244,
+                        "llegada": 43.48364673125598,
+                        "rnd_fin_juego1": 0.2099917012012431,
+                        "rnd_fin_juego2": 0.4555433680190163,
+                        "fin_juego": 1.7976931348623157E308,
+                        "estado": "FIN_JUEGO"
+                    },
+                    {
+                        "tipo": "HAND_BALL",
+                        "rnd_llegada1": 0.33713121387980505,
+                        "rnd_llegada2": 0.6967523617704322,
+                        "llegada": 60.30223884174352,
+                        "rnd_fin_juego1": 0.1570959712160358,
+                        "rnd_fin_juego2": 0.34456766429897867,
+                        "fin_juego": 151.37030913180962,
+                        "estado": "JUGANDO"
+                    },
+                    {
+                        "tipo": "FUTBOL",
+                        "rnd_llegada": 0.6757021877152599,
+                        "llegada": 77.2664370808445,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "HAND_BALL",
+                        "rnd_llegada1": 0.33713121387980505,
+                        "rnd_llegada2": 0.6967523617704322,
+                        "llegada": 77.51648473962757,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "FUTBOL",
+                        "rnd_llegada": 0.010956948009574918,
+                        "llegada": 77.59695960516392,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "HAND_BALL",
+                        "rnd_llegada1": 0.6037707380652982,
+                        "rnd_llegada2": 0.37152004758658064,
+                        "llegada": 96.12723583523072,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "FUTBOL",
+                        "rnd_llegada": 0.5184343596826992,
+                        "llegada": 99.51834157682774,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "FUTBOL",
+                        "rnd_llegada": 0.03385290044914757,
+                        "llegada": 100.55151695867244,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "HAND_BALL",
+                        "rnd_llegada1": 0.6037707380652982,
+                        "rnd_llegada2": 0.37152004758658064,
+                        "llegada": 117.57860528798045,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    }
+                ],
+                "llegaronBasketBall": [
+                    {
+                        "tipo": "BASKET_BALL",
+                        "rnd_llegada1": 0.2516439702199742,
+                        "rnd_llegada2": 0.58806102614851,
+                        "llegada": 15.427488351038564,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "BASKET_BALL",
+                        "rnd_llegada1": 0.5201807211071783,
+                        "rnd_llegada2": 0.0675376378357575,
+                        "llegada": 27.511298899773863,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "BASKET_BALL",
+                        "rnd_llegada1": 0.5201807211071783,
+                        "rnd_llegada2": 0.0675376378357575,
+                        "llegada": 38.45276875831047,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "BASKET_BALL",
+                        "rnd_llegada1": 0.42429473296077513,
+                        "rnd_llegada2": 0.6085763830381785,
+                        "llegada": 46.42002368434708,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "BASKET_BALL",
+                        "rnd_llegada1": 0.42429473296077513,
+                        "rnd_llegada2": 0.6085763830381785,
+                        "llegada": 54.768792935203145,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "BASKET_BALL",
+                        "rnd_llegada1": 0.3167352495263638,
+                        "rnd_llegada2": 0.4669837200025906,
+                        "llegada": 61.801075309177605,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "BASKET_BALL",
+                        "rnd_llegada1": 0.3167352495263638,
+                        "rnd_llegada2": 0.4669837200025906,
+                        "llegada": 72.42570666014014,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "BASKET_BALL",
+                        "rnd_llegada1": 0.9280949322809195,
+                        "rnd_llegada2": 0.09456631374961555,
+                        "llegada": 83.06592186427865,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "BASKET_BALL",
+                        "rnd_llegada1": 0.9280949322809195,
+                        "rnd_llegada2": 0.09456631374961555,
+                        "llegada": 93.49846610719692,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "BASKET_BALL",
+                        "rnd_llegada1": 0.3207198938364654,
+                        "rnd_llegada2": 0.532589251786078,
+                        "llegada": 100.54527210198407,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "BASKET_BALL",
+                        "rnd_llegada1": 0.3207198938364654,
+                        "rnd_llegada2": 0.532589251786078,
+                        "llegada": 109.93196769070977,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "BASKET_BALL",
+                        "rnd_llegada1": 0.2597414525257453,
+                        "rnd_llegada2": 0.6220005014696892,
+                        "llegada": 117.56649182552746,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    }
+                ]
+            },
+            {
+                "n": 36,
+                "evento": "LLEGADA_BASKET",
+                "reloj": 125.28853827465578,
+                "futbolALlegar": {
+                    "tipo": "FUTBOL",
+                    "rnd_llegada": 0.8044879576960828,
+                    "llegada": 149.51551607841054,
                     "rnd_fin_juego1": 0.0,
                     "rnd_fin_juego2": 0.0,
                     "fin_juego": 0.0,
-                    "llego": true,
-                    "estado": "ESPERANDO"
+                    "estado": "NO_LLEGO"
                 },
-                {
-                    "rnd_llegada1": 0.14981362086436079,
-                    "rnd_llegada2": 0.49725518309741623,
-                    "llegada": 26.375145199709976,
+                "handBallALlegar": {
+                    "tipo": "HAND_BALL",
+                    "rnd_llegada1": 0.32875662897058766,
+                    "rnd_llegada2": 0.867224675721282,
+                    "llegada": 139.58251824613242,
                     "rnd_fin_juego1": 0.0,
                     "rnd_fin_juego2": 0.0,
                     "fin_juego": 0.0,
-                    "llego": true,
-                    "estado": "ESPERANDO"
-                }
-            ]
-        },
-        {
-            "n": 7,
-            "evento": "LLEGADA_BASKET",
-            "reloj": 36.44235094091483,
-            "futbolALlegar": {
-                "rnd_llegada": 0.9473691969955245,
-                "llegada": 88.33361166570249,
-                "rnd_fin_juego1": 0.0,
-                "rnd_fin_juego2": 0.0,
-                "fin_juego": 0.0,
-                "llego": false,
-                "estado": "NO_LLEGO"
-            },
-            "handBallALlegar": {
-                "rnd_llegada1": 0.5045137929917881,
-                "rnd_llegada2": 0.3265972988237069,
-                "llegada": 40.99077001405989,
-                "rnd_fin_juego1": 0.0,
-                "rnd_fin_juego2": 0.0,
-                "fin_juego": 0.0,
-                "llego": false,
-                "estado": "NO_LLEGO"
-            },
-            "basketBallALlegar": {
-                "rnd_llegada1": 0.07490768702791006,
-                "rnd_llegada2": 0.16705051543882699,
-                "llegada": 48.70945385483255,
-                "rnd_fin_juego1": 0.0,
-                "rnd_fin_juego2": 0.0,
-                "fin_juego": 0.0,
-                "llego": false,
-                "estado": "NO_LLEGO"
-            },
-            "jugando1": {
-                "rnd_llegada1": 0.5045137929917881,
-                "rnd_llegada2": 0.3265972988237069,
-                "llegada": 18.9170206342181,
-                "rnd_fin_juego1": 0.11762907392937505,
-                "rnd_fin_juego2": 0.45466081707232275,
-                "fin_juego": 1.7976931348623157E308,
-                "llego": true,
-                "estado": "FIN_JUEGO"
-            },
-            "jugando2": null,
-            "finLimpieza": 1.7976931348623157E308,
-            "cancha": {
-                "estado": "OCUPADA_UN_GRUPO"
-            },
-            "colaHF": 0,
-            "colaB": 3,
-            "acumuladorEsperaFutbol": 0.0,
-            "acumuladorEsperaHandBall": 0.0,
-            "acumuladorEsperaBasketBall": 26.237952876364606,
-            "acumuladorCantidadFutbolLlegaron": 0,
-            "acumuladorCantidadHandBallLlegaron": 0,
-            "acumuladorCantidadBasketBallLlegaron": 0,
-            "llegaron": [
-                {
-                    "rnd_llegada1": 0.9048438863216288,
-                    "rnd_llegada2": 0.3405565316942394,
-                    "llegada": 9.518121363251916,
-                    "rnd_fin_juego1": 0.8776360759891684,
-                    "rnd_fin_juego2": 0.27962760187353797,
-                    "fin_juego": 1.7976931348623157E308,
-                    "llego": true,
-                    "estado": "FIN_JUEGO"
+                    "estado": "NO_LLEGO"
                 },
-                {
-                    "rnd_llegada1": 0.5045137929917881,
-                    "rnd_llegada2": 0.3265972988237069,
-                    "llegada": 18.9170206342181,
-                    "rnd_fin_juego1": 0.11762907392937505,
-                    "rnd_fin_juego2": 0.45466081707232275,
-                    "fin_juego": 62.438019678497966,
-                    "llego": true,
+                "basketBallALlegar": {
+                    "tipo": "BASKET_BALL",
+                    "rnd_llegada1": 0.9970553571522703,
+                    "rnd_llegada2": 0.5265527644102616,
+                    "llegada": 135.13707440944412,
+                    "rnd_fin_juego1": 0.0,
+                    "rnd_fin_juego2": 0.0,
+                    "fin_juego": 0.0,
+                    "estado": "NO_LLEGO"
+                },
+                "jugando1": {
+                    "tipo": "HAND_BALL",
+                    "rnd_llegada1": 0.33713121387980505,
+                    "rnd_llegada2": 0.6967523617704322,
+                    "llegada": 60.30223884174352,
+                    "rnd_fin_juego1": 0.1570959712160358,
+                    "rnd_fin_juego2": 0.34456766429897867,
+                    "fin_juego": 151.37030913180962,
                     "estado": "JUGANDO"
                 },
-                {
-                    "rnd_llegada1": 0.9048438863216288,
-                    "rnd_llegada2": 0.3405565316942394,
-                    "llegada": 20.271603805755074,
-                    "rnd_fin_juego1": 0.0,
-                    "rnd_fin_juego2": 0.0,
-                    "fin_juego": 0.0,
-                    "llego": true,
-                    "estado": "ESPERANDO"
-                },
-                {
-                    "rnd_llegada1": 0.14981362086436079,
-                    "rnd_llegada2": 0.49725518309741623,
-                    "llegada": 26.375145199709976,
-                    "rnd_fin_juego1": 0.0,
-                    "rnd_fin_juego2": 0.0,
-                    "fin_juego": 0.0,
-                    "llego": true,
-                    "estado": "ESPERANDO"
-                },
-                {
-                    "rnd_llegada1": 0.14981362086436079,
-                    "rnd_llegada2": 0.49725518309741623,
-                    "llegada": 36.44235094091483,
-                    "rnd_fin_juego1": 0.0,
-                    "rnd_fin_juego2": 0.0,
-                    "fin_juego": 0.0,
-                    "llego": true,
-                    "estado": "ESPERANDO"
-                }
-            ]
-        },
-        {
-            "n": 8,
-            "evento": "LLEGADA_HANDBALL",
-            "reloj": 40.99077001405989,
-            "futbolALlegar": {
-                "rnd_llegada": 0.9473691969955245,
-                "llegada": 88.33361166570249,
-                "rnd_fin_juego1": 0.0,
-                "rnd_fin_juego2": 0.0,
-                "fin_juego": 0.0,
-                "llego": false,
-                "estado": "NO_LLEGO"
-            },
-            "handBallALlegar": {
-                "rnd_llegada1": 0.018566373802480718,
-                "rnd_llegada2": 0.4331763533774441,
-                "llegada": 55.83403522754,
-                "rnd_fin_juego1": 0.0,
-                "rnd_fin_juego2": 0.0,
-                "fin_juego": 0.0,
-                "llego": false,
-                "estado": "NO_LLEGO"
-            },
-            "basketBallALlegar": {
-                "rnd_llegada1": 0.07490768702791006,
-                "rnd_llegada2": 0.16705051543882699,
-                "llegada": 48.70945385483255,
-                "rnd_fin_juego1": 0.0,
-                "rnd_fin_juego2": 0.0,
-                "fin_juego": 0.0,
-                "llego": false,
-                "estado": "NO_LLEGO"
-            },
-            "jugando1": {
-                "rnd_llegada1": 0.5045137929917881,
-                "rnd_llegada2": 0.3265972988237069,
-                "llegada": 18.9170206342181,
-                "rnd_fin_juego1": 0.11762907392937505,
-                "rnd_fin_juego2": 0.45466081707232275,
-                "fin_juego": 1.7976931348623157E308,
-                "llego": true,
-                "estado": "FIN_JUEGO"
-            },
-            "jugando2": null,
-            "finLimpieza": 1.7976931348623157E308,
-            "cancha": {
-                "estado": "OCUPADA_UN_GRUPO"
-            },
-            "colaHF": 1,
-            "colaB": 3,
-            "acumuladorEsperaFutbol": 0.0,
-            "acumuladorEsperaHandBall": 0.0,
-            "acumuladorEsperaBasketBall": 39.88321009579979,
-            "acumuladorCantidadFutbolLlegaron": 0,
-            "acumuladorCantidadHandBallLlegaron": 0,
-            "acumuladorCantidadBasketBallLlegaron": 0,
-            "llegaron": [
-                {
-                    "rnd_llegada1": 0.9048438863216288,
-                    "rnd_llegada2": 0.3405565316942394,
-                    "llegada": 9.518121363251916,
-                    "rnd_fin_juego1": 0.8776360759891684,
-                    "rnd_fin_juego2": 0.27962760187353797,
-                    "fin_juego": 1.7976931348623157E308,
-                    "llego": true,
-                    "estado": "FIN_JUEGO"
-                },
-                {
-                    "rnd_llegada1": 0.5045137929917881,
-                    "rnd_llegada2": 0.3265972988237069,
-                    "llegada": 18.9170206342181,
-                    "rnd_fin_juego1": 0.11762907392937505,
-                    "rnd_fin_juego2": 0.45466081707232275,
-                    "fin_juego": 62.438019678497966,
-                    "llego": true,
-                    "estado": "JUGANDO"
-                },
-                {
-                    "rnd_llegada1": 0.9048438863216288,
-                    "rnd_llegada2": 0.3405565316942394,
-                    "llegada": 20.271603805755074,
-                    "rnd_fin_juego1": 0.0,
-                    "rnd_fin_juego2": 0.0,
-                    "fin_juego": 0.0,
-                    "llego": true,
-                    "estado": "ESPERANDO"
-                },
-                {
-                    "rnd_llegada1": 0.14981362086436079,
-                    "rnd_llegada2": 0.49725518309741623,
-                    "llegada": 26.375145199709976,
-                    "rnd_fin_juego1": 0.0,
-                    "rnd_fin_juego2": 0.0,
-                    "fin_juego": 0.0,
-                    "llego": true,
-                    "estado": "ESPERANDO"
-                },
-                {
-                    "rnd_llegada1": 0.14981362086436079,
-                    "rnd_llegada2": 0.49725518309741623,
-                    "llegada": 36.44235094091483,
-                    "rnd_fin_juego1": 0.0,
-                    "rnd_fin_juego2": 0.0,
-                    "fin_juego": 0.0,
-                    "llego": true,
-                    "estado": "ESPERANDO"
-                },
-                {
-                    "rnd_llegada1": 0.5045137929917881,
-                    "rnd_llegada2": 0.3265972988237069,
-                    "llegada": 40.99077001405989,
-                    "rnd_fin_juego1": 0.0,
-                    "rnd_fin_juego2": 0.0,
-                    "fin_juego": 0.0,
-                    "llego": true,
-                    "estado": "ESPERANDO"
-                }
-            ]
-        },
-        {
-            "n": 9,
-            "evento": "LLEGADA_BASKET",
-            "reloj": 48.70945385483255,
-            "futbolALlegar": {
-                "rnd_llegada": 0.9473691969955245,
-                "llegada": 88.33361166570249,
-                "rnd_fin_juego1": 0.0,
-                "rnd_fin_juego2": 0.0,
-                "fin_juego": 0.0,
-                "llego": false,
-                "estado": "NO_LLEGO"
-            },
-            "handBallALlegar": {
-                "rnd_llegada1": 0.018566373802480718,
-                "rnd_llegada2": 0.4331763533774441,
-                "llegada": 55.83403522754,
-                "rnd_fin_juego1": 0.0,
-                "rnd_fin_juego2": 0.0,
-                "fin_juego": 0.0,
-                "llego": false,
-                "estado": "NO_LLEGO"
-            },
-            "basketBallALlegar": {
-                "rnd_llegada1": 0.07490768702791006,
-                "rnd_llegada2": 0.16705051543882699,
-                "llegada": 62.658154208510595,
-                "rnd_fin_juego1": 0.0,
-                "rnd_fin_juego2": 0.0,
-                "fin_juego": 0.0,
-                "llego": false,
-                "estado": "NO_LLEGO"
-            },
-            "jugando1": {
-                "rnd_llegada1": 0.5045137929917881,
-                "rnd_llegada2": 0.3265972988237069,
-                "llegada": 18.9170206342181,
-                "rnd_fin_juego1": 0.11762907392937505,
-                "rnd_fin_juego2": 0.45466081707232275,
-                "fin_juego": 1.7976931348623157E308,
-                "llego": true,
-                "estado": "FIN_JUEGO"
-            },
-            "jugando2": null,
-            "finLimpieza": 1.7976931348623157E308,
-            "cancha": {
-                "estado": "OCUPADA_UN_GRUPO"
-            },
-            "colaHF": 1,
-            "colaB": 4,
-            "acumuladorEsperaFutbol": 0.0,
-            "acumuladorEsperaHandBall": 0.0,
-            "acumuladorEsperaBasketBall": 63.03926161811778,
-            "acumuladorCantidadFutbolLlegaron": 0,
-            "acumuladorCantidadHandBallLlegaron": 0,
-            "acumuladorCantidadBasketBallLlegaron": 0,
-            "llegaron": [
-                {
-                    "rnd_llegada1": 0.9048438863216288,
-                    "rnd_llegada2": 0.3405565316942394,
-                    "llegada": 9.518121363251916,
-                    "rnd_fin_juego1": 0.8776360759891684,
-                    "rnd_fin_juego2": 0.27962760187353797,
-                    "fin_juego": 1.7976931348623157E308,
-                    "llego": true,
-                    "estado": "FIN_JUEGO"
-                },
-                {
-                    "rnd_llegada1": 0.5045137929917881,
-                    "rnd_llegada2": 0.3265972988237069,
-                    "llegada": 18.9170206342181,
-                    "rnd_fin_juego1": 0.11762907392937505,
-                    "rnd_fin_juego2": 0.45466081707232275,
-                    "fin_juego": 62.438019678497966,
-                    "llego": true,
-                    "estado": "JUGANDO"
-                },
-                {
-                    "rnd_llegada1": 0.9048438863216288,
-                    "rnd_llegada2": 0.3405565316942394,
-                    "llegada": 20.271603805755074,
-                    "rnd_fin_juego1": 0.0,
-                    "rnd_fin_juego2": 0.0,
-                    "fin_juego": 0.0,
-                    "llego": true,
-                    "estado": "ESPERANDO"
-                },
-                {
-                    "rnd_llegada1": 0.14981362086436079,
-                    "rnd_llegada2": 0.49725518309741623,
-                    "llegada": 26.375145199709976,
-                    "rnd_fin_juego1": 0.0,
-                    "rnd_fin_juego2": 0.0,
-                    "fin_juego": 0.0,
-                    "llego": true,
-                    "estado": "ESPERANDO"
-                },
-                {
-                    "rnd_llegada1": 0.14981362086436079,
-                    "rnd_llegada2": 0.49725518309741623,
-                    "llegada": 36.44235094091483,
-                    "rnd_fin_juego1": 0.0,
-                    "rnd_fin_juego2": 0.0,
-                    "fin_juego": 0.0,
-                    "llego": true,
-                    "estado": "ESPERANDO"
-                },
-                {
-                    "rnd_llegada1": 0.5045137929917881,
-                    "rnd_llegada2": 0.3265972988237069,
-                    "llegada": 40.99077001405989,
-                    "rnd_fin_juego1": 0.0,
-                    "rnd_fin_juego2": 0.0,
-                    "fin_juego": 0.0,
-                    "llego": true,
-                    "estado": "ESPERANDO"
-                },
-                {
-                    "rnd_llegada1": 0.07490768702791006,
-                    "rnd_llegada2": 0.16705051543882699,
-                    "llegada": 48.70945385483255,
-                    "rnd_fin_juego1": 0.0,
-                    "rnd_fin_juego2": 0.0,
-                    "fin_juego": 0.0,
-                    "llego": true,
-                    "estado": "ESPERANDO"
-                }
-            ]
-        },
-        {
-            "n": 10,
-            "evento": "LLEGADA_HANDBALL",
-            "reloj": 55.83403522754,
-            "futbolALlegar": {
-                "rnd_llegada": 0.9473691969955245,
-                "llegada": 88.33361166570249,
-                "rnd_fin_juego1": 0.0,
-                "rnd_fin_juego2": 0.0,
-                "fin_juego": 0.0,
-                "llego": false,
-                "estado": "NO_LLEGO"
-            },
-            "handBallALlegar": {
-                "rnd_llegada1": 0.018566373802480718,
-                "rnd_llegada2": 0.4331763533774441,
-                "llegada": 78.13605866301222,
-                "rnd_fin_juego1": 0.0,
-                "rnd_fin_juego2": 0.0,
-                "fin_juego": 0.0,
-                "llego": false,
-                "estado": "NO_LLEGO"
-            },
-            "basketBallALlegar": {
-                "rnd_llegada1": 0.07490768702791006,
-                "rnd_llegada2": 0.16705051543882699,
-                "llegada": 62.658154208510595,
-                "rnd_fin_juego1": 0.0,
-                "rnd_fin_juego2": 0.0,
-                "fin_juego": 0.0,
-                "llego": false,
-                "estado": "NO_LLEGO"
-            },
-            "jugando1": {
-                "rnd_llegada1": 0.5045137929917881,
-                "rnd_llegada2": 0.3265972988237069,
-                "llegada": 18.9170206342181,
-                "rnd_fin_juego1": 0.11762907392937505,
-                "rnd_fin_juego2": 0.45466081707232275,
-                "fin_juego": 1.7976931348623157E308,
-                "llego": true,
-                "estado": "FIN_JUEGO"
-            },
-            "jugando2": null,
-            "finLimpieza": 1.7976931348623157E308,
-            "cancha": {
-                "estado": "OCUPADA_UN_GRUPO"
-            },
-            "colaHF": 2,
-            "colaB": 4,
-            "acumuladorEsperaFutbol": 0.0,
-            "acumuladorEsperaHandBall": 0.0,
-            "acumuladorEsperaBasketBall": 91.53758710894755,
-            "acumuladorCantidadFutbolLlegaron": 0,
-            "acumuladorCantidadHandBallLlegaron": 0,
-            "acumuladorCantidadBasketBallLlegaron": 0,
-            "llegaron": [
-                {
-                    "rnd_llegada1": 0.9048438863216288,
-                    "rnd_llegada2": 0.3405565316942394,
-                    "llegada": 9.518121363251916,
-                    "rnd_fin_juego1": 0.8776360759891684,
-                    "rnd_fin_juego2": 0.27962760187353797,
-                    "fin_juego": 1.7976931348623157E308,
-                    "llego": true,
-                    "estado": "FIN_JUEGO"
-                },
-                {
-                    "rnd_llegada1": 0.5045137929917881,
-                    "rnd_llegada2": 0.3265972988237069,
-                    "llegada": 18.9170206342181,
-                    "rnd_fin_juego1": 0.11762907392937505,
-                    "rnd_fin_juego2": 0.45466081707232275,
-                    "fin_juego": 62.438019678497966,
-                    "llego": true,
-                    "estado": "JUGANDO"
-                },
-                {
-                    "rnd_llegada1": 0.9048438863216288,
-                    "rnd_llegada2": 0.3405565316942394,
-                    "llegada": 20.271603805755074,
-                    "rnd_fin_juego1": 0.0,
-                    "rnd_fin_juego2": 0.0,
-                    "fin_juego": 0.0,
-                    "llego": true,
-                    "estado": "ESPERANDO"
-                },
-                {
-                    "rnd_llegada1": 0.14981362086436079,
-                    "rnd_llegada2": 0.49725518309741623,
-                    "llegada": 26.375145199709976,
-                    "rnd_fin_juego1": 0.0,
-                    "rnd_fin_juego2": 0.0,
-                    "fin_juego": 0.0,
-                    "llego": true,
-                    "estado": "ESPERANDO"
-                },
-                {
-                    "rnd_llegada1": 0.14981362086436079,
-                    "rnd_llegada2": 0.49725518309741623,
-                    "llegada": 36.44235094091483,
-                    "rnd_fin_juego1": 0.0,
-                    "rnd_fin_juego2": 0.0,
-                    "fin_juego": 0.0,
-                    "llego": true,
-                    "estado": "ESPERANDO"
-                },
-                {
-                    "rnd_llegada1": 0.5045137929917881,
-                    "rnd_llegada2": 0.3265972988237069,
-                    "llegada": 40.99077001405989,
-                    "rnd_fin_juego1": 0.0,
-                    "rnd_fin_juego2": 0.0,
-                    "fin_juego": 0.0,
-                    "llego": true,
-                    "estado": "ESPERANDO"
-                },
-                {
-                    "rnd_llegada1": 0.07490768702791006,
-                    "rnd_llegada2": 0.16705051543882699,
-                    "llegada": 48.70945385483255,
-                    "rnd_fin_juego1": 0.0,
-                    "rnd_fin_juego2": 0.0,
-                    "fin_juego": 0.0,
-                    "llego": true,
-                    "estado": "ESPERANDO"
-                },
-                {
-                    "rnd_llegada1": 0.018566373802480718,
-                    "rnd_llegada2": 0.4331763533774441,
-                    "llegada": 55.83403522754,
-                    "rnd_fin_juego1": 0.0,
-                    "rnd_fin_juego2": 0.0,
-                    "fin_juego": 0.0,
-                    "llego": true,
-                    "estado": "ESPERANDO"
-                }
-            ]
-        },
-        {
-            "n": 11,
-            "evento": "FIN_JUEGO",
-            "reloj": 62.438019678497966,
-            "futbolALlegar": {
-                "rnd_llegada": 0.9473691969955245,
-                "llegada": 88.33361166570249,
-                "rnd_fin_juego1": 0.0,
-                "rnd_fin_juego2": 0.0,
-                "fin_juego": 0.0,
-                "llego": false,
-                "estado": "NO_LLEGO"
-            },
-            "handBallALlegar": {
-                "rnd_llegada1": 0.018566373802480718,
-                "rnd_llegada2": 0.4331763533774441,
-                "llegada": 78.13605866301222,
-                "rnd_fin_juego1": 0.0,
-                "rnd_fin_juego2": 0.0,
-                "fin_juego": 0.0,
-                "llego": false,
-                "estado": "NO_LLEGO"
-            },
-            "basketBallALlegar": {
-                "rnd_llegada1": 0.07490768702791006,
-                "rnd_llegada2": 0.16705051543882699,
-                "llegada": 62.658154208510595,
-                "rnd_fin_juego1": 0.0,
-                "rnd_fin_juego2": 0.0,
-                "fin_juego": 0.0,
-                "llego": false,
-                "estado": "NO_LLEGO"
-            },
-            "jugando1": null,
-            "jugando2": null,
-            "finLimpieza": 67.43801967849797,
-            "cancha": {
-                "estado": "RECIBIENDO_LIMPIEZA"
-            },
-            "colaHF": 2,
-            "colaB": 4,
-            "acumuladorEsperaFutbol": 0.0,
-            "acumuladorEsperaHandBall": 0.0,
-            "acumuladorEsperaBasketBall": 117.95352491277941,
-            "acumuladorCantidadFutbolLlegaron": 0,
-            "acumuladorCantidadHandBallLlegaron": 0,
-            "acumuladorCantidadBasketBallLlegaron": 0,
-            "llegaron": [
-                {
-                    "rnd_llegada1": 0.9048438863216288,
-                    "rnd_llegada2": 0.3405565316942394,
-                    "llegada": 9.518121363251916,
-                    "rnd_fin_juego1": 0.8776360759891684,
-                    "rnd_fin_juego2": 0.27962760187353797,
-                    "fin_juego": 1.7976931348623157E308,
-                    "llego": true,
-                    "estado": "FIN_JUEGO"
-                },
-                {
-                    "rnd_llegada1": 0.5045137929917881,
-                    "rnd_llegada2": 0.3265972988237069,
-                    "llegada": 18.9170206342181,
-                    "rnd_fin_juego1": 0.11762907392937505,
-                    "rnd_fin_juego2": 0.45466081707232275,
-                    "fin_juego": 1.7976931348623157E308,
-                    "llego": true,
-                    "estado": "FIN_JUEGO"
-                },
-                {
-                    "rnd_llegada1": 0.9048438863216288,
-                    "rnd_llegada2": 0.3405565316942394,
-                    "llegada": 20.271603805755074,
-                    "rnd_fin_juego1": 0.0,
-                    "rnd_fin_juego2": 0.0,
-                    "fin_juego": 0.0,
-                    "llego": true,
-                    "estado": "ESPERANDO"
-                },
-                {
-                    "rnd_llegada1": 0.14981362086436079,
-                    "rnd_llegada2": 0.49725518309741623,
-                    "llegada": 26.375145199709976,
-                    "rnd_fin_juego1": 0.0,
-                    "rnd_fin_juego2": 0.0,
-                    "fin_juego": 0.0,
-                    "llego": true,
-                    "estado": "ESPERANDO"
-                },
-                {
-                    "rnd_llegada1": 0.14981362086436079,
-                    "rnd_llegada2": 0.49725518309741623,
-                    "llegada": 36.44235094091483,
-                    "rnd_fin_juego1": 0.0,
-                    "rnd_fin_juego2": 0.0,
-                    "fin_juego": 0.0,
-                    "llego": true,
-                    "estado": "ESPERANDO"
-                },
-                {
-                    "rnd_llegada1": 0.5045137929917881,
-                    "rnd_llegada2": 0.3265972988237069,
-                    "llegada": 40.99077001405989,
-                    "rnd_fin_juego1": 0.0,
-                    "rnd_fin_juego2": 0.0,
-                    "fin_juego": 0.0,
-                    "llego": true,
-                    "estado": "ESPERANDO"
-                },
-                {
-                    "rnd_llegada1": 0.07490768702791006,
-                    "rnd_llegada2": 0.16705051543882699,
-                    "llegada": 48.70945385483255,
-                    "rnd_fin_juego1": 0.0,
-                    "rnd_fin_juego2": 0.0,
-                    "fin_juego": 0.0,
-                    "llego": true,
-                    "estado": "ESPERANDO"
-                },
-                {
-                    "rnd_llegada1": 0.018566373802480718,
-                    "rnd_llegada2": 0.4331763533774441,
-                    "llegada": 55.83403522754,
-                    "rnd_fin_juego1": 0.0,
-                    "rnd_fin_juego2": 0.0,
-                    "fin_juego": 0.0,
-                    "llego": true,
-                    "estado": "ESPERANDO"
-                }
-            ]
-        },
-        {
-            "n": 12,
-            "evento": "LLEGADA_BASKET",
-            "reloj": 62.658154208510595,
-            "futbolALlegar": {
-                "rnd_llegada": 0.9473691969955245,
-                "llegada": 88.33361166570249,
-                "rnd_fin_juego1": 0.0,
-                "rnd_fin_juego2": 0.0,
-                "fin_juego": 0.0,
-                "llego": false,
-                "estado": "NO_LLEGO"
-            },
-            "handBallALlegar": {
-                "rnd_llegada1": 0.018566373802480718,
-                "rnd_llegada2": 0.4331763533774441,
-                "llegada": 78.13605866301222,
-                "rnd_fin_juego1": 0.0,
-                "rnd_fin_juego2": 0.0,
-                "fin_juego": 0.0,
-                "llego": false,
-                "estado": "NO_LLEGO"
-            },
-            "basketBallALlegar": {
-                "rnd_llegada1": 0.18581412916927498,
-                "rnd_llegada2": 0.8397947193362126,
-                "llegada": 74.62028807146753,
-                "rnd_fin_juego1": 0.0,
-                "rnd_fin_juego2": 0.0,
-                "fin_juego": 0.0,
-                "llego": false,
-                "estado": "NO_LLEGO"
-            },
-            "jugando1": null,
-            "jugando2": null,
-            "finLimpieza": 67.43801967849797,
-            "cancha": {
-                "estado": "RECIBIENDO_LIMPIEZA"
-            },
-            "colaHF": 2,
-            "colaB": 5,
-            "acumuladorEsperaFutbol": 0.0,
-            "acumuladorEsperaHandBall": 0.0,
-            "acumuladorEsperaBasketBall": 118.83406303282996,
-            "acumuladorCantidadFutbolLlegaron": 0,
-            "acumuladorCantidadHandBallLlegaron": 0,
-            "acumuladorCantidadBasketBallLlegaron": 0,
-            "llegaron": [
-                {
-                    "rnd_llegada1": 0.9048438863216288,
-                    "rnd_llegada2": 0.3405565316942394,
-                    "llegada": 9.518121363251916,
-                    "rnd_fin_juego1": 0.8776360759891684,
-                    "rnd_fin_juego2": 0.27962760187353797,
-                    "fin_juego": 1.7976931348623157E308,
-                    "llego": true,
-                    "estado": "FIN_JUEGO"
-                },
-                {
-                    "rnd_llegada1": 0.5045137929917881,
-                    "rnd_llegada2": 0.3265972988237069,
-                    "llegada": 18.9170206342181,
-                    "rnd_fin_juego1": 0.11762907392937505,
-                    "rnd_fin_juego2": 0.45466081707232275,
-                    "fin_juego": 1.7976931348623157E308,
-                    "llego": true,
-                    "estado": "FIN_JUEGO"
-                },
-                {
-                    "rnd_llegada1": 0.9048438863216288,
-                    "rnd_llegada2": 0.3405565316942394,
-                    "llegada": 20.271603805755074,
-                    "rnd_fin_juego1": 0.0,
-                    "rnd_fin_juego2": 0.0,
-                    "fin_juego": 0.0,
-                    "llego": true,
-                    "estado": "ESPERANDO"
-                },
-                {
-                    "rnd_llegada1": 0.14981362086436079,
-                    "rnd_llegada2": 0.49725518309741623,
-                    "llegada": 26.375145199709976,
-                    "rnd_fin_juego1": 0.0,
-                    "rnd_fin_juego2": 0.0,
-                    "fin_juego": 0.0,
-                    "llego": true,
-                    "estado": "ESPERANDO"
-                },
-                {
-                    "rnd_llegada1": 0.14981362086436079,
-                    "rnd_llegada2": 0.49725518309741623,
-                    "llegada": 36.44235094091483,
-                    "rnd_fin_juego1": 0.0,
-                    "rnd_fin_juego2": 0.0,
-                    "fin_juego": 0.0,
-                    "llego": true,
-                    "estado": "ESPERANDO"
-                },
-                {
-                    "rnd_llegada1": 0.5045137929917881,
-                    "rnd_llegada2": 0.3265972988237069,
-                    "llegada": 40.99077001405989,
-                    "rnd_fin_juego1": 0.0,
-                    "rnd_fin_juego2": 0.0,
-                    "fin_juego": 0.0,
-                    "llego": true,
-                    "estado": "ESPERANDO"
-                },
-                {
-                    "rnd_llegada1": 0.07490768702791006,
-                    "rnd_llegada2": 0.16705051543882699,
-                    "llegada": 48.70945385483255,
-                    "rnd_fin_juego1": 0.0,
-                    "rnd_fin_juego2": 0.0,
-                    "fin_juego": 0.0,
-                    "llego": true,
-                    "estado": "ESPERANDO"
-                },
-                {
-                    "rnd_llegada1": 0.018566373802480718,
-                    "rnd_llegada2": 0.4331763533774441,
-                    "llegada": 55.83403522754,
-                    "rnd_fin_juego1": 0.0,
-                    "rnd_fin_juego2": 0.0,
-                    "fin_juego": 0.0,
-                    "llego": true,
-                    "estado": "ESPERANDO"
-                },
-                {
-                    "rnd_llegada1": 0.07490768702791006,
-                    "rnd_llegada2": 0.16705051543882699,
-                    "llegada": 62.658154208510595,
-                    "rnd_fin_juego1": 0.0,
-                    "rnd_fin_juego2": 0.0,
-                    "fin_juego": 0.0,
-                    "llego": true,
-                    "estado": "ESPERANDO"
-                }
-            ]
-        },
-        {
-            "n": 13,
-            "evento": "FIN_LIMPIEZA",
-            "reloj": 67.43801967849797,
-            "futbolALlegar": {
-                "rnd_llegada": 0.9473691969955245,
-                "llegada": 88.33361166570249,
-                "rnd_fin_juego1": 0.0,
-                "rnd_fin_juego2": 0.0,
-                "fin_juego": 0.0,
-                "llego": false,
-                "estado": "NO_LLEGO"
-            },
-            "handBallALlegar": {
-                "rnd_llegada1": 0.018566373802480718,
-                "rnd_llegada2": 0.4331763533774441,
-                "llegada": 78.13605866301222,
-                "rnd_fin_juego1": 0.0,
-                "rnd_fin_juego2": 0.0,
-                "fin_juego": 0.0,
-                "llego": false,
-                "estado": "NO_LLEGO"
-            },
-            "basketBallALlegar": {
-                "rnd_llegada1": 0.18581412916927498,
-                "rnd_llegada2": 0.8397947193362126,
-                "llegada": 74.62028807146753,
-                "rnd_fin_juego1": 0.0,
-                "rnd_fin_juego2": 0.0,
-                "fin_juego": 0.0,
-                "llego": false,
-                "estado": "NO_LLEGO"
-            },
-            "jugando1": {
-                "rnd_llegada1": 0.5045137929917881,
-                "rnd_llegada2": 0.3265972988237069,
-                "llegada": 40.99077001405989,
-                "rnd_fin_juego1": 0.11762907392937505,
-                "rnd_fin_juego2": 0.45466081707232275,
-                "fin_juego": 1.7976931348623157E308,
-                "llego": true,
-                "estado": "FIN_JUEGO"
-            },
-            "jugando2": null,
-            "finLimpieza": 1.7976931348623157E308,
-            "cancha": {
-                "estado": "OCUPADA_UN_GRUPO"
-            },
-            "colaHF": 1,
-            "colaB": 5,
-            "acumuladorEsperaFutbol": 0.0,
-            "acumuladorEsperaHandBall": 0.0,
-            "acumuladorEsperaBasketBall": 142.7333903827668,
-            "acumuladorCantidadFutbolLlegaron": 0,
-            "acumuladorCantidadHandBallLlegaron": 0,
-            "acumuladorCantidadBasketBallLlegaron": 0,
-            "llegaron": [
-                {
-                    "rnd_llegada1": 0.9048438863216288,
-                    "rnd_llegada2": 0.3405565316942394,
-                    "llegada": 9.518121363251916,
-                    "rnd_fin_juego1": 0.8776360759891684,
-                    "rnd_fin_juego2": 0.27962760187353797,
-                    "fin_juego": 1.7976931348623157E308,
-                    "llego": true,
-                    "estado": "FIN_JUEGO"
-                },
-                {
-                    "rnd_llegada1": 0.5045137929917881,
-                    "rnd_llegada2": 0.3265972988237069,
-                    "llegada": 18.9170206342181,
-                    "rnd_fin_juego1": 0.11762907392937505,
-                    "rnd_fin_juego2": 0.45466081707232275,
-                    "fin_juego": 1.7976931348623157E308,
-                    "llego": true,
-                    "estado": "FIN_JUEGO"
-                },
-                {
-                    "rnd_llegada1": 0.9048438863216288,
-                    "rnd_llegada2": 0.3405565316942394,
-                    "llegada": 20.271603805755074,
-                    "rnd_fin_juego1": 0.0,
-                    "rnd_fin_juego2": 0.0,
-                    "fin_juego": 0.0,
-                    "llego": true,
-                    "estado": "ESPERANDO"
-                },
-                {
-                    "rnd_llegada1": 0.14981362086436079,
-                    "rnd_llegada2": 0.49725518309741623,
-                    "llegada": 26.375145199709976,
-                    "rnd_fin_juego1": 0.0,
-                    "rnd_fin_juego2": 0.0,
-                    "fin_juego": 0.0,
-                    "llego": true,
-                    "estado": "ESPERANDO"
-                },
-                {
-                    "rnd_llegada1": 0.14981362086436079,
-                    "rnd_llegada2": 0.49725518309741623,
-                    "llegada": 36.44235094091483,
-                    "rnd_fin_juego1": 0.0,
-                    "rnd_fin_juego2": 0.0,
-                    "fin_juego": 0.0,
-                    "llego": true,
-                    "estado": "ESPERANDO"
-                },
-                {
-                    "rnd_llegada1": 0.5045137929917881,
-                    "rnd_llegada2": 0.3265972988237069,
-                    "llegada": 40.99077001405989,
-                    "rnd_fin_juego1": 0.11762907392937505,
-                    "rnd_fin_juego2": 0.45466081707232275,
-                    "fin_juego": 98.01946330060332,
-                    "llego": true,
-                    "estado": "JUGANDO"
-                },
-                {
-                    "rnd_llegada1": 0.07490768702791006,
-                    "rnd_llegada2": 0.16705051543882699,
-                    "llegada": 48.70945385483255,
-                    "rnd_fin_juego1": 0.0,
-                    "rnd_fin_juego2": 0.0,
-                    "fin_juego": 0.0,
-                    "llego": true,
-                    "estado": "ESPERANDO"
-                },
-                {
-                    "rnd_llegada1": 0.018566373802480718,
-                    "rnd_llegada2": 0.4331763533774441,
-                    "llegada": 55.83403522754,
-                    "rnd_fin_juego1": 0.0,
-                    "rnd_fin_juego2": 0.0,
-                    "fin_juego": 0.0,
-                    "llego": true,
-                    "estado": "ESPERANDO"
-                },
-                {
-                    "rnd_llegada1": 0.07490768702791006,
-                    "rnd_llegada2": 0.16705051543882699,
-                    "llegada": 62.658154208510595,
-                    "rnd_fin_juego1": 0.0,
-                    "rnd_fin_juego2": 0.0,
-                    "fin_juego": 0.0,
-                    "llego": true,
-                    "estado": "ESPERANDO"
-                }
-            ]
-        },
-        {
-            "n": 14,
-            "evento": "LLEGADA_BASKET",
-            "reloj": 74.62028807146753,
-            "futbolALlegar": {
-                "rnd_llegada": 0.9473691969955245,
-                "llegada": 88.33361166570249,
-                "rnd_fin_juego1": 0.0,
-                "rnd_fin_juego2": 0.0,
-                "fin_juego": 0.0,
-                "llego": false,
-                "estado": "NO_LLEGO"
-            },
-            "handBallALlegar": {
-                "rnd_llegada1": 0.018566373802480718,
-                "rnd_llegada2": 0.4331763533774441,
-                "llegada": 78.13605866301222,
-                "rnd_fin_juego1": 0.0,
-                "rnd_fin_juego2": 0.0,
-                "fin_juego": 0.0,
-                "llego": false,
-                "estado": "NO_LLEGO"
-            },
-            "basketBallALlegar": {
-                "rnd_llegada1": 0.18581412916927498,
-                "rnd_llegada2": 0.8397947193362126,
-                "llegada": 81.51962717620168,
-                "rnd_fin_juego1": 0.0,
-                "rnd_fin_juego2": 0.0,
-                "fin_juego": 0.0,
-                "llego": false,
-                "estado": "NO_LLEGO"
-            },
-            "jugando1": {
-                "rnd_llegada1": 0.5045137929917881,
-                "rnd_llegada2": 0.3265972988237069,
-                "llegada": 40.99077001405989,
-                "rnd_fin_juego1": 0.11762907392937505,
-                "rnd_fin_juego2": 0.45466081707232275,
-                "fin_juego": 1.7976931348623157E308,
-                "llego": true,
-                "estado": "FIN_JUEGO"
-            },
-            "jugando2": null,
-            "finLimpieza": 1.7976931348623157E308,
-            "cancha": {
-                "estado": "OCUPADA_UN_GRUPO"
-            },
-            "colaHF": 1,
-            "colaB": 6,
-            "acumuladorEsperaFutbol": 0.0,
-            "acumuladorEsperaHandBall": 0.0,
-            "acumuladorEsperaBasketBall": 178.64473234761462,
-            "acumuladorCantidadFutbolLlegaron": 0,
-            "acumuladorCantidadHandBallLlegaron": 0,
-            "acumuladorCantidadBasketBallLlegaron": 0,
-            "llegaron": [
-                {
-                    "rnd_llegada1": 0.9048438863216288,
-                    "rnd_llegada2": 0.3405565316942394,
-                    "llegada": 9.518121363251916,
-                    "rnd_fin_juego1": 0.8776360759891684,
-                    "rnd_fin_juego2": 0.27962760187353797,
-                    "fin_juego": 1.7976931348623157E308,
-                    "llego": true,
-                    "estado": "FIN_JUEGO"
-                },
-                {
-                    "rnd_llegada1": 0.5045137929917881,
-                    "rnd_llegada2": 0.3265972988237069,
-                    "llegada": 18.9170206342181,
-                    "rnd_fin_juego1": 0.11762907392937505,
-                    "rnd_fin_juego2": 0.45466081707232275,
-                    "fin_juego": 1.7976931348623157E308,
-                    "llego": true,
-                    "estado": "FIN_JUEGO"
-                },
-                {
-                    "rnd_llegada1": 0.9048438863216288,
-                    "rnd_llegada2": 0.3405565316942394,
-                    "llegada": 20.271603805755074,
-                    "rnd_fin_juego1": 0.0,
-                    "rnd_fin_juego2": 0.0,
-                    "fin_juego": 0.0,
-                    "llego": true,
-                    "estado": "ESPERANDO"
-                },
-                {
-                    "rnd_llegada1": 0.14981362086436079,
-                    "rnd_llegada2": 0.49725518309741623,
-                    "llegada": 26.375145199709976,
-                    "rnd_fin_juego1": 0.0,
-                    "rnd_fin_juego2": 0.0,
-                    "fin_juego": 0.0,
-                    "llego": true,
-                    "estado": "ESPERANDO"
-                },
-                {
-                    "rnd_llegada1": 0.14981362086436079,
-                    "rnd_llegada2": 0.49725518309741623,
-                    "llegada": 36.44235094091483,
-                    "rnd_fin_juego1": 0.0,
-                    "rnd_fin_juego2": 0.0,
-                    "fin_juego": 0.0,
-                    "llego": true,
-                    "estado": "ESPERANDO"
-                },
-                {
-                    "rnd_llegada1": 0.5045137929917881,
-                    "rnd_llegada2": 0.3265972988237069,
-                    "llegada": 40.99077001405989,
-                    "rnd_fin_juego1": 0.11762907392937505,
-                    "rnd_fin_juego2": 0.45466081707232275,
-                    "fin_juego": 98.01946330060332,
-                    "llego": true,
-                    "estado": "JUGANDO"
-                },
-                {
-                    "rnd_llegada1": 0.07490768702791006,
-                    "rnd_llegada2": 0.16705051543882699,
-                    "llegada": 48.70945385483255,
-                    "rnd_fin_juego1": 0.0,
-                    "rnd_fin_juego2": 0.0,
-                    "fin_juego": 0.0,
-                    "llego": true,
-                    "estado": "ESPERANDO"
-                },
-                {
-                    "rnd_llegada1": 0.018566373802480718,
-                    "rnd_llegada2": 0.4331763533774441,
-                    "llegada": 55.83403522754,
-                    "rnd_fin_juego1": 0.0,
-                    "rnd_fin_juego2": 0.0,
-                    "fin_juego": 0.0,
-                    "llego": true,
-                    "estado": "ESPERANDO"
-                },
-                {
-                    "rnd_llegada1": 0.07490768702791006,
-                    "rnd_llegada2": 0.16705051543882699,
-                    "llegada": 62.658154208510595,
-                    "rnd_fin_juego1": 0.0,
-                    "rnd_fin_juego2": 0.0,
-                    "fin_juego": 0.0,
-                    "llego": true,
-                    "estado": "ESPERANDO"
-                },
-                {
-                    "rnd_llegada1": 0.18581412916927498,
-                    "rnd_llegada2": 0.8397947193362126,
-                    "llegada": 74.62028807146753,
-                    "rnd_fin_juego1": 0.0,
-                    "rnd_fin_juego2": 0.0,
-                    "fin_juego": 0.0,
-                    "llego": true,
-                    "estado": "ESPERANDO"
-                }
-            ]
-        },
-        {
-            "n": 15,
-            "evento": "LLEGADA_HANDBALL",
-            "reloj": 78.13605866301222,
-            "futbolALlegar": {
-                "rnd_llegada": 0.9473691969955245,
-                "llegada": 88.33361166570249,
-                "rnd_fin_juego1": 0.0,
-                "rnd_fin_juego2": 0.0,
-                "fin_juego": 0.0,
-                "llego": false,
-                "estado": "NO_LLEGO"
-            },
-            "handBallALlegar": {
-                "rnd_llegada1": 0.2852744789431729,
-                "rnd_llegada2": 0.41184091541352486,
-                "llegada": 95.4420136167973,
-                "rnd_fin_juego1": 0.0,
-                "rnd_fin_juego2": 0.0,
-                "fin_juego": 0.0,
-                "llego": false,
-                "estado": "NO_LLEGO"
-            },
-            "basketBallALlegar": {
-                "rnd_llegada1": 0.18581412916927498,
-                "rnd_llegada2": 0.8397947193362126,
-                "llegada": 81.51962717620168,
-                "rnd_fin_juego1": 0.0,
-                "rnd_fin_juego2": 0.0,
-                "fin_juego": 0.0,
-                "llego": false,
-                "estado": "NO_LLEGO"
-            },
-            "jugando1": {
-                "rnd_llegada1": 0.5045137929917881,
-                "rnd_llegada2": 0.3265972988237069,
-                "llegada": 40.99077001405989,
-                "rnd_fin_juego1": 0.11762907392937505,
-                "rnd_fin_juego2": 0.45466081707232275,
-                "fin_juego": 1.7976931348623157E308,
-                "llego": true,
-                "estado": "FIN_JUEGO"
-            },
-            "jugando2": null,
-            "finLimpieza": 1.7976931348623157E308,
-            "cancha": {
-                "estado": "OCUPADA_UN_GRUPO"
-            },
-            "colaHF": 2,
-            "colaB": 6,
-            "acumuladorEsperaFutbol": 0.0,
-            "acumuladorEsperaHandBall": 0.0,
-            "acumuladorEsperaBasketBall": 199.73935589688278,
-            "acumuladorCantidadFutbolLlegaron": 0,
-            "acumuladorCantidadHandBallLlegaron": 0,
-            "acumuladorCantidadBasketBallLlegaron": 0,
-            "llegaron": [
-                {
-                    "rnd_llegada1": 0.9048438863216288,
-                    "rnd_llegada2": 0.3405565316942394,
-                    "llegada": 9.518121363251916,
-                    "rnd_fin_juego1": 0.8776360759891684,
-                    "rnd_fin_juego2": 0.27962760187353797,
-                    "fin_juego": 1.7976931348623157E308,
-                    "llego": true,
-                    "estado": "FIN_JUEGO"
-                },
-                {
-                    "rnd_llegada1": 0.5045137929917881,
-                    "rnd_llegada2": 0.3265972988237069,
-                    "llegada": 18.9170206342181,
-                    "rnd_fin_juego1": 0.11762907392937505,
-                    "rnd_fin_juego2": 0.45466081707232275,
-                    "fin_juego": 1.7976931348623157E308,
-                    "llego": true,
-                    "estado": "FIN_JUEGO"
-                },
-                {
-                    "rnd_llegada1": 0.9048438863216288,
-                    "rnd_llegada2": 0.3405565316942394,
-                    "llegada": 20.271603805755074,
-                    "rnd_fin_juego1": 0.0,
-                    "rnd_fin_juego2": 0.0,
-                    "fin_juego": 0.0,
-                    "llego": true,
-                    "estado": "ESPERANDO"
-                },
-                {
-                    "rnd_llegada1": 0.14981362086436079,
-                    "rnd_llegada2": 0.49725518309741623,
-                    "llegada": 26.375145199709976,
-                    "rnd_fin_juego1": 0.0,
-                    "rnd_fin_juego2": 0.0,
-                    "fin_juego": 0.0,
-                    "llego": true,
-                    "estado": "ESPERANDO"
-                },
-                {
-                    "rnd_llegada1": 0.14981362086436079,
-                    "rnd_llegada2": 0.49725518309741623,
-                    "llegada": 36.44235094091483,
-                    "rnd_fin_juego1": 0.0,
-                    "rnd_fin_juego2": 0.0,
-                    "fin_juego": 0.0,
-                    "llego": true,
-                    "estado": "ESPERANDO"
-                },
-                {
-                    "rnd_llegada1": 0.5045137929917881,
-                    "rnd_llegada2": 0.3265972988237069,
-                    "llegada": 40.99077001405989,
-                    "rnd_fin_juego1": 0.11762907392937505,
-                    "rnd_fin_juego2": 0.45466081707232275,
-                    "fin_juego": 98.01946330060332,
-                    "llego": true,
-                    "estado": "JUGANDO"
-                },
-                {
-                    "rnd_llegada1": 0.07490768702791006,
-                    "rnd_llegada2": 0.16705051543882699,
-                    "llegada": 48.70945385483255,
-                    "rnd_fin_juego1": 0.0,
-                    "rnd_fin_juego2": 0.0,
-                    "fin_juego": 0.0,
-                    "llego": true,
-                    "estado": "ESPERANDO"
-                },
-                {
-                    "rnd_llegada1": 0.018566373802480718,
-                    "rnd_llegada2": 0.4331763533774441,
-                    "llegada": 55.83403522754,
-                    "rnd_fin_juego1": 0.0,
-                    "rnd_fin_juego2": 0.0,
-                    "fin_juego": 0.0,
-                    "llego": true,
-                    "estado": "ESPERANDO"
-                },
-                {
-                    "rnd_llegada1": 0.07490768702791006,
-                    "rnd_llegada2": 0.16705051543882699,
-                    "llegada": 62.658154208510595,
-                    "rnd_fin_juego1": 0.0,
-                    "rnd_fin_juego2": 0.0,
-                    "fin_juego": 0.0,
-                    "llego": true,
-                    "estado": "ESPERANDO"
-                },
-                {
-                    "rnd_llegada1": 0.18581412916927498,
-                    "rnd_llegada2": 0.8397947193362126,
-                    "llegada": 74.62028807146753,
-                    "rnd_fin_juego1": 0.0,
-                    "rnd_fin_juego2": 0.0,
-                    "fin_juego": 0.0,
-                    "llego": true,
-                    "estado": "ESPERANDO"
-                },
-                {
-                    "rnd_llegada1": 0.018566373802480718,
-                    "rnd_llegada2": 0.4331763533774441,
-                    "llegada": 78.13605866301222,
-                    "rnd_fin_juego1": 0.0,
-                    "rnd_fin_juego2": 0.0,
-                    "fin_juego": 0.0,
-                    "llego": true,
-                    "estado": "ESPERANDO"
-                }
-            ]
-        },
-        {
-            "n": 16,
-            "evento": "LLEGADA_BASKET",
-            "reloj": 81.51962717620168,
-            "futbolALlegar": {
-                "rnd_llegada": 0.9473691969955245,
-                "llegada": 88.33361166570249,
-                "rnd_fin_juego1": 0.0,
-                "rnd_fin_juego2": 0.0,
-                "fin_juego": 0.0,
-                "llego": false,
-                "estado": "NO_LLEGO"
-            },
-            "handBallALlegar": {
-                "rnd_llegada1": 0.2852744789431729,
-                "rnd_llegada2": 0.41184091541352486,
-                "llegada": 95.4420136167973,
-                "rnd_fin_juego1": 0.0,
-                "rnd_fin_juego2": 0.0,
-                "fin_juego": 0.0,
-                "llego": false,
-                "estado": "NO_LLEGO"
-            },
-            "basketBallALlegar": {
-                "rnd_llegada1": 0.6555447603590974,
-                "rnd_llegada2": 0.7258593610696394,
-                "llegada": 91.24190422056589,
-                "rnd_fin_juego1": 0.0,
-                "rnd_fin_juego2": 0.0,
-                "fin_juego": 0.0,
-                "llego": false,
-                "estado": "NO_LLEGO"
-            },
-            "jugando1": {
-                "rnd_llegada1": 0.5045137929917881,
-                "rnd_llegada2": 0.3265972988237069,
-                "llegada": 40.99077001405989,
-                "rnd_fin_juego1": 0.11762907392937505,
-                "rnd_fin_juego2": 0.45466081707232275,
-                "fin_juego": 1.7976931348623157E308,
-                "llego": true,
-                "estado": "FIN_JUEGO"
-            },
-            "jugando2": null,
-            "finLimpieza": 1.7976931348623157E308,
-            "cancha": {
-                "estado": "OCUPADA_UN_GRUPO"
-            },
-            "colaHF": 2,
-            "colaB": 7,
-            "acumuladorEsperaFutbol": 0.0,
-            "acumuladorEsperaHandBall": 0.0,
-            "acumuladorEsperaBasketBall": 220.04076697601954,
-            "acumuladorCantidadFutbolLlegaron": 0,
-            "acumuladorCantidadHandBallLlegaron": 0,
-            "acumuladorCantidadBasketBallLlegaron": 0,
-            "llegaron": [
-                {
-                    "rnd_llegada1": 0.9048438863216288,
-                    "rnd_llegada2": 0.3405565316942394,
-                    "llegada": 9.518121363251916,
-                    "rnd_fin_juego1": 0.8776360759891684,
-                    "rnd_fin_juego2": 0.27962760187353797,
-                    "fin_juego": 1.7976931348623157E308,
-                    "llego": true,
-                    "estado": "FIN_JUEGO"
-                },
-                {
-                    "rnd_llegada1": 0.5045137929917881,
-                    "rnd_llegada2": 0.3265972988237069,
-                    "llegada": 18.9170206342181,
-                    "rnd_fin_juego1": 0.11762907392937505,
-                    "rnd_fin_juego2": 0.45466081707232275,
-                    "fin_juego": 1.7976931348623157E308,
-                    "llego": true,
-                    "estado": "FIN_JUEGO"
-                },
-                {
-                    "rnd_llegada1": 0.9048438863216288,
-                    "rnd_llegada2": 0.3405565316942394,
-                    "llegada": 20.271603805755074,
-                    "rnd_fin_juego1": 0.0,
-                    "rnd_fin_juego2": 0.0,
-                    "fin_juego": 0.0,
-                    "llego": true,
-                    "estado": "ESPERANDO"
-                },
-                {
-                    "rnd_llegada1": 0.14981362086436079,
-                    "rnd_llegada2": 0.49725518309741623,
-                    "llegada": 26.375145199709976,
-                    "rnd_fin_juego1": 0.0,
-                    "rnd_fin_juego2": 0.0,
-                    "fin_juego": 0.0,
-                    "llego": true,
-                    "estado": "ESPERANDO"
-                },
-                {
-                    "rnd_llegada1": 0.14981362086436079,
-                    "rnd_llegada2": 0.49725518309741623,
-                    "llegada": 36.44235094091483,
-                    "rnd_fin_juego1": 0.0,
-                    "rnd_fin_juego2": 0.0,
-                    "fin_juego": 0.0,
-                    "llego": true,
-                    "estado": "ESPERANDO"
-                },
-                {
-                    "rnd_llegada1": 0.5045137929917881,
-                    "rnd_llegada2": 0.3265972988237069,
-                    "llegada": 40.99077001405989,
-                    "rnd_fin_juego1": 0.11762907392937505,
-                    "rnd_fin_juego2": 0.45466081707232275,
-                    "fin_juego": 98.01946330060332,
-                    "llego": true,
-                    "estado": "JUGANDO"
-                },
-                {
-                    "rnd_llegada1": 0.07490768702791006,
-                    "rnd_llegada2": 0.16705051543882699,
-                    "llegada": 48.70945385483255,
-                    "rnd_fin_juego1": 0.0,
-                    "rnd_fin_juego2": 0.0,
-                    "fin_juego": 0.0,
-                    "llego": true,
-                    "estado": "ESPERANDO"
-                },
-                {
-                    "rnd_llegada1": 0.018566373802480718,
-                    "rnd_llegada2": 0.4331763533774441,
-                    "llegada": 55.83403522754,
-                    "rnd_fin_juego1": 0.0,
-                    "rnd_fin_juego2": 0.0,
-                    "fin_juego": 0.0,
-                    "llego": true,
-                    "estado": "ESPERANDO"
-                },
-                {
-                    "rnd_llegada1": 0.07490768702791006,
-                    "rnd_llegada2": 0.16705051543882699,
-                    "llegada": 62.658154208510595,
-                    "rnd_fin_juego1": 0.0,
-                    "rnd_fin_juego2": 0.0,
-                    "fin_juego": 0.0,
-                    "llego": true,
-                    "estado": "ESPERANDO"
-                },
-                {
-                    "rnd_llegada1": 0.18581412916927498,
-                    "rnd_llegada2": 0.8397947193362126,
-                    "llegada": 74.62028807146753,
-                    "rnd_fin_juego1": 0.0,
-                    "rnd_fin_juego2": 0.0,
-                    "fin_juego": 0.0,
-                    "llego": true,
-                    "estado": "ESPERANDO"
-                },
-                {
-                    "rnd_llegada1": 0.018566373802480718,
-                    "rnd_llegada2": 0.4331763533774441,
-                    "llegada": 78.13605866301222,
-                    "rnd_fin_juego1": 0.0,
-                    "rnd_fin_juego2": 0.0,
-                    "fin_juego": 0.0,
-                    "llego": true,
-                    "estado": "ESPERANDO"
-                },
-                {
-                    "rnd_llegada1": 0.18581412916927498,
-                    "rnd_llegada2": 0.8397947193362126,
-                    "llegada": 81.51962717620168,
-                    "rnd_fin_juego1": 0.0,
-                    "rnd_fin_juego2": 0.0,
-                    "fin_juego": 0.0,
-                    "llego": true,
-                    "estado": "ESPERANDO"
-                }
-            ]
-        },
-        {
-            "n": 17,
-            "evento": "LLEGADA_FUTBOL",
-            "reloj": 88.33361166570249,
-            "futbolALlegar": {
-                "rnd_llegada": 0.5938361335639118,
-                "llegada": 115.36356933264955,
-                "rnd_fin_juego1": 0.0,
-                "rnd_fin_juego2": 0.0,
-                "fin_juego": 0.0,
-                "llego": false,
-                "estado": "NO_LLEGO"
-            },
-            "handBallALlegar": {
-                "rnd_llegada1": 0.2852744789431729,
-                "rnd_llegada2": 0.41184091541352486,
-                "llegada": 95.4420136167973,
-                "rnd_fin_juego1": 0.0,
-                "rnd_fin_juego2": 0.0,
-                "fin_juego": 0.0,
-                "llego": false,
-                "estado": "NO_LLEGO"
-            },
-            "basketBallALlegar": {
-                "rnd_llegada1": 0.6555447603590974,
-                "rnd_llegada2": 0.7258593610696394,
-                "llegada": 91.24190422056589,
-                "rnd_fin_juego1": 0.0,
-                "rnd_fin_juego2": 0.0,
-                "fin_juego": 0.0,
-                "llego": false,
-                "estado": "NO_LLEGO"
-            },
-            "jugando1": {
-                "rnd_llegada1": 0.5045137929917881,
-                "rnd_llegada2": 0.3265972988237069,
-                "llegada": 40.99077001405989,
-                "rnd_fin_juego1": 0.11762907392937505,
-                "rnd_fin_juego2": 0.45466081707232275,
-                "fin_juego": 1.7976931348623157E308,
-                "llego": true,
-                "estado": "FIN_JUEGO"
-            },
-            "jugando2": null,
-            "finLimpieza": 1.7976931348623157E308,
-            "cancha": {
-                "estado": "OCUPADA_UN_GRUPO"
-            },
-            "colaHF": 3,
-            "colaB": 7,
-            "acumuladorEsperaFutbol": 0.0,
-            "acumuladorEsperaHandBall": 0.0,
-            "acumuladorEsperaBasketBall": 267.7386584025252,
-            "acumuladorCantidadFutbolLlegaron": 0,
-            "acumuladorCantidadHandBallLlegaron": 0,
-            "acumuladorCantidadBasketBallLlegaron": 0,
-            "llegaron": [
-                {
-                    "rnd_llegada1": 0.9048438863216288,
-                    "rnd_llegada2": 0.3405565316942394,
-                    "llegada": 9.518121363251916,
-                    "rnd_fin_juego1": 0.8776360759891684,
-                    "rnd_fin_juego2": 0.27962760187353797,
-                    "fin_juego": 1.7976931348623157E308,
-                    "llego": true,
-                    "estado": "FIN_JUEGO"
-                },
-                {
-                    "rnd_llegada1": 0.5045137929917881,
-                    "rnd_llegada2": 0.3265972988237069,
-                    "llegada": 18.9170206342181,
-                    "rnd_fin_juego1": 0.11762907392937505,
-                    "rnd_fin_juego2": 0.45466081707232275,
-                    "fin_juego": 1.7976931348623157E308,
-                    "llego": true,
-                    "estado": "FIN_JUEGO"
-                },
-                {
-                    "rnd_llegada1": 0.9048438863216288,
-                    "rnd_llegada2": 0.3405565316942394,
-                    "llegada": 20.271603805755074,
-                    "rnd_fin_juego1": 0.0,
-                    "rnd_fin_juego2": 0.0,
-                    "fin_juego": 0.0,
-                    "llego": true,
-                    "estado": "ESPERANDO"
-                },
-                {
-                    "rnd_llegada1": 0.14981362086436079,
-                    "rnd_llegada2": 0.49725518309741623,
-                    "llegada": 26.375145199709976,
-                    "rnd_fin_juego1": 0.0,
-                    "rnd_fin_juego2": 0.0,
-                    "fin_juego": 0.0,
-                    "llego": true,
-                    "estado": "ESPERANDO"
-                },
-                {
-                    "rnd_llegada1": 0.14981362086436079,
-                    "rnd_llegada2": 0.49725518309741623,
-                    "llegada": 36.44235094091483,
-                    "rnd_fin_juego1": 0.0,
-                    "rnd_fin_juego2": 0.0,
-                    "fin_juego": 0.0,
-                    "llego": true,
-                    "estado": "ESPERANDO"
-                },
-                {
-                    "rnd_llegada1": 0.5045137929917881,
-                    "rnd_llegada2": 0.3265972988237069,
-                    "llegada": 40.99077001405989,
-                    "rnd_fin_juego1": 0.11762907392937505,
-                    "rnd_fin_juego2": 0.45466081707232275,
-                    "fin_juego": 98.01946330060332,
-                    "llego": true,
-                    "estado": "JUGANDO"
-                },
-                {
-                    "rnd_llegada1": 0.07490768702791006,
-                    "rnd_llegada2": 0.16705051543882699,
-                    "llegada": 48.70945385483255,
-                    "rnd_fin_juego1": 0.0,
-                    "rnd_fin_juego2": 0.0,
-                    "fin_juego": 0.0,
-                    "llego": true,
-                    "estado": "ESPERANDO"
-                },
-                {
-                    "rnd_llegada1": 0.018566373802480718,
-                    "rnd_llegada2": 0.4331763533774441,
-                    "llegada": 55.83403522754,
-                    "rnd_fin_juego1": 0.0,
-                    "rnd_fin_juego2": 0.0,
-                    "fin_juego": 0.0,
-                    "llego": true,
-                    "estado": "ESPERANDO"
-                },
-                {
-                    "rnd_llegada1": 0.07490768702791006,
-                    "rnd_llegada2": 0.16705051543882699,
-                    "llegada": 62.658154208510595,
-                    "rnd_fin_juego1": 0.0,
-                    "rnd_fin_juego2": 0.0,
-                    "fin_juego": 0.0,
-                    "llego": true,
-                    "estado": "ESPERANDO"
-                },
-                {
-                    "rnd_llegada1": 0.18581412916927498,
-                    "rnd_llegada2": 0.8397947193362126,
-                    "llegada": 74.62028807146753,
-                    "rnd_fin_juego1": 0.0,
-                    "rnd_fin_juego2": 0.0,
-                    "fin_juego": 0.0,
-                    "llego": true,
-                    "estado": "ESPERANDO"
-                },
-                {
-                    "rnd_llegada1": 0.018566373802480718,
-                    "rnd_llegada2": 0.4331763533774441,
-                    "llegada": 78.13605866301222,
-                    "rnd_fin_juego1": 0.0,
-                    "rnd_fin_juego2": 0.0,
-                    "fin_juego": 0.0,
-                    "llego": true,
-                    "estado": "ESPERANDO"
-                },
-                {
-                    "rnd_llegada1": 0.18581412916927498,
-                    "rnd_llegada2": 0.8397947193362126,
-                    "llegada": 81.51962717620168,
-                    "rnd_fin_juego1": 0.0,
-                    "rnd_fin_juego2": 0.0,
-                    "fin_juego": 0.0,
-                    "llego": true,
-                    "estado": "ESPERANDO"
-                },
-                {
-                    "rnd_llegada": 0.9473691969955245,
-                    "llegada": 88.33361166570249,
-                    "rnd_fin_juego1": 0.0,
-                    "rnd_fin_juego2": 0.0,
-                    "fin_juego": 0.0,
-                    "llego": true,
-                    "estado": "ESPERANDO"
-                }
-            ]
-        },
-        {
-            "n": 18,
-            "evento": "LLEGADA_BASKET",
-            "reloj": 91.24190422056589,
-            "futbolALlegar": {
-                "rnd_llegada": 0.5938361335639118,
-                "llegada": 115.36356933264955,
-                "rnd_fin_juego1": 0.0,
-                "rnd_fin_juego2": 0.0,
-                "fin_juego": 0.0,
-                "llego": false,
-                "estado": "NO_LLEGO"
-            },
-            "handBallALlegar": {
-                "rnd_llegada1": 0.2852744789431729,
-                "rnd_llegada2": 0.41184091541352486,
-                "llegada": 95.4420136167973,
-                "rnd_fin_juego1": 0.0,
-                "rnd_fin_juego2": 0.0,
-                "fin_juego": 0.0,
-                "llego": false,
-                "estado": "NO_LLEGO"
-            },
-            "basketBallALlegar": {
-                "rnd_llegada1": 0.6555447603590974,
-                "rnd_llegada2": 0.7258593610696394,
-                "llegada": 99.42498938756334,
-                "rnd_fin_juego1": 0.0,
-                "rnd_fin_juego2": 0.0,
-                "fin_juego": 0.0,
-                "llego": false,
-                "estado": "NO_LLEGO"
-            },
-            "jugando1": {
-                "rnd_llegada1": 0.5045137929917881,
-                "rnd_llegada2": 0.3265972988237069,
-                "llegada": 40.99077001405989,
-                "rnd_fin_juego1": 0.11762907392937505,
-                "rnd_fin_juego2": 0.45466081707232275,
-                "fin_juego": 1.7976931348623157E308,
-                "llego": true,
-                "estado": "FIN_JUEGO"
-            },
-            "jugando2": null,
-            "finLimpieza": 1.7976931348623157E308,
-            "cancha": {
-                "estado": "OCUPADA_UN_GRUPO"
-            },
-            "colaHF": 3,
-            "colaB": 8,
-            "acumuladorEsperaFutbol": 2.9082925548633938,
-            "acumuladorEsperaHandBall": 0.0,
-            "acumuladorEsperaBasketBall": 288.096706286569,
-            "acumuladorCantidadFutbolLlegaron": 0,
-            "acumuladorCantidadHandBallLlegaron": 0,
-            "acumuladorCantidadBasketBallLlegaron": 0,
-            "llegaron": [
-                {
-                    "rnd_llegada1": 0.9048438863216288,
-                    "rnd_llegada2": 0.3405565316942394,
-                    "llegada": 9.518121363251916,
-                    "rnd_fin_juego1": 0.8776360759891684,
-                    "rnd_fin_juego2": 0.27962760187353797,
-                    "fin_juego": 1.7976931348623157E308,
-                    "llego": true,
-                    "estado": "FIN_JUEGO"
-                },
-                {
-                    "rnd_llegada1": 0.5045137929917881,
-                    "rnd_llegada2": 0.3265972988237069,
-                    "llegada": 18.9170206342181,
-                    "rnd_fin_juego1": 0.11762907392937505,
-                    "rnd_fin_juego2": 0.45466081707232275,
-                    "fin_juego": 1.7976931348623157E308,
-                    "llego": true,
-                    "estado": "FIN_JUEGO"
-                },
-                {
-                    "rnd_llegada1": 0.9048438863216288,
-                    "rnd_llegada2": 0.3405565316942394,
-                    "llegada": 20.271603805755074,
-                    "rnd_fin_juego1": 0.0,
-                    "rnd_fin_juego2": 0.0,
-                    "fin_juego": 0.0,
-                    "llego": true,
-                    "estado": "ESPERANDO"
-                },
-                {
-                    "rnd_llegada1": 0.14981362086436079,
-                    "rnd_llegada2": 0.49725518309741623,
-                    "llegada": 26.375145199709976,
-                    "rnd_fin_juego1": 0.0,
-                    "rnd_fin_juego2": 0.0,
-                    "fin_juego": 0.0,
-                    "llego": true,
-                    "estado": "ESPERANDO"
-                },
-                {
-                    "rnd_llegada1": 0.14981362086436079,
-                    "rnd_llegada2": 0.49725518309741623,
-                    "llegada": 36.44235094091483,
-                    "rnd_fin_juego1": 0.0,
-                    "rnd_fin_juego2": 0.0,
-                    "fin_juego": 0.0,
-                    "llego": true,
-                    "estado": "ESPERANDO"
-                },
-                {
-                    "rnd_llegada1": 0.5045137929917881,
-                    "rnd_llegada2": 0.3265972988237069,
-                    "llegada": 40.99077001405989,
-                    "rnd_fin_juego1": 0.11762907392937505,
-                    "rnd_fin_juego2": 0.45466081707232275,
-                    "fin_juego": 98.01946330060332,
-                    "llego": true,
-                    "estado": "JUGANDO"
-                },
-                {
-                    "rnd_llegada1": 0.07490768702791006,
-                    "rnd_llegada2": 0.16705051543882699,
-                    "llegada": 48.70945385483255,
-                    "rnd_fin_juego1": 0.0,
-                    "rnd_fin_juego2": 0.0,
-                    "fin_juego": 0.0,
-                    "llego": true,
-                    "estado": "ESPERANDO"
-                },
-                {
-                    "rnd_llegada1": 0.018566373802480718,
-                    "rnd_llegada2": 0.4331763533774441,
-                    "llegada": 55.83403522754,
-                    "rnd_fin_juego1": 0.0,
-                    "rnd_fin_juego2": 0.0,
-                    "fin_juego": 0.0,
-                    "llego": true,
-                    "estado": "ESPERANDO"
-                },
-                {
-                    "rnd_llegada1": 0.07490768702791006,
-                    "rnd_llegada2": 0.16705051543882699,
-                    "llegada": 62.658154208510595,
-                    "rnd_fin_juego1": 0.0,
-                    "rnd_fin_juego2": 0.0,
-                    "fin_juego": 0.0,
-                    "llego": true,
-                    "estado": "ESPERANDO"
-                },
-                {
-                    "rnd_llegada1": 0.18581412916927498,
-                    "rnd_llegada2": 0.8397947193362126,
-                    "llegada": 74.62028807146753,
-                    "rnd_fin_juego1": 0.0,
-                    "rnd_fin_juego2": 0.0,
-                    "fin_juego": 0.0,
-                    "llego": true,
-                    "estado": "ESPERANDO"
-                },
-                {
-                    "rnd_llegada1": 0.018566373802480718,
-                    "rnd_llegada2": 0.4331763533774441,
-                    "llegada": 78.13605866301222,
-                    "rnd_fin_juego1": 0.0,
-                    "rnd_fin_juego2": 0.0,
-                    "fin_juego": 0.0,
-                    "llego": true,
-                    "estado": "ESPERANDO"
-                },
-                {
-                    "rnd_llegada1": 0.18581412916927498,
-                    "rnd_llegada2": 0.8397947193362126,
-                    "llegada": 81.51962717620168,
-                    "rnd_fin_juego1": 0.0,
-                    "rnd_fin_juego2": 0.0,
-                    "fin_juego": 0.0,
-                    "llego": true,
-                    "estado": "ESPERANDO"
-                },
-                {
-                    "rnd_llegada": 0.9473691969955245,
-                    "llegada": 88.33361166570249,
-                    "rnd_fin_juego1": 0.0,
-                    "rnd_fin_juego2": 0.0,
-                    "fin_juego": 0.0,
-                    "llego": true,
-                    "estado": "ESPERANDO"
-                },
-                {
-                    "rnd_llegada1": 0.6555447603590974,
-                    "rnd_llegada2": 0.7258593610696394,
-                    "llegada": 91.24190422056589,
-                    "rnd_fin_juego1": 0.0,
-                    "rnd_fin_juego2": 0.0,
-                    "fin_juego": 0.0,
-                    "llego": true,
-                    "estado": "ESPERANDO"
-                }
-            ]
-        },
-        {
-            "n": 19,
-            "evento": "LLEGADA_HANDBALL",
-            "reloj": 95.4420136167973,
-            "futbolALlegar": {
-                "rnd_llegada": 0.5938361335639118,
-                "llegada": 115.36356933264955,
-                "rnd_fin_juego1": 0.0,
-                "rnd_fin_juego2": 0.0,
-                "fin_juego": 0.0,
-                "llego": false,
-                "estado": "NO_LLEGO"
-            },
-            "handBallALlegar": {
-                "rnd_llegada1": 0.2852744789431729,
-                "rnd_llegada2": 0.41184091541352486,
-                "llegada": 117.10831164365999,
-                "rnd_fin_juego1": 0.0,
-                "rnd_fin_juego2": 0.0,
-                "fin_juego": 0.0,
-                "llego": false,
-                "estado": "NO_LLEGO"
-            },
-            "basketBallALlegar": {
-                "rnd_llegada1": 0.6555447603590974,
-                "rnd_llegada2": 0.7258593610696394,
-                "llegada": 99.42498938756334,
-                "rnd_fin_juego1": 0.0,
-                "rnd_fin_juego2": 0.0,
-                "fin_juego": 0.0,
-                "llego": false,
-                "estado": "NO_LLEGO"
-            },
-            "jugando1": {
-                "rnd_llegada1": 0.5045137929917881,
-                "rnd_llegada2": 0.3265972988237069,
-                "llegada": 40.99077001405989,
-                "rnd_fin_juego1": 0.11762907392937505,
-                "rnd_fin_juego2": 0.45466081707232275,
-                "fin_juego": 1.7976931348623157E308,
-                "llego": true,
-                "estado": "FIN_JUEGO"
-            },
-            "jugando2": null,
-            "finLimpieza": 1.7976931348623157E308,
-            "cancha": {
-                "estado": "OCUPADA_UN_GRUPO"
-            },
-            "colaHF": 4,
-            "colaB": 8,
-            "acumuladorEsperaFutbol": 7.108401951094805,
-            "acumuladorEsperaHandBall": 0.0,
-            "acumuladorEsperaBasketBall": 321.69758145642027,
-            "acumuladorCantidadFutbolLlegaron": 0,
-            "acumuladorCantidadHandBallLlegaron": 0,
-            "acumuladorCantidadBasketBallLlegaron": 0,
-            "llegaron": [
-                {
-                    "rnd_llegada1": 0.9048438863216288,
-                    "rnd_llegada2": 0.3405565316942394,
-                    "llegada": 9.518121363251916,
-                    "rnd_fin_juego1": 0.8776360759891684,
-                    "rnd_fin_juego2": 0.27962760187353797,
-                    "fin_juego": 1.7976931348623157E308,
-                    "llego": true,
-                    "estado": "FIN_JUEGO"
-                },
-                {
-                    "rnd_llegada1": 0.5045137929917881,
-                    "rnd_llegada2": 0.3265972988237069,
-                    "llegada": 18.9170206342181,
-                    "rnd_fin_juego1": 0.11762907392937505,
-                    "rnd_fin_juego2": 0.45466081707232275,
-                    "fin_juego": 1.7976931348623157E308,
-                    "llego": true,
-                    "estado": "FIN_JUEGO"
-                },
-                {
-                    "rnd_llegada1": 0.9048438863216288,
-                    "rnd_llegada2": 0.3405565316942394,
-                    "llegada": 20.271603805755074,
-                    "rnd_fin_juego1": 0.0,
-                    "rnd_fin_juego2": 0.0,
-                    "fin_juego": 0.0,
-                    "llego": true,
-                    "estado": "ESPERANDO"
-                },
-                {
-                    "rnd_llegada1": 0.14981362086436079,
-                    "rnd_llegada2": 0.49725518309741623,
-                    "llegada": 26.375145199709976,
-                    "rnd_fin_juego1": 0.0,
-                    "rnd_fin_juego2": 0.0,
-                    "fin_juego": 0.0,
-                    "llego": true,
-                    "estado": "ESPERANDO"
-                },
-                {
-                    "rnd_llegada1": 0.14981362086436079,
-                    "rnd_llegada2": 0.49725518309741623,
-                    "llegada": 36.44235094091483,
-                    "rnd_fin_juego1": 0.0,
-                    "rnd_fin_juego2": 0.0,
-                    "fin_juego": 0.0,
-                    "llego": true,
-                    "estado": "ESPERANDO"
-                },
-                {
-                    "rnd_llegada1": 0.5045137929917881,
-                    "rnd_llegada2": 0.3265972988237069,
-                    "llegada": 40.99077001405989,
-                    "rnd_fin_juego1": 0.11762907392937505,
-                    "rnd_fin_juego2": 0.45466081707232275,
-                    "fin_juego": 98.01946330060332,
-                    "llego": true,
-                    "estado": "JUGANDO"
-                },
-                {
-                    "rnd_llegada1": 0.07490768702791006,
-                    "rnd_llegada2": 0.16705051543882699,
-                    "llegada": 48.70945385483255,
-                    "rnd_fin_juego1": 0.0,
-                    "rnd_fin_juego2": 0.0,
-                    "fin_juego": 0.0,
-                    "llego": true,
-                    "estado": "ESPERANDO"
-                },
-                {
-                    "rnd_llegada1": 0.018566373802480718,
-                    "rnd_llegada2": 0.4331763533774441,
-                    "llegada": 55.83403522754,
-                    "rnd_fin_juego1": 0.0,
-                    "rnd_fin_juego2": 0.0,
-                    "fin_juego": 0.0,
-                    "llego": true,
-                    "estado": "ESPERANDO"
-                },
-                {
-                    "rnd_llegada1": 0.07490768702791006,
-                    "rnd_llegada2": 0.16705051543882699,
-                    "llegada": 62.658154208510595,
-                    "rnd_fin_juego1": 0.0,
-                    "rnd_fin_juego2": 0.0,
-                    "fin_juego": 0.0,
-                    "llego": true,
-                    "estado": "ESPERANDO"
-                },
-                {
-                    "rnd_llegada1": 0.18581412916927498,
-                    "rnd_llegada2": 0.8397947193362126,
-                    "llegada": 74.62028807146753,
-                    "rnd_fin_juego1": 0.0,
-                    "rnd_fin_juego2": 0.0,
-                    "fin_juego": 0.0,
-                    "llego": true,
-                    "estado": "ESPERANDO"
-                },
-                {
-                    "rnd_llegada1": 0.018566373802480718,
-                    "rnd_llegada2": 0.4331763533774441,
-                    "llegada": 78.13605866301222,
-                    "rnd_fin_juego1": 0.0,
-                    "rnd_fin_juego2": 0.0,
-                    "fin_juego": 0.0,
-                    "llego": true,
-                    "estado": "ESPERANDO"
-                },
-                {
-                    "rnd_llegada1": 0.18581412916927498,
-                    "rnd_llegada2": 0.8397947193362126,
-                    "llegada": 81.51962717620168,
-                    "rnd_fin_juego1": 0.0,
-                    "rnd_fin_juego2": 0.0,
-                    "fin_juego": 0.0,
-                    "llego": true,
-                    "estado": "ESPERANDO"
-                },
-                {
-                    "rnd_llegada": 0.9473691969955245,
-                    "llegada": 88.33361166570249,
-                    "rnd_fin_juego1": 0.0,
-                    "rnd_fin_juego2": 0.0,
-                    "fin_juego": 0.0,
-                    "llego": true,
-                    "estado": "ESPERANDO"
-                },
-                {
-                    "rnd_llegada1": 0.6555447603590974,
-                    "rnd_llegada2": 0.7258593610696394,
-                    "llegada": 91.24190422056589,
-                    "rnd_fin_juego1": 0.0,
-                    "rnd_fin_juego2": 0.0,
-                    "fin_juego": 0.0,
-                    "llego": true,
-                    "estado": "ESPERANDO"
-                },
-                {
-                    "rnd_llegada1": 0.2852744789431729,
-                    "rnd_llegada2": 0.41184091541352486,
-                    "llegada": 95.4420136167973,
-                    "rnd_fin_juego1": 0.0,
-                    "rnd_fin_juego2": 0.0,
-                    "fin_juego": 0.0,
-                    "llego": true,
-                    "estado": "ESPERANDO"
-                }
-            ]
-        }
+                "jugando2": null,
+                "finLimpieza": 1.7976931348623157E308,
+                "cancha": {
+                    "estado": "OCUPADA_UN_GRUPO"
+                },
+                "colaHF": 7,
+                "colaB": 13,
+                "acumuladorEsperaFutbol": 146.2208978771145,
+                "acumuladorEsperaHandBall": 0.0,
+                "acumuladorEsperaBasketBall": 682.0471851081818,
+                "acumuladorCantidadFutbolLlegaron": 0,
+                "acumuladorCantidadHandBallLlegaron": 0,
+                "acumuladorCantidadBasketBallLlegaron": 0,
+                "llegaronFutbolHandBall": [
+                    {
+                        "tipo": "HAND_BALL",
+                        "rnd_llegada1": 0.5145573956081833,
+                        "rnd_llegada2": 0.9387119274693267,
+                        "llegada": 22.13671205329328,
+                        "rnd_fin_juego1": 0.5791077633858823,
+                        "rnd_fin_juego2": 0.007486808496297903,
+                        "fin_juego": 1.7976931348623157E308,
+                        "estado": "FIN_JUEGO"
+                    },
+                    {
+                        "tipo": "HAND_BALL",
+                        "rnd_llegada1": 0.5145573956081833,
+                        "rnd_llegada2": 0.9387119274693267,
+                        "llegada": 41.270659519071074,
+                        "rnd_fin_juego1": 0.5791077633858823,
+                        "rnd_fin_juego2": 0.007486808496297903,
+                        "fin_juego": 1.7976931348623157E308,
+                        "estado": "FIN_JUEGO"
+                    },
+                    {
+                        "tipo": "FUTBOL",
+                        "rnd_llegada": 0.7397116102546244,
+                        "llegada": 43.48364673125598,
+                        "rnd_fin_juego1": 0.2099917012012431,
+                        "rnd_fin_juego2": 0.4555433680190163,
+                        "fin_juego": 1.7976931348623157E308,
+                        "estado": "FIN_JUEGO"
+                    },
+                    {
+                        "tipo": "HAND_BALL",
+                        "rnd_llegada1": 0.33713121387980505,
+                        "rnd_llegada2": 0.6967523617704322,
+                        "llegada": 60.30223884174352,
+                        "rnd_fin_juego1": 0.1570959712160358,
+                        "rnd_fin_juego2": 0.34456766429897867,
+                        "fin_juego": 151.37030913180962,
+                        "estado": "JUGANDO"
+                    },
+                    {
+                        "tipo": "FUTBOL",
+                        "rnd_llegada": 0.6757021877152599,
+                        "llegada": 77.2664370808445,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "HAND_BALL",
+                        "rnd_llegada1": 0.33713121387980505,
+                        "rnd_llegada2": 0.6967523617704322,
+                        "llegada": 77.51648473962757,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "FUTBOL",
+                        "rnd_llegada": 0.010956948009574918,
+                        "llegada": 77.59695960516392,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "HAND_BALL",
+                        "rnd_llegada1": 0.6037707380652982,
+                        "rnd_llegada2": 0.37152004758658064,
+                        "llegada": 96.12723583523072,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "FUTBOL",
+                        "rnd_llegada": 0.5184343596826992,
+                        "llegada": 99.51834157682774,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "FUTBOL",
+                        "rnd_llegada": 0.03385290044914757,
+                        "llegada": 100.55151695867244,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "HAND_BALL",
+                        "rnd_llegada1": 0.6037707380652982,
+                        "rnd_llegada2": 0.37152004758658064,
+                        "llegada": 117.57860528798045,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    }
+                ],
+                "llegaronBasketBall": [
+                    {
+                        "tipo": "BASKET_BALL",
+                        "rnd_llegada1": 0.2516439702199742,
+                        "rnd_llegada2": 0.58806102614851,
+                        "llegada": 15.427488351038564,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "BASKET_BALL",
+                        "rnd_llegada1": 0.5201807211071783,
+                        "rnd_llegada2": 0.0675376378357575,
+                        "llegada": 27.511298899773863,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "BASKET_BALL",
+                        "rnd_llegada1": 0.5201807211071783,
+                        "rnd_llegada2": 0.0675376378357575,
+                        "llegada": 38.45276875831047,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "BASKET_BALL",
+                        "rnd_llegada1": 0.42429473296077513,
+                        "rnd_llegada2": 0.6085763830381785,
+                        "llegada": 46.42002368434708,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "BASKET_BALL",
+                        "rnd_llegada1": 0.42429473296077513,
+                        "rnd_llegada2": 0.6085763830381785,
+                        "llegada": 54.768792935203145,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "BASKET_BALL",
+                        "rnd_llegada1": 0.3167352495263638,
+                        "rnd_llegada2": 0.4669837200025906,
+                        "llegada": 61.801075309177605,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "BASKET_BALL",
+                        "rnd_llegada1": 0.3167352495263638,
+                        "rnd_llegada2": 0.4669837200025906,
+                        "llegada": 72.42570666014014,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "BASKET_BALL",
+                        "rnd_llegada1": 0.9280949322809195,
+                        "rnd_llegada2": 0.09456631374961555,
+                        "llegada": 83.06592186427865,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "BASKET_BALL",
+                        "rnd_llegada1": 0.9280949322809195,
+                        "rnd_llegada2": 0.09456631374961555,
+                        "llegada": 93.49846610719692,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "BASKET_BALL",
+                        "rnd_llegada1": 0.3207198938364654,
+                        "rnd_llegada2": 0.532589251786078,
+                        "llegada": 100.54527210198407,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "BASKET_BALL",
+                        "rnd_llegada1": 0.3207198938364654,
+                        "rnd_llegada2": 0.532589251786078,
+                        "llegada": 109.93196769070977,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "BASKET_BALL",
+                        "rnd_llegada1": 0.2597414525257453,
+                        "rnd_llegada2": 0.6220005014696892,
+                        "llegada": 117.56649182552746,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    },
+                    {
+                        "tipo": "BASKET_BALL",
+                        "rnd_llegada1": 0.2597414525257453,
+                        "rnd_llegada2": 0.6220005014696892,
+                        "llegada": 125.28853827465578,
+                        "rnd_fin_juego1": 0.0,
+                        "rnd_fin_juego2": 0.0,
+                        "fin_juego": 0.0,
+                        "estado": "ESPERANDO"
+                    }
+                ]
+            }
     ];
 
   const filterSimulationData = (objeto, leaf) => {
     const newObjeto = { ...objeto }; // Create a shallow copy of the original object
 
     if(!leaf){
-      newObjeto.ensambladores = objeto.ensambladores.map(obj => filterSimulationData(obj, true));
-      newObjeto.hornos = objeto.hornos.map(obj => filterSimulationData(obj, true));
+      newObjeto.llegaronFutbolHandBall = objeto.llegaronFutbolHandBall.map(obj => filterSimulationData(obj, true));
+      newObjeto.llegaronBasketBall = objeto.llegaronBasketBall.map(obj => filterSimulationData(obj, true));
     }
 
     for (const atributo in objeto) {
@@ -2621,6 +2686,9 @@ function App() {
   return (
     <div className="App">
       <SimulationForm></SimulationForm>
+      <Grid data={data.map(objeto => filterSimulationData(objeto, false))} 
+      cantidadBasketBall={data[data.length - 1].llegaronBasketBall.length}
+      cantidadFutbolHandball={data[data.length - 1].llegaronFutbolHandBall.length}></Grid>
     </div>
   );
 }

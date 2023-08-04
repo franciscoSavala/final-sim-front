@@ -87,7 +87,7 @@ function SimulationForm() {
                     </div>
 
                     <div className="general-parameters">
-                        LLEGADA GRUPOS
+                        <span className="estadistico-title">LLEGADA GRUPOS</span>
                         <div className="estadisticos-ensambladores">
                             FUTBOL Exp-1(media)
                             <NumberImput
@@ -130,7 +130,7 @@ function SimulationForm() {
                     </div>
 
                     <div className="general-parameters">
-                        FIN JUEGO GRUPOS
+                        <span className="estadistico-title">FIN JUEGO GRUPOS</span>
                         <div className="estadisticos-ensambladores">
                             FUTBOL Normal(media, desv)
                             <NumberImput

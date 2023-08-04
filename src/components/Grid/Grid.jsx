@@ -2,9 +2,9 @@ import React, { useEffect, useState } from "react";
 import "./Grid.css";
 
 
-function Grid({ data, cantidadEnsambladores, cantidadHornos }) {
+function Grid({ data, cantidadFutbolHandball, cantidadBasketBall }) {
 
-    
+
 
     return (
         <div>
@@ -14,39 +14,74 @@ function Grid({ data, cantidadEnsambladores, cantidadHornos }) {
                         <th rowSpan="3">N</th>
                         <th rowSpan="3">Evento</th>
                         <th rowSpan="3">Reloj</th>
-                        <th colSpan={cantidadEnsambladores * 4}>Ensambladores</th>
-                        <th colSpan={2 + cantidadHornos * 2}>Hornos</th>
-                        <th rowSpan="2" colSpan="4">Estadisticos</th>
+                        <th colSpan={2 + 3 * 2} rowSpan="1">Llegada Grupo</th>
+                        <th colSpan={2 * 3}>Fin Juego</th>
+                        <th colSpan="1" rowSpan="3">Fin Limpieza</th>
+                        <th rowSpan="2" colSpan="3">Predio</th>
+                        <th rowSpan="1" colSpan="6">Acumuladores</th>
+                        <th rowSpan="1" colSpan={cantidadBasketBall * 2}>BasketBall</th>
+                        <th rowSpan="1" colSpan={cantidadFutbolHandball * 3}>Futbol-HandBall</th>
+
                     </tr>
                     <tr>
-                        {Array.from({ length: cantidadEnsambladores }, (_, index) => (
-                            <th colSpan="4" key={`ensamblador${index}`}>Ensamblador {index + 1}</th>
+                        <th rowSpan="1" colSpan={2}>Futbol</th>
+                        <th rowSpan="1" colSpan={3}>HandBall</th>
+                        <th rowSpan="1" colSpan={3}>BasketBall</th>
+
+                        <th rowSpan="1" colSpan={3}>Jugando 1</th>
+                        <th rowSpan="1" colSpan={3}>Jugando 2</th>
+
+                        <th rowSpan="1" colSpan={3}>Espera</th>
+                        <th rowSpan="1" colSpan={3}>Llegada</th>
+
+
+                        {Array.from({ length: cantidadBasketBall }, (_, index) => (
+                            <th colSpan="2" key={`basketball${index}`}>{index + 1}</th>
                         ))}
-                        <th rowSpan="2">RND</th>
-                        <th rowSpan="2">Cola</th>
-                        {Array.from({ length: cantidadHornos }, (_, index) => (
-                            <th colSpan="2" key={`horno${index}`}>Horno {index + 1}</th>
+                        {Array.from({ length: cantidadFutbolHandball }, (_, index) => (
+                            <th colSpan="3" key={`futbol-handball${index}`}>{index + 1}</th>
                         ))}
                     </tr>
                     <tr>
-                        {Array.from({ length: cantidadEnsambladores }, (_, index) => (
-                            <React.Fragment key={`ensamblador${index}`}>
-                                <th key={`ensamblador${index}-estado`}>Estado</th>
-                                <th key={`ensamblador${index}-rnd`}>RND</th>
-                                <th key={`ensamblador${index}-fin-ensamblado`}>Fin Ensamblado</th>
-                                <th key={`ensamblador${index}-llegada-a-cola`}>Llegada a cola</th>
+                        <th>RND</th>
+                        <th>Prox</th>
+                        <th>RND 1</th>
+                        <th>RND 2</th>
+                        <th>Prox</th>
+                        <th>RND 1</th>
+                        <th>RND 2</th>
+                        <th>Prox</th>
+                        <th>RND 1</th>
+                        <th>RND 2</th>
+                        <th>Prox</th>
+                        <th>RND 1</th>
+                        <th>RND 2</th>
+                        <th>Prox</th>
+
+                        <th>Estado</th>
+                        <th>Cola HF</th>
+                        <th>Cola B</th>
+
+                        <th>F</th>
+                        <th>H</th>
+                        <th>B</th>
+                        <th>F</th>
+                        <th>H</th>
+                        <th>B</th>
+
+                        {Array.from({ length: cantidadBasketBall }, (_, index) => (
+                            <React.Fragment key={`basketball${index}`}>
+                                <th key={`basketball${index}-llegada`}>Estado</th>
+                                <th key={`basketball${index}-estado`}>Llegada</th>
                             </React.Fragment>
                         ))}
-                        {Array.from({ length: cantidadHornos }, (_, index) => (
-                            <React.Fragment key={`horno${index}`}>
-                                <th key={`horno${index}-estado`}>Estado</th>
-                                <th key={`horno${index}-fin-cuece`}>Fin Cuece</th>
+                        {Array.from({ length: cantidadFutbolHandball }, (_, index) => (
+                            <React.Fragment key={`futbol-handball${index}`}>
+                                <th key={`futbol-handball${index}-tipo`}>Tipo</th>
+                                <th key={`futbol-handball${index}-estado`}>Estado</th>
+                                <th key={`futbol-handball${index}-llegada`}>Llegada</th>
                             </React.Fragment>
                         ))}
-                        <th>Horas Trabajadas</th>
-                        <th>Dias Trabajados</th>
-                        <th>Moldes Terminados</th>
-                        <th>Cantidad Trabjadores</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -55,26 +90,50 @@ function Grid({ data, cantidadEnsambladores, cantidadHornos }) {
                             <td>{dato.n}</td>
                             <td>{dato.evento}</td>
                             <td>{dato.reloj}</td>
-                            {Array.from({ length: cantidadEnsambladores }, (_, index) => (
-                                <React.Fragment key={`ensamblador${index}`}>
-                                    <td key={`ensamblador${index}-estado`}>{dato.ensambladores[index].estado}</td>
-                                    <td key={`ensamblador${index}-rnd`}>{dato.ensambladores[index].rnd}</td>
-                                    <td key={`ensamblador${index}-fin-ensamblado`}>{dato.ensambladores[index].finEnsamblado}</td>
-                                    <td key={`ensamblador${index}-llegada-a-cola`}>{dato.ensambladores[index].llegadaACola}</td>
+
+                            <td>{dato.futbolALlegar.rnd_llegada}</td>
+                            <td>{dato.futbolALlegar.llegada}</td>
+                            <td>{dato.handBallALlegar.rnd_llegada1}</td>
+                            <td>{dato.handBallALlegar.rnd_llegada2}</td>
+                            <td>{dato.handBallALlegar.llegada}</td>
+                            <td>{dato.basketBallALlegar.rnd_llegada1}</td>
+                            <td>{dato.basketBallALlegar.rnd_llegada2}</td>
+                            <td>{dato.basketBallALlegar.llegada}</td>
+
+                            <td>{(dato.jugando1 != null) ? dato.jugando1.rnd_fin_juego1 : null}</td>
+                            <td>{(dato.jugando1 != null) ? dato.jugando1.rnd_fin_juego2 : null}</td>
+                            <td>{(dato.jugando1 != null) ? dato.jugando1.fin_juego : null}</td>
+                            <td>{(dato.jugando2 != null) ? dato.jugando2.rnd_fin_juego1 : null}</td>
+                            <td>{(dato.jugando2 != null) ? dato.jugando2.rnd_fin_juego2 : null}</td>
+                            <td>{(dato.jugando2 != null) ? dato.jugando2.fin_juego : null}</td>
+
+                            <td>{dato.finLimpieza}</td>
+
+                            <td>{dato.cancha.estado}</td>
+                            <td>{dato.colaHF}</td>
+                            <td>{dato.colaB}</td>
+
+                            <td>{dato.acumuladorEsperaFutbol}</td>
+                            <td>{dato.acumuladorEsperaHandBall}</td>
+                            <td>{dato.acumuladorEsperaBasketBall}</td>
+                            <td>{dato.acumuladorCantidadFutbolLlegaron}</td>
+                            <td>{dato.acumuladorCantidadHandBallLlegaron}</td>
+                            <td>{dato.acumuladorCantidadBasketBallLlegaron}</td>
+
+
+                            {Array.from({ length: cantidadBasketBall }, (_, index) => (
+                                <React.Fragment key={`basketball${index}`}>
+                                    <td key={`basketball${index}-estado`}>{(dato.llegaronBasketBall[index] != null && dato.llegaronBasketBall[index].estado !== "FIN_JUEGO") ? dato.llegaronBasketBall[index].estado : null}</td>
+                                    <td key={`basketball${index}-llegada`}>{(dato.llegaronBasketBall[index] != null && dato.llegaronBasketBall[index].estado !== "FIN_JUEGO") ? dato.llegaronBasketBall[index].llegada : null}</td>
                                 </React.Fragment>
                             ))}
-                            <td>{dato.rnd}</td>
-                            <td>{dato.cola}</td>
-                            {Array.from({ length: cantidadHornos }, (_, index) => (
-                                <React.Fragment key={`horno${index}`}>
-                                    <td key={`horno${index}-estado`}>{dato.hornos[index].estado}</td>
-                                    <td key={`horno${index}-fin-cuece`}>{dato.hornos[index].finCuece}</td>
+                            {Array.from({ length: cantidadFutbolHandball }, (_, index) => (
+                                <React.Fragment key={`futbol-handball${index}`}>
+                                    <td key={`futbol-handball${index}-tipo`}>{(dato.llegaronFutbolHandBall[index] != null && dato.llegaronFutbolHandBall[index].estado !== "FIN_JUEGO") ? dato.llegaronFutbolHandBall[index].tipo : null}</td>
+                                    <td key={`futbol-handball${index}-estado`}>{(dato.llegaronFutbolHandBall[index] != null && dato.llegaronFutbolHandBall[index].estado !== "FIN_JUEGO") ? dato.llegaronFutbolHandBall[index].estado : null}</td>
+                                    <td key={`futbol-handball${index}-llegada`}>{(dato.llegaronFutbolHandBall[index] != null && dato.llegaronFutbolHandBall[index].estado !== "FIN_JUEGO") ? dato.llegaronFutbolHandBall[index].llegada : null}</td>
                                 </React.Fragment>
                             ))}
-                            <td>{dato.horasTrabajadas}</td>
-                            <td>{dato.diasTrabajados}</td>
-                            <td>{dato.moldesTerminados}</td>
-                            <td>{dato.cantidadTrabajadores}</td>
                         </tr>
                     ))}
                 </tbody>
