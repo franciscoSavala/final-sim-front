@@ -29,13 +29,21 @@ function App() {
   const handleFormSubmit = (formData) => {
     makeRequest(formData);
   };
+  
 
   const makeRequest = async (formData) => {
+    const apiUrl = 'http://localhost:8080/api/v1'; // Reemplaza esta URL con la URL real de tu API
+    const username = 'fran-savala';
+    const password = 'MichitoSantos23GalletitaDeamon';
+
+    const base64Credentials = btoa(`${username}:${password}`);
+
     try {
-      let res = await fetch("http://localhost:8080/api/v1", {
+      let res = await fetch(apiUrl, {
         method: "POST",
         headers: {
           'Content-type': 'application/json; charset=UTF-8',
+          'Authorization': `Basic ${base64Credentials}`,
         },
         body: JSON.stringify({ ...formData })
       });
