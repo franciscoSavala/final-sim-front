@@ -1,14 +1,14 @@
 import React from "react";
-import "./Grid.css";
+import "../Grid/Grid.css";
 
 
-function Grid({ data, cantidadFutbolHandball, cantidadBasketBall }) {
+function LastLine({ response }) {
 
-
+    const data = response.data;
 
     return (
         <div>
-            <span className="titulo-tabla">Simulacion</span>
+            <span className="titulo-tabla">Ultima Linea</span>
             <table>
                 <thead>
                     <tr>
@@ -20,8 +20,7 @@ function Grid({ data, cantidadFutbolHandball, cantidadBasketBall }) {
                         <th colSpan="1" rowSpan="3">Fin Limpieza</th>
                         <th rowSpan="2" colSpan="3">Predio</th>
                         <th rowSpan="1" colSpan="6">Acumuladores</th>
-                        <th rowSpan="1" colSpan={cantidadBasketBall * 2}>BasketBall</th>
-                        <th rowSpan="1" colSpan={cantidadFutbolHandball * 3}>Futbol-HandBall</th>
+                        <th rowSpan="1" colSpan="3">PROMEDIOS</th>
 
                     </tr>
                     <tr>
@@ -35,13 +34,11 @@ function Grid({ data, cantidadFutbolHandball, cantidadBasketBall }) {
                         <th rowSpan="1" colSpan={3}>Espera</th>
                         <th rowSpan="1" colSpan={3}>Llegada</th>
 
+                        <th rowSpan="2" colSpan={1}>Espera Futbol</th>
+                        <th rowSpan="2" colSpan={1}>Espera HandBall</th>
+                        <th rowSpan="2" colSpan={1}>Espera BasketBall</th>
 
-                        {Array.from({ length: cantidadBasketBall }, (_, index) => (
-                            <th colSpan="2" key={`basketball${index}`}>{index + 1}</th>
-                        ))}
-                        {Array.from({ length: cantidadFutbolHandball }, (_, index) => (
-                            <th colSpan="3" key={`futbol-handball${index}`}>{index + 1}</th>
-                        ))}
+
                     </tr>
                     <tr>
                         <th>RND</th>
@@ -70,19 +67,6 @@ function Grid({ data, cantidadFutbolHandball, cantidadBasketBall }) {
                         <th>H</th>
                         <th>B</th>
 
-                        {Array.from({ length: cantidadBasketBall }, (_, index) => (
-                            <React.Fragment key={`basketball${index}`}>
-                                <th key={`basketball${index}-llegada`}>Estado</th>
-                                <th key={`basketball${index}-estado`}>Llegada</th>
-                            </React.Fragment>
-                        ))}
-                        {Array.from({ length: cantidadFutbolHandball }, (_, index) => (
-                            <React.Fragment key={`futbol-handball${index}`}>
-                                <th key={`futbol-handball${index}-tipo`}>Tipo</th>
-                                <th key={`futbol-handball${index}-estado`}>Estado</th>
-                                <th key={`futbol-handball${index}-llegada`}>Llegada</th>
-                            </React.Fragment>
-                        ))}
                     </tr>
                 </thead>
                 <tbody>
@@ -122,20 +106,9 @@ function Grid({ data, cantidadFutbolHandball, cantidadBasketBall }) {
                             <td>{dato.acumuladorCantidadHandBallLlegaron}</td>
                             <td>{dato.acumuladorCantidadBasketBallLlegaron}</td>
 
-
-                            {Array.from({ length: cantidadBasketBall }, (_, index) => (
-                                <React.Fragment key={`basketball${index}`}>
-                                    <td key={`basketball${index}-estado`}>{(dato.llegaronBasketBall[index] != null && dato.llegaronBasketBall[index].estado !== "FIN_JUEGO") ? dato.llegaronBasketBall[index].estado : null}</td>
-                                    <td key={`basketball${index}-llegada`}>{(dato.llegaronBasketBall[index] != null && dato.llegaronBasketBall[index].estado !== "FIN_JUEGO") ? dato.llegaronBasketBall[index].llegada : null}</td>
-                                </React.Fragment>
-                            ))}
-                            {Array.from({ length: cantidadFutbolHandball }, (_, index) => (
-                                <React.Fragment key={`futbol-handball${index}`}>
-                                    <td key={`futbol-handball${index}-tipo`}>{(dato.llegaronFutbolHandBall[index] != null && dato.llegaronFutbolHandBall[index].estado !== "FIN_JUEGO") ? dato.llegaronFutbolHandBall[index].tipo : null}</td>
-                                    <td key={`futbol-handball${index}-estado`}>{(dato.llegaronFutbolHandBall[index] != null && dato.llegaronFutbolHandBall[index].estado !== "FIN_JUEGO") ? dato.llegaronFutbolHandBall[index].estado : null}</td>
-                                    <td key={`futbol-handball${index}-llegada`}>{(dato.llegaronFutbolHandBall[index] != null && dato.llegaronFutbolHandBall[index].estado !== "FIN_JUEGO") ? dato.llegaronFutbolHandBall[index].llegada : null}</td>
-                                </React.Fragment>
-                            ))}
+                            <td className="promedios">{response.promedioEsperaFutbol}</td>
+                            <td className="promedios">{response.promedioEsperaHandBall}</td>
+                            <td className="promedios">{response.promedioEsperaBasketBall}</td>
                         </tr>
                     ))}
                 </tbody>
@@ -144,4 +117,4 @@ function Grid({ data, cantidadFutbolHandball, cantidadBasketBall }) {
     );
 }
 
-export default Grid;
+export default LastLine;
