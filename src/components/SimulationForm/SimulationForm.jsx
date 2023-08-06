@@ -33,7 +33,7 @@ function SimulationForm({onFormatSubmit}) {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        onFormatSubmit(apiJsonReq);
+        //onFormatSubmit(apiJsonReq);
     }
 
     return (
