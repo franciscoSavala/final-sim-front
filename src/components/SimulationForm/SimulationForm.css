@@ -15,7 +15,7 @@ button:hover{
 .main-simulation-form{
     margin: 10px;
     padding: 10px;
-    max-height: 300px;
+    max-height: 500px;
     width: auto;
     font-family: "Poppins", sans-serif;
     font-size: 10px;
@@ -45,4 +45,12 @@ button:hover{
 
 .nombre-estadistico{
     text-decoration: underline solid black;
+}
+
+.estadistico-title{
+    font-weight: bold;
+}
+.estadisticos-ensambladores{
+    margin: 5px 0px;
+    border-top: solid 1px;
 }

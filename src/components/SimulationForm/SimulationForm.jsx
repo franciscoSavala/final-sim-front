@@ -5,19 +5,21 @@ import NumberImput from "../NumberImput/NumberImput";
 function SimulationForm({onFormatSubmit}) {
 
     const [apiJsonReq, setApiJsonReq] = useState({
-        time: 500,
-        iteraciones: 2000,
-        desdeHora: 400,
-        assemblers: 5,
-        lowerLimitUniformAssembler: 25.0,
-        upperLimitUniformAssembler: 35.0,
-        furnaces: 1,
-        lowerLimitUniformCook: 5.0,
-        upperLimitUniformCook: 11.0,
-        assemblersPayment: 3.75,
-        furnaceCost: 80.0,
-        moldProfit: 5.0,
-        moldLimit: 275
+        "time": 1000,
+        "iteraciones": 20,
+        "desdeHora": 0.0,
+        "limpieza": 5,
+        "llegadaFutbolE": 30,
+        "llegadaHandBallMedia": 20,
+        "llegadaHandBallDesvi": 2,
+        "llegadaBasketBallMedia": 10,
+        "llegadaBasketBallDesvi": 2,
+        "finJuegoFutbolMedia": 7,
+        "finJuegoFutbolDesvi": 1,
+        "finJuegoHandBallMedia": 30,
+        "finJuegoHandBallDesvi": 1,
+        "finJuegoBasketBallMedia": 20,
+        "finJuegoBasketBallDesvi": 1
     });
 
 
@@ -39,6 +41,7 @@ function SimulationForm({onFormatSubmit}) {
             <form className="form" onSubmit={handleSubmit}>
                 <div className="main-simulation-form">
                     <div className="general-parameters">
+                        <span className="estadistico-title">PARAMETROS GENERALES</span>
                         <NumberImput
                             label="Tiempo a simular (min)"
                             name="time"
@@ -59,94 +62,107 @@ function SimulationForm({onFormatSubmit}) {
                             value={apiJsonReq.desdeHora}
                             onChange={handleInputChange}
                         />
+
+                        <NumberImput
+                            label="Tiempo de limpieza (min)"
+                            name="limpieza"
+                            value={apiJsonReq.limpieza}
+                            onChange={handleInputChange}
+                        />
                     </div>
 
                     <div className="general-parameters">
-                        <NumberImput
-                            label="Ensambladores"
-                            name="assemblers"
-                            value={apiJsonReq.assemblers}
-                            onChange={handleInputChange}
-                        />
-
+                        <span className="estadistico-title">LLEGADA GRUPOS</span>
                         <div className="estadisticos-ensambladores">
-                            <label className="nombre-estadistico">Distribución uniforme U(min, max)</label>
+                            FUTBOL Exp-1(media)
                             <NumberImput
-                                label="Tiempo de ensamblado mínimo (min)"
-                                name="lowerLimitUniformAssembler"
-                                value={apiJsonReq.lowerLimitUniformAssembler}
+                                label="Media (hs)"
+                                name="llegadaFutbolE"
+                                value={apiJsonReq.llegadaFutbolE}
+                                onChange={handleInputChange}
+                            />
+                        </div>
+                        <div className="estadisticos-ensambladores">
+                            HAND BALL Normal(media, desv)
+                            <NumberImput
+                                label="Media (hs)"
+                                name="llegadaHandBallMedia"
+                                value={apiJsonReq.llegadaHandBallMedia}
                                 onChange={handleInputChange}
                             />
                             <NumberImput
-                                label="Tiempo de ensamblado máximo (máx)"
-                                name="upperLimitUniformAssembler"
-                                value={apiJsonReq.upperLimitUniformAssembler}
+                                label="Desviación (hs)"
+                                name="llegadaHandBallDesvi"
+                                value={apiJsonReq.llegadaHandBallDesvi}
+                                onChange={handleInputChange}
+                            />
+                        </div>
+                        <div className="estadisticos-ensambladores">
+                            BASKET BALL Normal(media, desv)
+                            <NumberImput
+                                label="Media (hs)"
+                                name="llegadaBasketBallMedia"
+                                value={apiJsonReq.llegadaBasketBallMedia}
+                                onChange={handleInputChange}
+                            />
+                            <NumberImput
+                                label="Desviación (hs)"
+                                name="llegadaBasketBallDesvi"
+                                value={apiJsonReq.llegadaBasketBallDesvi}
                                 onChange={handleInputChange}
                             />
                         </div>
                     </div>
 
                     <div className="general-parameters">
-                        <NumberImput
-                            label="Hornos"
-                            name="furnaces"
-                            value={apiJsonReq.furnaces}
-                            onChange={handleInputChange}
-                        />
-
-                        <div className="estadisticos-hornos">
-                            <label className="nombre-estadistico">Distribución uniforme U(min, max)</label>
+                        <span className="estadistico-title">FIN JUEGO GRUPOS</span>
+                        <div className="estadisticos-ensambladores">
+                            FUTBOL Normal(media, desv)
                             <NumberImput
-                                label="Tiempo de cocción mínimo (min)"
-                                name="lowerLimitUniformCook"
-                                value={apiJsonReq.lowerLimitUniformCook}
+                                label="Media (hs)"
+                                name="finJuegoFutbolMedia"
+                                value={apiJsonReq.finJuegoFutbolMedia}
                                 onChange={handleInputChange}
                             />
                             <NumberImput
-                                label="Tiempo de cocción máximo (min)"
-                                name="upperLimitUniformCook"
-                                value={apiJsonReq.upperLimitUniformCook}
+                                label="Desviación (hs)"
+                                name="finJuegoFutbolDesvi"
+                                value={apiJsonReq.finJuegoFutbolDesvi}
                                 onChange={handleInputChange}
                             />
                         </div>
-                    </div>
-
-
-
-                    <div className="general-parameters">
-                        <NumberImput
-                            label="Pago a ensambladores ($)"
-                            name="assamblerPayment"
-                            value={apiJsonReq.assemblersPayment}
-                            onChange={handleInputChange}
-                        />
-
-                        <NumberImput
-                            label="Costo de hornos ($)"
-                            name="furnaceCost"
-                            value={apiJsonReq.furnaceCost}
-                            onChange={handleInputChange}
-                        />
-
-                        <NumberImput
-                            label="Ganancia por molde terminado ($)"
-                            name="moldProfit"
-                            value={apiJsonReq.moldProfit}
-                            onChange={handleInputChange}
-                        />
-
-                        <NumberImput
-                            label="Máximo de moldes diarios"
-                            name="moldLimit"
-                            value={apiJsonReq.moldLimit}
-                            onChange={handleInputChange}
-                        />
+                        <div className="estadisticos-ensambladores">
+                            HAND BALL Normal(media, desv)
+                            <NumberImput
+                                label="Media (hs)"
+                                name="finJuegoHandBallMedia"
+                                value={apiJsonReq.finJuegoHandBallMedia}
+                                onChange={handleInputChange}
+                            />
+                            <NumberImput
+                                label="Desviación (hs)"
+                                name="finJuegoHandBallDesvi"
+                                value={apiJsonReq.finJuegoHandBallDesvi}
+                                onChange={handleInputChange}
+                            />
+                        </div>
+                        <div className="estadisticos-ensambladores">
+                            BASKET BALL Normal(media, desv)
+                            <NumberImput
+                                label="Media (hs)"
+                                name="finJuegoBasketBallMedia"
+                                value={apiJsonReq.finJuegoBasketBallMedia}
+                                onChange={handleInputChange}
+                            />
+                            <NumberImput
+                                label="Desviación (hs)"
+                                name="finJuegoBasketBallDesvi"
+                                value={apiJsonReq.finJuegoBasketBallDesvi}
+                                onChange={handleInputChange}
+                            />
+                        </div>
                     </div>
                 </div>
-
-
-
-
                 <button className="submit-simulation" name="submit-button" type="submit">SIMULAR</button>
             </form>
 
