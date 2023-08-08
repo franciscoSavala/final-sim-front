@@ -12,7 +12,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/simulation", 
-    element: <Simulation apiUrl="http://localhost:8080/api/v1"/>
+    element: <Simulation apiUrl={process.env.REACT_APP_API_SPRING}/>
   }
 ])
 const root = ReactDOM.createRoot(document.getElementById('root'));
