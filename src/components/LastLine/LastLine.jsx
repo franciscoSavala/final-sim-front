@@ -14,7 +14,7 @@ function LastLine({ response }) {
                     <tr>
                         <th rowSpan="3">N</th>
                         <th rowSpan="3">Evento</th>
-                        <th rowSpan="3">Reloj</th>
+                        <th rowSpan="3">Reloj (min)</th>
                         <th colSpan={2 + 3 * 2} rowSpan="1">Llegada Grupo</th>
                         <th colSpan={2 * 3}>Fin Juego</th>
                         <th colSpan="1" rowSpan="3">Fin Limpieza</th>
