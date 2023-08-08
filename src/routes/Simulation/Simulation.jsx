@@ -3,7 +3,6 @@ import SimulationForm from '../../components/SimulationForm/SimulationForm';
 import Grid from '../../components/Grid/Grid';
 import LastLine from '../../components/LastLine/LastLine';
 import { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 
 function Simulation({apiUrl}) {
   const [res, setRes] = useState({
@@ -125,7 +124,6 @@ function Simulation({apiUrl}) {
     }
   ]);
 
-  const navigate = useNavigate();
 
   const [base64Credentials, setBase64Credentials] = useState("");
 
