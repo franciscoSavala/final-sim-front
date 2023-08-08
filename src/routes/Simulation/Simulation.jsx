@@ -1,10 +1,11 @@
-import './App.css';
-import SimulationForm from './components/SimulationForm/SimulationForm';
-import Grid from './components/Grid/Grid';
-import LastLine from './components/LastLine/LastLine';
-import { useState } from 'react';
+import './Simulation.css';
+import SimulationForm from '../../components/SimulationForm/SimulationForm';
+import Grid from '../../components/Grid/Grid';
+import LastLine from '../../components/LastLine/LastLine';
+import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
-function App() {
+function Simulation({apiUrl}) {
   const [res, setRes] = useState({
     "data": [
       {
@@ -124,9 +125,17 @@ function App() {
     }
   ]);
 
+  const navigate = useNavigate();
+
+  const [base64Credentials, setBase64Credentials] = useState("");
+
+  useEffect(() => {
+    const base64Data = sessionStorage.getItem('base64Data');
+    setBase64Credentials(base64Data);
+  }, []);
 
   const filterSimulationData = (objeto, leaf, d = true) => {
-    const newObjeto = { ...objeto }; // Create a shallow copy of the original object
+    const newObjeto = { ...objeto };
 
     if (!leaf) {
       if(d) newObjeto.llegaronFutbolHandBall = objeto.llegaronFutbolHandBall.map(obj => filterSimulationData(obj, true));
@@ -151,17 +160,11 @@ function App() {
   }
 
   const handleFormSubmit = (formData) => {
-
     makeRequest(formData);
   };
 
 
   const makeRequest = async (formData) => {
-    const apiUrl = 'http://localhost:8080/api/v1'; // Reemplaza esta URL con la URL real de tu API
-    const username = 'fran-savala';
-    const password = 'MichitoSantos23GalletitaDeamon';
-
-    const base64Credentials = btoa(`${username}:${password}`);
 
     try {
       let res = await fetch(apiUrl, {
@@ -176,6 +179,7 @@ function App() {
       if (res.status === 200) {
         setTable(resJson.data);
       }
+      
     } catch (err) {
       console.log(err)
     }
@@ -199,7 +203,7 @@ function App() {
 
 
   return (
-    <div className="App">
+    <div>
       <SimulationForm onFormatSubmit={handleFormSubmit}></SimulationForm>
       <LastLine response={{...filterSimulationData(res, false, false), data: res.data.map(objeto => filterSimulationData(objeto, false, false))}}></LastLine>
       <Grid data={table.map(objeto => filterSimulationData(objeto, false))}
@@ -209,4 +213,4 @@ function App() {
   );
 }
 
-export default App;
+export default Simulation;
