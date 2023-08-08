@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./NumberInput.css"
 
 function NumberImput({ label, name, value, onChange }) {

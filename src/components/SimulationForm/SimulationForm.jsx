@@ -33,15 +33,16 @@ function SimulationForm({onFormatSubmit}) {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        setApiJsonReq({
-            ...apiJsonReq,
-            llegadaFutbolE: llegadaFutbolE * 60,
-            llegadaHandBallMedia: llegadaHandBallMedia * 60,
-            llegadaHandBallDesvi: llegadaHandBallDesvi * 60,
-            llegadaBasketBallMedia: llegadaBasketBallMedia * 60,
-            llegadaBasketBallDesvi: llegadaBasketBallDesvi * 60,
-        })
-        onFormatSubmit(apiJsonReq);
+        onFormatSubmit(
+            {
+                ...apiJsonReq,
+                "llegadaFutbolE": apiJsonReq.llegadaFutbolE * 60,
+                "llegadaHandBallMedia": apiJsonReq.llegadaHandBallMedia * 60,
+                "llegadaHandBallDesvi": apiJsonReq.llegadaHandBallDesvi * 60,
+                "llegadaBasketBallMedia": apiJsonReq.llegadaBasketBallMedia * 60,
+                "llegadaBasketBallDesvi": apiJsonReq.llegadaBasketBallDesvi * 60,
+            }
+        );
     }
 
     return (
