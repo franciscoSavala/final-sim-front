@@ -70,7 +70,6 @@ function LastLine({ response }) {
                     </tr>
                 </thead>
                 <tbody>
-                    {console.log(data)}
                     {data.map((dato) => (
                         <tr key={dato.n}>
                             <td>{dato.n}</td>

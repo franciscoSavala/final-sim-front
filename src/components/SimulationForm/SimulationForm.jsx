@@ -22,17 +22,35 @@ function SimulationForm({onFormatSubmit}) {
         "finJuegoBasketBallDesvi": 1
     });
 
+    const [error, setError] = useState(false);
+
 
     const handleInputChange = (event) => {
         const { name, value } = event.target;
         setApiJsonReq({
             ...apiJsonReq,
-            [name]: Number(value)
+            [name]: value
         });
     };
 
+
     const handleSubmit = (event) => {
         event.preventDefault();
+
+        for(const atributo in apiJsonReq){
+            if(isNaN(apiJsonReq[atributo]) || parseFloat(apiJsonReq[atributo]) < 0){
+                setError(true);
+                return;
+            }
+        }
+
+        if(!/^\d+$/.test(apiJsonReq.iteraciones.toString())){
+            setError(true);
+            return;
+        }
+
+
+
         onFormatSubmit(
             {
                 ...apiJsonReq,
@@ -43,6 +61,7 @@ function SimulationForm({onFormatSubmit}) {
                 "llegadaBasketBallDesvi": apiJsonReq.llegadaBasketBallDesvi * 60,
             }
         );
+        setError(false);
     }
 
     return (
@@ -128,13 +147,13 @@ function SimulationForm({onFormatSubmit}) {
                         <div className="estadisticos-ensambladores">
                             FUTBOL Normal(media, desv)
                             <NumberImput
-                                label="Media (hs)"
+                                label="Media (min)"
                                 name="finJuegoFutbolMedia"
                                 value={apiJsonReq.finJuegoFutbolMedia}
                                 onChange={handleInputChange}
                             />
                             <NumberImput
-                                label="Desviación (hs)"
+                                label="Desviación (min)"
                                 name="finJuegoFutbolDesvi"
                                 value={apiJsonReq.finJuegoFutbolDesvi}
                                 onChange={handleInputChange}
@@ -143,13 +162,13 @@ function SimulationForm({onFormatSubmit}) {
                         <div className="estadisticos-ensambladores">
                             HAND BALL Normal(media, desv)
                             <NumberImput
-                                label="Media (hs)"
+                                label="Media (min)"
                                 name="finJuegoHandBallMedia"
                                 value={apiJsonReq.finJuegoHandBallMedia}
                                 onChange={handleInputChange}
                             />
                             <NumberImput
-                                label="Desviación (hs)"
+                                label="Desviación (min)"
                                 name="finJuegoHandBallDesvi"
                                 value={apiJsonReq.finJuegoHandBallDesvi}
                                 onChange={handleInputChange}
@@ -158,13 +177,13 @@ function SimulationForm({onFormatSubmit}) {
                         <div className="estadisticos-ensambladores">
                             BASKET BALL Normal(media, desv)
                             <NumberImput
-                                label="Media (hs)"
+                                label="Media (min)"
                                 name="finJuegoBasketBallMedia"
                                 value={apiJsonReq.finJuegoBasketBallMedia}
                                 onChange={handleInputChange}
                             />
                             <NumberImput
-                                label="Desviación (hs)"
+                                label="Desviación (min)"
                                 name="finJuegoBasketBallDesvi"
                                 value={apiJsonReq.finJuegoBasketBallDesvi}
                                 onChange={handleInputChange}
@@ -172,7 +191,10 @@ function SimulationForm({onFormatSubmit}) {
                         </div>
                     </div>
                 </div>
-                <button className="submit-simulation" name="submit-button" type="submit">SIMULAR</button>
+                <div>
+                    <button className="submit-simulation" name="submit-button" type="submit">SIMULAR</button>
+                    {(error) ? <label className="error">ERROR!</label> : <span></span>}
+                </div>
             </form>
 
         </div>

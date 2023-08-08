@@ -16,7 +16,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start -e REACT_APP_API_SPRING='http://54.207.3.127:8080/api/v1'",
+    "start": "react-scripts start -e REACT_APP_API_SPRING='http://localhost:8080/api/v1'",
     "build": "react-scripts build -e REACT_APP_API_SPRING='http://54.207.3.127:8080/api/v1'",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

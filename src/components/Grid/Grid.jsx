@@ -86,7 +86,6 @@ function Grid({ data, cantidadFutbolHandball, cantidadBasketBall }) {
                     </tr>
                 </thead>
                 <tbody>
-                    {console.log(data)}
                     {data.map((dato) => (
                         <tr key={dato.n}>
                             <td>{dato.n}</td>

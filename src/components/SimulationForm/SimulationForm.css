@@ -54,3 +54,7 @@ button:hover{
     margin: 5px 0px;
     border-top: solid 1px;
 }
+
+.error{
+    color: red;
+}
